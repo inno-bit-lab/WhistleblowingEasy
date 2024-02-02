@@ -5,7 +5,7 @@ RUN apt-get update -q && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN wget https://deb.globaleaks.org/install-globaleaks.sh
+RUN wget https://raw.githubusercontent.com/inno-bit-lab/WhistleblowingEasy/main/scripts/install.sh -O install-globaleaks.sh
 RUN chmod +x install-globaleaks.sh
 RUN ./install-globaleaks.sh -y -n
 

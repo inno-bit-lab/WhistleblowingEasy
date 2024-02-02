@@ -993,3 +993,7 @@ html[dir="ltr"] #Receipt {
   opacity: 0.2;
   pointer-events: none;
 }
+.display-none
+{
+  display: none;
+}
