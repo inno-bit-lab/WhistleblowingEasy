@@ -35,7 +35,7 @@
       </div>
       <div data-ng-switch-when="multichoice">
         <div data-ng-repeat="option in field.options | orderBy:'order'">
-          <input id="{{fieldEntry + '-option-' + $index}}" name="{{fieldEntry + '-option-' + $index}}" class="form-control-input inputelem" type="radio" data-ng-model="entry['value']" value="{{option.id}}" data-ng-required="field.required" />
+          <input id="{{fieldEntry + '-option-' + $index}}" name="{{fieldEntry + '-option-' + $index}}" class="form-control-input inputelem" type="checkbox" data-ng-model="entry['value']" value="{{option.id}}" data-ng-required="field.required" />
           <label for="{{fieldEntry + '-option-' + $index}}" data-uib-tooltip="{{option.hint1}}" class="form-control-label" data-ng-class="{'text-underline': option.hint1}">{{option.label}}</label>
         </div>
       </div>
