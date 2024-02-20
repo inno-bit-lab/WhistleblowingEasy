@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Inizializza la variabile NODE_NAME vuota
+export NODE_NAME=""
+
+# Analizza gli argomenti della riga di comando
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        --node-name) export NODE_NAME="$2"; shift ;;
+        *) echo "Opzione non riconosciuta: $1" >&2; exit 1 ;;
+    esac
+    shift
+done
+
+# Verifica che NODE_NAME sia stato fornito
+if [ -z "$NODE_NAME" ]; then
+    echo "Errore: Il parametro --node-name è obbligatorio."
+    exit 1
+fi
+
+export NODE_PATH="$APP_PATH/$NODE_NAME"
+export CONFIG_FILE="$NODE_PATH/node.conf"
