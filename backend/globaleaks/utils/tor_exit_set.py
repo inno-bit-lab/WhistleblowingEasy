@@ -4,7 +4,8 @@ import re
 from globaleaks.utils.agent import get_page
 
 
-EXIT_ADDR_URL = b'https://deb.globaleaks.org/app/exit-addresses'
+#EXIT_ADDR_URL = b'https://deb.globaleaks.org/app/exit-addresses'
+EXIT_ADDR_URL = b'https://check.torproject.org/torbulkexitlist'
 
 
 class TorExitSet(set):
@@ -13,7 +14,10 @@ class TorExitSet(set):
     def processData(self, data):
         self.clear()
 
-        for ip in re.findall(r'ExitAddress ([^ ]*) ', data.decode()):
+        # for ip in re.findall(r'ExitAddress ([^ ]*) ', data.decode()):
+        #     self.add(ip)
+        ip_list = data.decode().strip().split('\n')
+        for ip in ip_list:
             self.add(ip)
 
     def update(self, agent):

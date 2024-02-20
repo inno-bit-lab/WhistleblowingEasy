@@ -35,8 +35,8 @@ class SettingsClass(object, metaclass=Singleton):
         self.src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
         self.backend_script = os.path.abspath(os.path.join(self.src_path, 'globaleaks/backend.py'))
 
-        self.ramdisk_path = '/dev/shm/globaleaks'
         self.working_path = '/var/globaleaks'
+        self.ramdisk_path = self.working_path + '/shm'
 
         self.authentication_lifetime = 1800
 
@@ -88,6 +88,7 @@ class SettingsClass(object, metaclass=Singleton):
 
         self.files_path = os.path.abspath(os.path.join(self.working_path, 'files'))
         self.attachments_path = os.path.abspath(os.path.join(self.working_path, 'attachments'))
+        self.ramdisk_path = os.path.abspath(os.path.join(self.working_path, 'shm'))
         self.tmp_path = os.path.abspath(os.path.join(self.working_path, 'tmp'))
         self.tor_control = os.path.abspath(os.path.join(self.tmp_path, 'tor_control'))
 
@@ -136,6 +137,7 @@ class SettingsClass(object, metaclass=Singleton):
 
         if options.working_path:
             self.working_path = options.working_path
+            self.ramdisk_path = self.working_path + '/shm'
 
 
 # Settings is a singleton class exported once
