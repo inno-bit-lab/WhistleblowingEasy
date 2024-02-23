@@ -22,7 +22,7 @@ class TorExitSet(set):
         except Exception as excep:
             log.err("Error in creating processData: %s (%s)",
                       data, excep.strerror)
-            raise excep
+            #raise excep
 
 
     def update(self, agent):
