@@ -103,7 +103,7 @@ class Tor(Service):
             self.tor_conn = tor_conn
             self.tor_conn.protocol.on_disconnect = restart_deferred
 
-            log.err('Successfully connected to Tor control port')
+            log.debug('Successfully connected to Tor control port')
 
             self.load_all_onion_services()
 

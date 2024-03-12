@@ -6,6 +6,23 @@
       <div class="col-md-2" data-ng-if="submission.context.picture"><img class="contextImg" alt="context picture" data-ng-src="/s/{{submission.context.id}}" /></div>
     </div>
   </div>
+  <div>
+    <label id="WhistleblowerLoginQuestion" for="receipt-input" data-translate>Have you already filed a report? Enter your receipt.</label>
+  </div>
+  <div class="form-inline">
+    <div class="form-group d-block ml-auto">
+      <div class="input-group">
+        <input id="receipt-input" class="form-control" type="text" maxlength="19" size="19" data-ng-model="formatted_receipt" name="receipt-input" receiptvalidator>
+        <span class="input-group-append">
+          <button id="ReceiptButton"
+                  data-ng-click="Authentication.login(0, 'whistleblower', formatted_receipt); formatted_receipt = ''" class="btn btn-primary"
+                  data-ng-disabled="formatted_receipt.length !== 19 || Authentication.loginInProgress || WhistleblowerLoginForm.receipt.$error.receiptvalidator" type="submit">
+            <span data-translate>Log in</span>
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
   <form id="SubmissionForm" name="vars.submissionForm" autocomplete="off" novalidate data-ng-class="{'was-validated': displayErrors()}">
     <div class="tabbable tabs-below">
       <ul id="SubmissionTabsNavigationBox" class="nav nav-tabs" data-ng-if="submission.context.show_steps_navigation_interface && submission.context.questionnaire.steps.length > 1" role="tablist">

@@ -85,7 +85,7 @@ def update_db():
             from globaleaks.db import migration
             warnings.simplefilter("ignore", category=SAWarning)
 
-            log.err('Found an already initialized database version: %d', db_version)
+            log.info('Found an already initialized database version: %d', db_version)
 
             if db_version != DATABASE_VERSION:
                 log.err('Performing schema migration from version %d to version %d',
