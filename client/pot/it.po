@@ -1397,6 +1397,9 @@ msgstr "Poi, una volta installato, copia ed incolla il seguente indirizzo all'in
 msgid "Have you already filed a report? Enter your receipt."
 msgstr "Hai già effettuato una segnalazione? Inserisci la tua ricevuta."
 
+msgid "Enter a report already made"
+msgstr "Inserisci una segnalazione già effettuata"
+
 msgid "The receipt is either invalid or the report has expired."
 msgstr "La ricevuta inserita non è valida o la segnalazione è scaduta."
 
