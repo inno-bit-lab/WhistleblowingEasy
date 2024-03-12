@@ -1453,7 +1453,7 @@ msgstr "Fájl feltöltése:"
 msgid "Welcome!"
 msgstr "Üdvözöljük!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "A felhasználói útmutatóért látogasson ide:"
 
 msgid "If you need technical support or have general questions, write to us here:"

@@ -1455,7 +1455,7 @@ msgstr "Wyślij plik"
 msgid "Welcome!"
 msgstr "Witaj!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Dokumentacja użytkownika:"
 
 msgid "If you need technical support or have general questions, write to us here:"

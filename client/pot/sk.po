@@ -1445,7 +1445,7 @@ msgstr "Nahrať súbor:"
 msgid "Welcome!"
 msgstr "Vitajte!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Pre používateľskú dokumentáciu navštívte:"
 
 msgid "If you need technical support or have general questions, write to us here:"

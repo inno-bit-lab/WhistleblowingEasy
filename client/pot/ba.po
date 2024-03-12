@@ -1436,7 +1436,7 @@ msgstr "Файлды тейәргә:"
 msgid "Welcome!"
 msgstr "Рәхим итегеҙ!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Ҡулланыусының документтары менән түбәндәге биттәрҙә танышырға була"
 
 msgid "If you need technical support or have general questions, write to us here:"

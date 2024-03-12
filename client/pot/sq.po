@@ -1444,7 +1444,7 @@ msgstr "Ngarkoni një kartelë:"
 msgid "Welcome!"
 msgstr "Mirë se vini!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Për dokumentim për përdoruesit, vizitoni:"
 
 msgid "If you need technical support or have general questions, write to us here:"

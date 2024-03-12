@@ -1435,7 +1435,7 @@ msgstr "Pakia faili:"
 msgid "Welcome!"
 msgstr "Karibu!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Kwa nyaraka za mtumiaji, tembelea:"
 
 msgid "If you need technical support or have general questions, write to us here:"

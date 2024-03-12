@@ -1450,7 +1450,7 @@ msgstr "Tải lên tập tin:"
 msgid "Welcome!"
 msgstr "Chào mừng bạn!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Vào trang sau đây để xem cẩm nang sử dụng"
 
 msgid "If you need technical support or have general questions, write to us here:"

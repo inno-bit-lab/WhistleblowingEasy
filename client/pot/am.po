@@ -1436,7 +1436,7 @@ msgstr "ፋይል ጫኑ፡-"
 msgid "Welcome!"
 msgstr "እንኳን ደህና መጡ！"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "ለተጠቃሚ ሰነድ የሚከተለውን ጎብኝ"
 
 msgid "If you need technical support or have general questions, write to us here:"

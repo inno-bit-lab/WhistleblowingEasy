@@ -1483,7 +1483,7 @@ msgstr "Hochladen einer Datei:"
 msgid "Welcome!"
 msgstr "Willkommen!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Für die Benutzerdokumentation besuchen Sie:"
 
 msgid "If you need technical support or have general questions, write to us here:"

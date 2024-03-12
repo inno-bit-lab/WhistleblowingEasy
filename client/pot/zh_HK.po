@@ -1437,7 +1437,7 @@ msgstr "上傳檔案："
 msgid "Welcome!"
 msgstr "您好！"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "查看使用者文檔，請瀏覽："
 
 msgid "If you need technical support or have general questions, write to us here:"

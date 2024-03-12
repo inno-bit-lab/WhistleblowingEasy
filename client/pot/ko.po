@@ -1436,7 +1436,7 @@ msgstr "파일 업로드:"
 msgid "Welcome!"
 msgstr "환영합니다!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "사용자 문서는 다음을 방문하십시오."
 
 msgid "If you need technical support or have general questions, write to us here:"

@@ -1465,7 +1465,7 @@ msgstr "Загрузить файл на сервер:"
 msgid "Welcome!"
 msgstr "Добро пожаловать!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "С документацией пользователя можно ознакомиться на странице:"
 
 msgid "If you need technical support or have general questions, write to us here:"

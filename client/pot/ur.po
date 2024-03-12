@@ -1447,7 +1447,7 @@ msgstr "فائل اپ لوڈ کریں: "
 msgid "Welcome!"
 msgstr "خوش آمدید!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "صارف کی دستاویزات کے لیے، ملاحظہ کریں: "
 
 msgid "If you need technical support or have general questions, write to us here:"

@@ -1475,7 +1475,7 @@ msgstr "Subir un archivo:"
 msgid "Welcome!"
 msgstr "¡Bienvenido!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Para la documentación de usuario, ir a:"
 
 msgid "If you need technical support or have general questions, write to us here:"

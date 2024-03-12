@@ -1439,7 +1439,7 @@ msgstr "Carga un ficheiro:"
 msgid "Welcome!"
 msgstr "Benvido!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Para a documentación do usuario, visite:"
 
 msgid "If you need technical support or have general questions, write to us here:"

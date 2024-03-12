@@ -1435,7 +1435,7 @@ msgstr "ატვირთეთ ფაილი:"
 msgid "Welcome!"
 msgstr "მოგესალმებით!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "მომხმარებლის დოკუმენტაციისთვის, ეწვიეთ:"
 
 msgid "If you need technical support or have general questions, write to us here:"

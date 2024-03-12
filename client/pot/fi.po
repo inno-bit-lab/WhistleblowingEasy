@@ -1445,7 +1445,7 @@ msgstr "Lähetä tiedosto:"
 msgid "Welcome!"
 msgstr "Tervetuloa!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Käyttöohjeet löydät osoitteesta: "
 
 msgid "If you need technical support or have general questions, write to us here:"

@@ -1484,7 +1484,7 @@ msgstr "رفع ملف:"
 msgid "Welcome!"
 msgstr "مرحبا!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "للاطلاع على وثائق المستخدم، قم بزيارة:"
 
 msgid "If you need technical support or have general questions, write to us here:"

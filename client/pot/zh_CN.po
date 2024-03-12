@@ -1456,7 +1456,7 @@ msgstr "上传文件："
 msgid "Welcome!"
 msgstr "欢迎！"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "查看用户文档，请访问："
 
 msgid "If you need technical support or have general questions, write to us here:"

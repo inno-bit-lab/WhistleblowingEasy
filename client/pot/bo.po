@@ -1436,7 +1436,7 @@ msgstr "ཡིག་ཆ་ཞིག་ཡར་འཇུག་བྱ།:"
 msgid "Welcome!"
 msgstr "བྱོན་པ་ལེགས།"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "སྤྱོད་པ་པོའི་ཡིག་ཆ་དེབ་སྐྱེལ་ཆེད། འདིར་བསྐྱོད།:"
 
 msgid "If you need technical support or have general questions, write to us here:"

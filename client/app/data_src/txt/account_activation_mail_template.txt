@@ -10,7 +10,7 @@ Please click on the activation link to proceed with the account activation and t
 After successful activation you will be able to access the system via the following link: {LoginUrl}
 {AccountRecoveryKeyInstructions}
 
-For the user documentation, visit:
+For the user documentation, download here:
 {DocumentationUrl}
 
 Kind regards,

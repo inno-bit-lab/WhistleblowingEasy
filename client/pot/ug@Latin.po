@@ -1435,7 +1435,7 @@ msgstr "Bir höjjet yükle:"
 msgid "Welcome!"
 msgstr "Xosh kepsiz!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Ishletküchi höjjiti üchün bu yerge qarang:"
 
 msgid "If you need technical support or have general questions, write to us here:"

@@ -1445,7 +1445,7 @@ msgstr "Качване на файл:"
 msgid "Welcome!"
 msgstr "Добре дошли!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "За потребителска документация, посетете:"
 
 msgid "If you need technical support or have general questions, write to us here:"

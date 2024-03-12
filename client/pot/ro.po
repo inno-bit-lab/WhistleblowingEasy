@@ -1451,7 +1451,7 @@ msgstr "Încarcă un fișier:"
 msgid "Welcome!"
 msgstr "Bine ai venit!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Pentru a vedea documentația necesară utilizatorilor, mergi la:"
 
 msgid "If you need technical support or have general questions, write to us here:"

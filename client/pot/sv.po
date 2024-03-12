@@ -1458,7 +1458,7 @@ msgstr "Ladda upp en fil:"
 msgid "Welcome!"
 msgstr "Välkommen!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "För att hitta användardokumentation, gå in på sidan:"
 
 msgid "If you need technical support or have general questions, write to us here:"

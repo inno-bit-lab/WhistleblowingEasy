@@ -1436,7 +1436,7 @@ msgstr "Faili üleslaadimine:"
 msgid "Welcome!"
 msgstr "Tere tulemast!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Kasutaja dokumendid leiate aadressilt:"
 
 msgid "If you need technical support or have general questions, write to us here:"

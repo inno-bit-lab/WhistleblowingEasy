@@ -1435,7 +1435,7 @@ msgstr "د یوه فایل اپلوډ کول:"
 msgid "Welcome!"
 msgstr "ښه راغلاست!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "د کارن د مستند کېدو لپاره دلته ورشئ:"
 
 msgid "If you need technical support or have general questions, write to us here:"

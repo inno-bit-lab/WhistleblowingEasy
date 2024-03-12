@@ -1473,7 +1473,7 @@ msgstr "Téléverser un fichier :"
 msgid "Welcome!"
 msgstr "Bienvenue."
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Pour consulter la documentation d’utilisation, visitez :"
 
 msgid "If you need technical support or have general questions, write to us here:"

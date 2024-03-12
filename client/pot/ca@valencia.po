@@ -1449,7 +1449,7 @@ msgstr "Pujar un fitxer:"
 msgid "Welcome!"
 msgstr "Benvingut!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Per a la documentació d'usuari, visite:"
 
 msgid "If you need technical support or have general questions, write to us here:"

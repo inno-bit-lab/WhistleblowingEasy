@@ -1437,7 +1437,7 @@ msgstr "கோப்பு பதிவேற்று:"
 msgid "Welcome!"
 msgstr "வரவேற்பு!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "பயனர் ஆவணங்களுக்கான, வருகை:"
 
 msgid "If you need technical support or have general questions, write to us here:"

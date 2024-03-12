@@ -1448,7 +1448,7 @@ msgstr "Ανεβάστε ένα αρχείο:"
 msgid "Welcome!"
 msgstr "Καλώς ήρθατε!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Για την τεκμηρίωση χρήστη, επισκευθείτε:"
 
 msgid "If you need technical support or have general questions, write to us here:"

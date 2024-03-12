@@ -1443,7 +1443,7 @@ msgstr "Otpremite datoteku:"
 msgid "Welcome!"
 msgstr "Dobro došli!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Dokumentacija za korisnike se nalazi na:"
 
 msgid "If you need technical support or have general questions, write to us here:"

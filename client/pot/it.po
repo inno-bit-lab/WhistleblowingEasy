@@ -1460,8 +1460,8 @@ msgstr "Carica un file:"
 msgid "Welcome!"
 msgstr "Benvenuto!"
 
-msgid "For the user documentation, visit:"
-msgstr "Per la documentazione utente visita:"
+msgid "For the user documentation, download here:"
+msgstr "Per la documentazione utente, scarica qui:"
 
 msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Se hai bisogno di supporto tecnico o hai domande generali, scrivici qui:"

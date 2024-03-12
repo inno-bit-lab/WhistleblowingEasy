@@ -1435,7 +1435,7 @@ msgstr "Muat naik fail:"
 msgid "Welcome!"
 msgstr "Selamat datang!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Untuk dokumentasi pengguna, layari:"
 
 msgid "If you need technical support or have general questions, write to us here:"

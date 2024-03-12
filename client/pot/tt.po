@@ -1435,7 +1435,7 @@ msgstr "Файлны йөкләтеп җибәрү:"
 msgid "Welcome!"
 msgstr "Рәхим итегез!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Кулланучының документлары өчен монда керегез:"
 
 msgid "If you need technical support or have general questions, write to us here:"

@@ -1462,7 +1462,7 @@ msgstr "بارگذاری یک فایل:"
 msgid "Welcome!"
 msgstr "خوش آمدید!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "برای مستندات کاربر، مراجعه کنید به:"
 
 msgid "If you need technical support or have general questions, write to us here:"

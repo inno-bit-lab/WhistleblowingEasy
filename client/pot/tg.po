@@ -1443,7 +1443,7 @@ msgstr "Боркунии файл:"
 msgid "Welcome!"
 msgstr "Марҳабо!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Барои ҳуҷҷатҳои корбар, аз ин ҷо дидан кунед:"
 
 msgid "If you need technical support or have general questions, write to us here:"

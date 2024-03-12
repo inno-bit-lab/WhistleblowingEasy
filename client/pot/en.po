@@ -1452,8 +1452,8 @@ msgstr "Upload a file:"
 msgid "Welcome!"
 msgstr "Welcome!"
 
-msgid "For the user documentation, visit:"
-msgstr "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
+msgstr "For the user documentation, download here:"
 
 msgid ""
 "If you need technical support, have general questions, or have new ideas "

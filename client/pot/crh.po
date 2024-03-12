@@ -1435,7 +1435,7 @@ msgstr "Файлны юклемек:"
 msgid "Welcome!"
 msgstr "Хош кельдинъиз!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Къулланыджы весикъаларынен невбеттеки саифеде таныш олмагъа мумкюн:"
 
 msgid "If you need technical support or have general questions, write to us here:"

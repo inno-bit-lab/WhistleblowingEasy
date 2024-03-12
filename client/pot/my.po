@@ -1436,7 +1436,7 @@ msgstr "ဖိုင် အပ်လုဒ်လုပ်ပါ -"
 msgid "Welcome!"
 msgstr "ကြိုဆိုပါသည်။"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "အသုံးပြုသူ စာရွက်စာတမ်းအတွက် ဝင်ကြည့်ရန် - "
 
 msgid "If you need technical support or have general questions, write to us here:"

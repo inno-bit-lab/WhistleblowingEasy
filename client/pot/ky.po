@@ -1436,7 +1436,7 @@ msgstr "Бул файлды жүктөө"
 msgid "Welcome!"
 msgstr "Кош келиңиз!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "Колдонуучунун документтери үчүн төмөнкүгө кириңиз:"
 
 msgid "If you need technical support or have general questions, write to us here:"

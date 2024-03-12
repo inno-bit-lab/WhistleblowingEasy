@@ -1437,7 +1437,7 @@ msgstr "Last opp en fil:"
 msgid "Welcome!"
 msgstr "Velkommen!"
 
-msgid "For the user documentation, visit:"
+msgid "For the user documentation, download here:"
 msgstr "For brukerdokumentasjon, gå til:"
 
 msgid "If you need technical support or have general questions, write to us here:"
