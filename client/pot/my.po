@@ -1439,9 +1439,7 @@ msgstr "ကြိုဆိုပါသည်။"
 msgid "For the user documentation, visit:"
 msgstr "အသုံးပြုသူ စာရွက်စာတမ်းအတွက် ဝင်ကြည့်ရန် - "
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "သင် နည်းပညာဆိုင်ရာ အကူအညီ လိုအပ်လျှင်၊ ယေဘုယျ မေးခွန်းများရှိလျှင် (သို့) ဆော့ဝဲအတွက် အကြံဉာဏ်အသစ်များ ရှိလျှင် - "
 
 msgid ""

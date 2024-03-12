@@ -1443,9 +1443,7 @@ msgstr "މަރުހަބާ!"
 msgid "For the user documentation, visit:"
 msgstr "ޔޫސަރ ޑޮކިއުމެންޓޭޝަން ވިދާޅުވާން ފިއްތަވާ : "
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "ޓެކްނިކަލް ސަޕޯޓް ބޭނުންފުޅު ނަމަ، ނުވަތަ އިތުރު ސުވާލަކަށް ޖަވާބު ހޯއްދަވަން އަދި ސޮފްޓްވެއަރއަށް ގެންނާނެ ހެޔޮ ބަދަލެއް ހުރިކަމަށް ފެންނަނަމަ: "
 
 msgid ""

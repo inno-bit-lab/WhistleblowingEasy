@@ -1440,9 +1440,7 @@ msgstr "خوش كەپسىز!"
 msgid "For the user documentation, visit:"
 msgstr "ئىشلەتكۈچى ھۆججىتى ئۈچۈن بۇ يەرگە قاراڭ:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "ئەگەر تېخنىكىلىق قوللاشقا ئېھتىياجلىق بولسىڭىز ، ئادەتتىكى سوئاللىرىڭىز بولسا ياكى يۇمشاق دېتالغا مۇناسىۋەتلىك يېڭى پىكىرلىرىڭىز بولسا:"
 
 msgid ""

@@ -1459,9 +1459,7 @@ msgstr "欢迎！"
 msgid "For the user documentation, visit:"
 msgstr "查看用户文档，请访问："
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "对于有关软件的技术支持、常规问题或新想法，可访问："
 
 msgid ""

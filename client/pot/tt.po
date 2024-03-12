@@ -1438,9 +1438,7 @@ msgstr "Рәхим итегез!"
 msgid "For the user documentation, visit:"
 msgstr "Кулланучының документлары өчен монда керегез:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Әгәр сезгә техник ярдәм кирәк булса, гомуми сорауларыгыз яисә программа өчен яңа идеяләрегез булса:"
 
 msgid ""

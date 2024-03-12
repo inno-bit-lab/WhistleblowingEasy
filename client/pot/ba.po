@@ -1439,9 +1439,7 @@ msgstr "Рәхим итегеҙ!"
 msgid "For the user documentation, visit:"
 msgstr "Ҡулланыусының документтары менән түбәндәге биттәрҙә танышырға була"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Әгәр техник ярҙам талап ителһә, дөйөм һорауҙар булһа, программаның тәьминиәтенә тәҡдим булһа:"
 
 msgid ""

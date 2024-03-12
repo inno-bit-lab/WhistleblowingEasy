@@ -1446,9 +1446,7 @@ msgstr "Марҳабо!"
 msgid "For the user documentation, visit:"
 msgstr "Барои ҳуҷҷатҳои корбар, аз ин ҷо дидан кунед:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Агар ба шумо дастгирии техникӣ лозим бошад, саволи умумӣ дошта бошед ва ё ақидаи нав барои нармафзор доред:"
 
 msgid ""

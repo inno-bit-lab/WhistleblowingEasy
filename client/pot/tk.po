@@ -1443,9 +1443,7 @@ msgstr "Hoş geldiňiz!"
 msgid "For the user documentation, visit:"
 msgstr "Ulanyjy resminamalary üçin:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Tehniki goldaw gerek bolsa, umumy soraglaryňyz ýa-da programma üpjünçiligi üçin täze pikirleriňiz bar bolsa:"
 
 msgid ""

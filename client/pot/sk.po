@@ -1448,9 +1448,7 @@ msgstr "Vitajte!"
 msgid "For the user documentation, visit:"
 msgstr "Pre používateľskú dokumentáciu navštívte:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Ak potrebujete technickú podporu, máte všeobecné otázky alebo máte nové nápady pre softvér:"
 
 msgid ""

@@ -1448,9 +1448,7 @@ msgstr "Добре дошли!"
 msgid "For the user documentation, visit:"
 msgstr "За потребителска документация, посетете:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Ако се нуждаете от техническа поддръжка, имате въпроси от общ характер или нови идеи за софтуера:"
 
 msgid ""

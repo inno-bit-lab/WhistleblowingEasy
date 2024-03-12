@@ -1447,9 +1447,7 @@ msgstr "Mirë se vini!"
 msgid "For the user documentation, visit:"
 msgstr "Për dokumentim për përdoruesit, vizitoni:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Nëse ju duhet asistencë teknike, keni pyetje të përgjithshme, ose keni ide të reja për software-in:"
 
 msgid ""

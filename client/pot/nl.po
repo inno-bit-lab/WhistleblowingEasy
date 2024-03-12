@@ -1482,9 +1482,7 @@ msgstr "Welkom"
 msgid "For the user documentation, visit:"
 msgstr "Voor de gebruikershandleiding, bezoek:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Indien u technische ondersteuning nodig heeft, algemene vragen of nieuwe ideeën heeft betreffende de software:"
 
 msgid ""

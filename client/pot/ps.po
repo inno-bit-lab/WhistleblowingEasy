@@ -1438,9 +1438,7 @@ msgstr "ښه راغلاست!"
 msgid "For the user documentation, visit:"
 msgstr "د کارن د مستند کېدو لپاره دلته ورشئ:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "که چیرته تخنیکي مرستې ته اړتیا لرئ، عمومي پوښتنې لرئ یا د سافټ ویر لپاره نوې نظریې لرئ:"
 
 msgid ""

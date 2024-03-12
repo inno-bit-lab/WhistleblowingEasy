@@ -1438,9 +1438,7 @@ msgstr "მოგესალმებით!"
 msgid "For the user documentation, visit:"
 msgstr "მომხმარებლის დოკუმენტაციისთვის, ეწვიეთ:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "თუ გჭირდებათ ტექნიკური მხარდაჭერა, გაქვთ ზოგადი კითხვები ან ახალი იდეები პროგრამულ უზრუნველყოფასთან დაკავშირებით:"
 
 msgid ""

@@ -1439,9 +1439,7 @@ msgstr "Кош келиңиз!"
 msgid "For the user documentation, visit:"
 msgstr "Колдонуучунун документтери үчүн төмөнкүгө кириңиз:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Эгерде сиз техникалык колдоого муктаж болсоңуз, жалпы сурооңуз болсо же программалык жабдыктар боюнча жаңы идеяңыз болсо:"
 
 msgid ""

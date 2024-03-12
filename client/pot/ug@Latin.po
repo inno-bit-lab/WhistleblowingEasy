@@ -1438,9 +1438,7 @@ msgstr "Xosh kepsiz!"
 msgid "For the user documentation, visit:"
 msgstr "Ishletküchi höjjiti üchün bu yerge qarang:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Eger téxnikiliq qollashqa éhtiyajliq bolsingiz , adettiki so’alliringiz bolsa yaki yumshaq détalgha munasiwetlik yéngi pikirliringiz bolsa:"
 
 msgid ""

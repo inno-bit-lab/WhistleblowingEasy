@@ -1439,9 +1439,7 @@ msgstr "བྱོན་པ་ལེགས།"
 msgid "For the user documentation, visit:"
 msgstr "སྤྱོད་པ་པོའི་ཡིག་ཆ་དེབ་སྐྱེལ་ཆེད། འདིར་བསྐྱོད།:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "གལ་ཏེ་ཁྱེད་ལ་འཕྲུལ་རིག་རམ་འདེགས་དགོས་པའམ། སྤྱིར་བཏང་དྲི་བ་ཡོད་པ། ཡང་ན། མཉེན་ཆས་ཆེད་བསམ་བློ་གསར་པ་ཡོད་ན།:"
 
 msgid ""

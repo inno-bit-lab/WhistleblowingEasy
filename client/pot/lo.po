@@ -1438,9 +1438,7 @@ msgstr "ຍິນດີຕ້ອນຮັບ!"
 msgid "For the user documentation, visit:"
 msgstr "ສຳລັບເອກະສານຂອງຜູ້ໃຊ້, ໃຫ້ເຂົ້າເບິ່ງ:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "ຖ້າທ່ານຕ້ອງການການຊ່ວຍເຫຼືອດ້ານເຕັກນິກ, ມີຄຳຖາມທົ່ວໄປ ຫຼື ມີແນວຄວາມຄິດໃໝ່ໆສຳລັບຊອບແວ:"
 
 msgid ""

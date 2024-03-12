@@ -1461,9 +1461,7 @@ msgstr "Välkommen!"
 msgid "For the user documentation, visit:"
 msgstr "För att hitta användardokumentation, gå in på sidan:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Om du behöver tekniskt stöd, har allmänna frågor eller nya idéer om mjukvaran, kontakta:"
 
 msgid ""

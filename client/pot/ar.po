@@ -1487,9 +1487,7 @@ msgstr "مرحبا!"
 msgid "For the user documentation, visit:"
 msgstr "للاطلاع على وثائق المستخدم، قم بزيارة:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "إذا كنت بحاجة إلى الدعم التقني أو لديك أسئلة عامة أو أفكار جديدة للبرنامج:"
 
 msgid ""

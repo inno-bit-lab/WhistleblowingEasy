@@ -1453,9 +1453,7 @@ msgstr "Chào mừng bạn!"
 msgid "For the user documentation, visit:"
 msgstr "Vào trang sau đây để xem cẩm nang sử dụng"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Nếu bạn cần hỗ trợ kỹ thuật, có câu hỏi chung hoặc có ý tưởng mới cho phần mềm:"
 
 msgid ""

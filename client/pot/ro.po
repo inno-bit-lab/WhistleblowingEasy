@@ -1454,9 +1454,7 @@ msgstr "Bine ai venit!"
 msgid "For the user documentation, visit:"
 msgstr "Pentru a vedea documentația necesară utilizatorilor, mergi la:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Dacă ai nevoie de suport tehnic, ai întrebări generale sau ai idei pentru software:"
 
 msgid ""

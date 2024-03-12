@@ -1443,9 +1443,7 @@ msgstr "ようこそ!"
 msgid "For the user documentation, visit:"
 msgstr "ユーザードキュメントはこちら:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "技術サポートが必要な場合、一般的な質問がある場合、またはソフトウェアの新しいアイデアをお持ちの場合:"
 
 msgid ""

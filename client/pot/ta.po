@@ -1440,9 +1440,7 @@ msgstr "வரவேற்பு!"
 msgid "For the user documentation, visit:"
 msgstr "பயனர் ஆவணங்களுக்கான, வருகை:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "உங்களுக்கு தொழில்நுட்ப ஆதரவு தேவைப்பட்டால், பொதுவான கேள்விகளைக் கொண்டிருங்கள், அல்லது மென்பொருளுக்கு புதிய யோசனைகள் இருக்க வேண்டும்:"
 
 msgid ""

@@ -1439,9 +1439,7 @@ msgstr "እንኳን ደህና መጡ！"
 msgid "For the user documentation, visit:"
 msgstr "ለተጠቃሚ ሰነድ የሚከተለውን ጎብኝ"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "ውያዊ ድጋፍ ከፈለጉ፣ ማንኛውም ጥያቄ ካሎት ወይም አዲስ ሃሳብ \n\nለሶፍትዌር ካሎት"
 
 msgid ""

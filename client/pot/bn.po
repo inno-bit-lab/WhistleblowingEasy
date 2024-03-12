@@ -1445,9 +1445,7 @@ msgstr "স্বাগতম!"
 msgid "For the user documentation, visit:"
 msgstr "ব্যবহারকারীর ডকুমেন্টেশনের জন্য, এখানে যান:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "আপনার যদি প্রযুক্তিগত সহায়তার প্রয়োজন হয়, সাধারণ প্রশ্ন থাকে বা সফ্টওয়্যারটির জন্য নতুন ধারণা পেয়ে থাকেনঃ"
 
 msgid ""

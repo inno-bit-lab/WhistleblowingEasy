@@ -1448,9 +1448,7 @@ msgstr "Tervetuloa!"
 msgid "For the user documentation, visit:"
 msgstr "Käyttöohjeet löydät osoitteesta: "
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Jos tarvitset teknistä tukea, sinulla on yleisiä kysymyksiä tai sinulla on uusia ideoita ohjelmistoon:"
 
 msgid ""

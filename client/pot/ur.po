@@ -1450,9 +1450,7 @@ msgstr "خوش آمدید!"
 msgid "For the user documentation, visit:"
 msgstr "صارف کی دستاویزات کے لیے، ملاحظہ کریں: "
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "اگر آپ کو تکنیکی مدد کی ضرورت ہے، عام سوالات ہیں، یا سافٹ ویئر کے لیے نئی تجاویز ہیں: "
 
 msgid ""

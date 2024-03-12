@@ -1456,9 +1456,7 @@ msgstr "Üdvözöljük!"
 msgid "For the user documentation, visit:"
 msgstr "A felhasználói útmutatóért látogasson ide:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Ha technikai támogatásra van szüksége, általános kérdése, vagy ötletei vannak a szoftverhez:"
 
 msgid ""

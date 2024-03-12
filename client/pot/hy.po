@@ -1440,9 +1440,7 @@ msgstr "Բարի գալուստ"
 msgid "For the user documentation, visit:"
 msgstr "Օգտատերերին առնչվող դոկումենտացիայի համար այցելեք՝"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Եթե ​​ձեզ անհրաժեշտ է տեխնիկական աջակցություն, ունեք ընդհանուր հարցեր կամ ծրագրային ապահովումը բարելավելու նոր գաղափարներ."
 
 msgid ""

@@ -1439,9 +1439,7 @@ msgstr "환영합니다!"
 msgid "For the user documentation, visit:"
 msgstr "사용자 문서는 다음을 방문하십시오."
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "기술 지원이 필요하거나, 일반 질문이 있거나 소프트웨어에 대한 새 아이디어가 있다면 다음으로 연락해 주십시오."
 
 msgid ""

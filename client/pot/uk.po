@@ -1459,9 +1459,7 @@ msgstr "Ласкаво просимо!"
 msgid "For the user documentation, visit:"
 msgstr "З документацією користувача можна ознайомитися на сторінці:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Якщо вам необхідна технічна підтримка, у вас виникли загальні питання, або є пропозиції для удосконалення програмного забезпечення:"
 
 msgid ""

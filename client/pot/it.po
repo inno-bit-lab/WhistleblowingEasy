@@ -1463,10 +1463,8 @@ msgstr "Benvenuto!"
 msgid "For the user documentation, visit:"
 msgstr "Per la documentazione utente visita:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
-msgstr "Se hai bisogno di supporto tecnico, hai domande generiche, o hai nuove idee per il software:"
+msgid "If you need technical support or have general questions, write to us here:"
+msgstr "Se hai bisogno di supporto tecnico o hai domande generali, scrivici qui:"
 
 msgid ""
 "If you want to contribute to software development or report a bug, please "

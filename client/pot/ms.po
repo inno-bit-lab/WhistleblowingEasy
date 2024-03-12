@@ -1438,9 +1438,7 @@ msgstr "Selamat datang!"
 msgid "For the user documentation, visit:"
 msgstr "Untuk dokumentasi pengguna, layari:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Jika anda perlukan sokongan teknikal, mempunyai soalan umum atau mempunyai idea baru untuk perisian:"
 
 msgid ""

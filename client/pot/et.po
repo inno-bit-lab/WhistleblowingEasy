@@ -1439,9 +1439,7 @@ msgstr "Tere tulemast!"
 msgid "For the user documentation, visit:"
 msgstr "Kasutaja dokumendid leiate aadressilt:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Kui vajate tehnilist tuge, teil on üldisi küsimusi või uusi ideid tarkvara arendamiseks:"
 
 msgid ""

@@ -1465,9 +1465,7 @@ msgstr "Hoş geldiniz!"
 msgid "For the user documentation, visit:"
 msgstr "Kullanıcı belgeleri için şuraya bakın:"
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Teknik desteğe gerek duyuyorsanız, genel sorularınız veya uygulama için yeni fikirleriniz varsa: "
 
 msgid ""

@@ -1445,9 +1445,7 @@ msgstr "歡迎！"
 msgid "For the user documentation, visit:"
 msgstr "使用者文檔請到："
 
-msgid ""
-"If you need technical support, have general questions, or have new ideas for"
-" the software:"
+msgid "If you need technical support or have general questions, write to us here:"
 msgstr "若需要技術支援、有使用問題或是對此軟體有什麼新想法："
 
 msgid ""
