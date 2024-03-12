@@ -1442,9 +1442,7 @@ msgstr "ለተጠቃሚ ሰነድ የሚከተለውን ጎብኝ"
 msgid "If you need technical support or have general questions, write to us here:"
 msgstr "ውያዊ ድጋፍ ከፈለጉ፣ ማንኛውም ጥያቄ ካሎት ወይም አዲስ ሃሳብ \n\nለሶፍትዌር ካሎት"
 
-msgid ""
-"If you want to contribute to software development or report a bug, please "
-"open an issue in our ticketing system:"
+msgid "For a detailed overview, click here and watch the video guide:"
 msgstr "ለሶፍትዌር ግንባታ አስተዋጽኦ ማደረግ ከፈለጉ ወይም የሶፍትዌር ሳንካ መጠቆም ከፈለጉ\n\nበትኬት ስርኣታችን ገብተው ሁኔታ ሙሉ"
 
 msgid "Join our chat:"

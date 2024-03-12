@@ -1451,9 +1451,7 @@ msgstr "Käyttöohjeet löydät osoitteesta: "
 msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Jos tarvitset teknistä tukea, sinulla on yleisiä kysymyksiä tai sinulla on uusia ideoita ohjelmistoon:"
 
-msgid ""
-"If you want to contribute to software development or report a bug, please "
-"open an issue in our ticketing system:"
+msgid "For a detailed overview, click here and watch the video guide:"
 msgstr "Jos haluat osallistua ohjelmistokehitykseen tai ilmoittaa virheestä, avaa ongelma tikettijärjestelmässämme:"
 
 msgid "Join our chat:"

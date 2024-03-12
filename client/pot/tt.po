@@ -1441,9 +1441,7 @@ msgstr "Кулланучының документлары өчен монда к
 msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Әгәр сезгә техник ярдәм кирәк булса, гомуми сорауларыгыз яисә программа өчен яңа идеяләрегез булса:"
 
-msgid ""
-"If you want to contribute to software development or report a bug, please "
-"open an issue in our ticketing system:"
+msgid "For a detailed overview, click here and watch the video guide:"
 msgstr "Әгәр сез программа үсешенә өлеш кертергә яки хата турында хәбәр итәргә теләсәгез, зинһар, безнең ярдәм системасына сорау җибәрегез:"
 
 msgid "Join our chat:"

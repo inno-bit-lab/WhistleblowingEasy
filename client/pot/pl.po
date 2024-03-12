@@ -1461,9 +1461,7 @@ msgstr "Dokumentacja użytkownika:"
 msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Jak potrzebujesz wsparcia technicznego, masz ogólne pytania bądź pomysły:"
 
-msgid ""
-"If you want to contribute to software development or report a bug, please "
-"open an issue in our ticketing system:"
+msgid "For a detailed overview, click here and watch the video guide:"
 msgstr "Jeśli chcesz pomóc w rozwoju oprogramowania lub zgłosić błąd, otwórz zgłoszenie w naszym systemie:"
 
 msgid "Join our chat:"

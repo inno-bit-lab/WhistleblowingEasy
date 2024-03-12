@@ -1451,9 +1451,7 @@ msgstr "Pre používateľskú dokumentáciu navštívte:"
 msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Ak potrebujete technickú podporu, máte všeobecné otázky alebo máte nové nápady pre softvér:"
 
-msgid ""
-"If you want to contribute to software development or report a bug, please "
-"open an issue in our ticketing system:"
+msgid "For a detailed overview, click here and watch the video guide:"
 msgstr "Ak chcete prispieť k vývoju softvéru alebo nahlásiť chybu, založte, prosím, hlásenie v našom ticket systému:"
 
 msgid "Join our chat:"

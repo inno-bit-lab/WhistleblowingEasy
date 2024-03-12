@@ -1450,9 +1450,7 @@ msgstr "Për dokumentim për përdoruesit, vizitoni:"
 msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Nëse ju duhet asistencë teknike, keni pyetje të përgjithshme, ose keni ide të reja për software-in:"
 
-msgid ""
-"If you want to contribute to software development or report a bug, please "
-"open an issue in our ticketing system:"
+msgid "For a detailed overview, click here and watch the video guide:"
 msgstr "Nëse doni të jepni ndihmesë në zhvillimin e software-it, ose të njoftoni një të metë, ju lutemi, hapni një çështje te sistemi ynë për të tilla:"
 
 msgid "Join our chat:"

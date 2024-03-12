@@ -1441,9 +1441,7 @@ msgstr "Kwa nyaraka za mtumiaji, tembelea:"
 msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Ikiwa unahitaji msaada wa kiufundi, ukiwa na maswali ya jumla, au uwe na maoni mapya juu ya\n\nprogramu:"
 
-msgid ""
-"If you want to contribute to software development or report a bug, please "
-"open an issue in our ticketing system:"
+msgid "For a detailed overview, click here and watch the video guide:"
 msgstr "Ikiwa unataka kuchangia uendelezaji wa programu au kuripoti kuhusu virusi katika programu, tafadhali\n\nfungua suala katika mfumo wetu wa tiketi:"
 
 msgid "Join our chat:"

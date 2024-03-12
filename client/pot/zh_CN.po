@@ -1462,9 +1462,7 @@ msgstr "查看用户文档，请访问："
 msgid "If you need technical support or have general questions, write to us here:"
 msgstr "对于有关软件的技术支持、常规问题或新想法，可访问："
 
-msgid ""
-"If you want to contribute to software development or report a bug, please "
-"open an issue in our ticketing system:"
+msgid "For a detailed overview, click here and watch the video guide:"
 msgstr "如果想要参与软件开发或提交程序漏洞，请在我们的票证系统中新建一个问题条目："
 
 msgid "Join our chat:"

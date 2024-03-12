@@ -1485,9 +1485,7 @@ msgstr "Voor de gebruikershandleiding, bezoek:"
 msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Indien u technische ondersteuning nodig heeft, algemene vragen of nieuwe ideeën heeft betreffende de software:"
 
-msgid ""
-"If you want to contribute to software development or report a bug, please "
-"open an issue in our ticketing system:"
+msgid "For a detailed overview, click here and watch the video guide:"
 msgstr "Indien u een bijdrage wilt leveren aan het ontwikkelen van de software of een fout wilt rapporteren kunt u dit doen door een nieuw ticket te openen in ons ticketsysteem:"
 
 msgid "Join our chat:"

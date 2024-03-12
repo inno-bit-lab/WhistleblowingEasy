@@ -1442,9 +1442,7 @@ msgstr "Kasutaja dokumendid leiate aadressilt:"
 msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Kui vajate tehnilist tuge, teil on üldisi küsimusi või uusi ideid tarkvara arendamiseks:"
 
-msgid ""
-"If you want to contribute to software development or report a bug, please "
-"open an issue in our ticketing system:"
+msgid "For a detailed overview, click here and watch the video guide:"
 msgstr "Kui soovite kaasa aidata tarkvara arendamisele või teatada programmiveast, avage meie piletisüsteemis probleemikirje:"
 
 msgid "Join our chat:"

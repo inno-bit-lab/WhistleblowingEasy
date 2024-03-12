@@ -1448,9 +1448,7 @@ msgstr "Sənədləşməyə baxmaq üçün:"
 msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Texniki dəstəyə ehtiyacınız , ümumi suallarınız və ya proqramçün yeni ideyalarınız varsa: "
 
-msgid ""
-"If you want to contribute to software development or report a bug, please "
-"open an issue in our ticketing system:"
+msgid "For a detailed overview, click here and watch the video guide:"
 msgstr "Proqram təminatına töhvə, yaxud problem haqda məlumat vermək istəyirsinizsə, bilet sistemində məsələ qaldırın: "
 
 msgid "Join our chat:"

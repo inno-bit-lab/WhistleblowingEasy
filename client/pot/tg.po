@@ -1449,9 +1449,7 @@ msgstr "Барои ҳуҷҷатҳои корбар, аз ин ҷо дидан к
 msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Агар ба шумо дастгирии техникӣ лозим бошад, саволи умумӣ дошта бошед ва ё ақидаи нав барои нармафзор доред:"
 
-msgid ""
-"If you want to contribute to software development or report a bug, please "
-"open an issue in our ticketing system:"
+msgid "For a detailed overview, click here and watch the video guide:"
 msgstr "Агар шумо хоҳед, ки дар таҳияи нармафзор саҳм гузоред ва ё оиди камбудие хабар диҳед, лутфан дар системаи мо парванда кушоед:"
 
 msgid "Join our chat:"

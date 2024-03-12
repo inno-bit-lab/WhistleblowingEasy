@@ -1443,9 +1443,7 @@ msgstr "查看使用者文檔，請瀏覽："
 msgid "If you need technical support or have general questions, write to us here:"
 msgstr "如您需要技術支援、有普通問題、或者對此軟件有新的建議，請查看討論區："
 
-msgid ""
-"If you want to contribute to software development or report a bug, please "
-"open an issue in our ticketing system:"
+msgid "For a detailed overview, click here and watch the video guide:"
 msgstr "如您想幫助軟件開發、或想通報軟件問題，請到此建立一個新問題："
 
 msgid "Join our chat:"

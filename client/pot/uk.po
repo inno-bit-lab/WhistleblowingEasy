@@ -1462,9 +1462,7 @@ msgstr "З документацією користувача можна озна
 msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Якщо вам необхідна технічна підтримка, у вас виникли загальні питання, або є пропозиції для удосконалення програмного забезпечення:"
 
-msgid ""
-"If you want to contribute to software development or report a bug, please "
-"open an issue in our ticketing system:"
+msgid "For a detailed overview, click here and watch the video guide:"
 msgstr "Якщо ви хочете брати участь в розробці програмного забезпечення або повідомити про помилку, будь ласка, надішліть запит у нашу систему підтримки:"
 
 msgid "Join our chat:"

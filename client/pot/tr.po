@@ -1468,9 +1468,7 @@ msgstr "Kullanıcı belgeleri için şuraya bakın:"
 msgid "If you need technical support or have general questions, write to us here:"
 msgstr "Teknik desteğe gerek duyuyorsanız, genel sorularınız veya uygulama için yeni fikirleriniz varsa: "
 
-msgid ""
-"If you want to contribute to software development or report a bug, please "
-"open an issue in our ticketing system:"
+msgid "For a detailed overview, click here and watch the video guide:"
 msgstr "Yazılımın geliştirilmesine katkı sağlamak veya sorun bildirmek istiyorsanız, lütfen sorun bildirme sistemimizi kullanın:"
 
 msgid "Join our chat:"
