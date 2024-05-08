@@ -101,7 +101,7 @@ msgstr "Trình hướng dẫn của hệ thống"
 msgid "Label the report"
 msgstr "Dán nhãn báo cáo"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Hoãn ngày hết hạn"
 
 msgid "Select all"
@@ -660,9 +660,6 @@ msgstr "Số lượng người nhận được chọn tối đa là:"
 msgid "Show recipients in alphabetical order"
 msgstr "Hiển thị người nhận theo thứ tự ABC"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Cho phép người tố giác thêm tập tin đính kèm"
-
 msgid "Additional questionnaire"
 msgstr "Bảng câu hỏi bổ sung"
 
@@ -1174,7 +1171,7 @@ msgstr "Được chọn trước"
 msgid "Allow the recipient to delete reports"
 msgstr "Cho phép người nhận xóa báo cáo"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Cho phép người nhận hoãn thời điểm hết hạn của báo cáo"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1349,6 +1346,9 @@ msgstr "Thông tin chỉ có thể truy cập được qua mạng Tor"
 msgid "The upload request exceeds the size limit"
 msgstr "Tập tin tải lên vượt quá giới hạn về kích thước"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1416,9 +1416,6 @@ msgstr "Người nhận đã yêu cầu bạn điền vào một bảng câu h�
 
 msgid "Fill the additional questionnaire"
 msgstr "Điền thêm các câu hỏi bổ sung"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Cho phép người tố giác góp ý kiến"
 
 msgid "From:"
 msgstr "Từ:"

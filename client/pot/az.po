@@ -93,7 +93,7 @@ msgstr "Proqram quraşdırması"
 msgid "Label the report"
 msgstr "Hesabatı etiketlə"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Son istifadə tarixini dəyiş"
 
 msgid "Select all"
@@ -652,9 +652,6 @@ msgstr "Seçilən alıcıların maksimum sayı:"
 msgid "Show recipients in alphabetical order"
 msgstr "Alıcıları əlifba sırası ilə göstərin"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "İnformasiya ötürənin hesabata əlavələr etməsinə icazə verin"
-
 msgid "Additional questionnaire"
 msgstr "Əlavə sorğu"
 
@@ -1166,7 +1163,7 @@ msgstr "Zorla seçilmiş"
 msgid "Allow the recipient to delete reports"
 msgstr "Alıcının hesabatları silməsinə icazə verin"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Alıcının hesabatların son tarixini dəyişməsinə icazə verin"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1341,6 +1338,9 @@ msgstr "Resursa giriş yalnız Tor şəbəkəsi vasitəsiylə mümkündür"
 msgid "The upload request exceeds the size limit"
 msgstr "Yükləmə tələbi ölçü həddini aşır"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1408,9 +1408,6 @@ msgstr "Alıcılar əlavə sorğu anketini doldurmağınızı istəyirlər."
 
 msgid "Fill the additional questionnaire"
 msgstr "Əlavə sorğu anketini doldurun"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "İnformasiya ötürənlərin şərh yazmasına icazə verin"
 
 msgid "From:"
 msgstr "Etibarən:"

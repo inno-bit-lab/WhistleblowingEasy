@@ -106,7 +106,7 @@ msgstr "Kreator platformy"
 msgid "Label the report"
 msgstr "Dodaj opis zgłoszenia"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Zmień datę wygaśnięcia"
 
 msgid "Select all"
@@ -665,9 +665,6 @@ msgstr "Maksymalna liczna dostępnych odbiorców:"
 msgid "Show recipients in alphabetical order"
 msgstr "Pokaż odbiorców w porządku alfabetycznym"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Sygnaliści mogą dodawać załączniki"
-
 msgid "Additional questionnaire"
 msgstr "Dodatkowa ankieta"
 
@@ -1179,7 +1176,7 @@ msgstr "Wybrane w wymuszony sposób"
 msgid "Allow the recipient to delete reports"
 msgstr "Odbiorcy mogą usuwać zgłoszenia"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Odbiorcy mogą zmieniać datę wygaśnięcia zgłoszenia"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1354,6 +1351,9 @@ msgstr "Dostęp do zasobów możliwy tylko poprzez sieć Tor."
 msgid "The upload request exceeds the size limit"
 msgstr "Żądanie wysłania przekracza limit rozmiaru"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1421,9 +1421,6 @@ msgstr "Odbiorcy proszą cię byś wypełnił/a dodatkową ankietę."
 
 msgid "Fill the additional questionnaire"
 msgstr "Wypełnij dodatkową ankietę"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Sygnalista może pisać komentarze"
 
 msgid "From:"
 msgstr "Od:"

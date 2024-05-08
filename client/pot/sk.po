@@ -96,7 +96,7 @@ msgstr "Sprievodca platformou"
 msgid "Label the report"
 msgstr "Označte oznámenie štítkom"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Odložiť vypršanie platnosti"
 
 msgid "Select all"
@@ -655,9 +655,6 @@ msgstr "Maximálny počet voliteľných príjemcov"
 msgid "Show recipients in alphabetical order"
 msgstr "Zobraziť príjemcov v abecednom poradí"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Povoliť oznamovateľovi pripojiť prílohy k podaniu"
-
 msgid "Additional questionnaire"
 msgstr "Dodatočný dotazník"
 
@@ -1169,7 +1166,7 @@ msgstr "Nastavené administrátorom"
 msgid "Allow the recipient to delete reports"
 msgstr "Povoliť príjemcom zmazať podania"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Umožniť príjemcovi odložiť dátum exspirácie podania"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1344,6 +1341,9 @@ msgstr "Zdroj je prístupný iba v rámci siete Tor"
 msgid "The upload request exceeds the size limit"
 msgstr "Žiadosť na upload prekročila veľkostné limity"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1411,9 +1411,6 @@ msgstr "Príjemcovia požadujú, aby ste vyplnili dodatočný dotazník."
 
 msgid "Fill the additional questionnaire"
 msgstr "Vyplňte dodatočný dotazník"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Povoliť oznamovateľovi písať komentáre"
 
 msgid "From:"
 msgstr "Od:"

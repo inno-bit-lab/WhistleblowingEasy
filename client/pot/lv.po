@@ -91,7 +91,7 @@ msgstr "Platformas vednis"
 msgid "Label the report"
 msgstr "Marķēt ziņojumu"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Atlikt termiņa beigas"
 
 msgid "Select all"
@@ -650,9 +650,6 @@ msgstr "Maksimālais atlasāmo saņēmēju skaits:"
 msgid "Show recipients in alphabetical order"
 msgstr "Rādīt saņēmējus alfabētiskā secībā"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Atļaut trauksmes cēlējam pievienot pielikumus"
-
 msgid "Additional questionnaire"
 msgstr "Papildu aptauja"
 
@@ -1164,7 +1161,7 @@ msgstr "Piespiedu kārtā atlasīts"
 msgid "Allow the recipient to delete reports"
 msgstr "Atļaut adresātam dzēst ziņojumus"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Atļaut adresātam atlikt ziņojuma termiņu"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1339,6 +1336,9 @@ msgstr "Saturam var piekļūt tikai Tor tīklā"
 msgid "The upload request exceeds the size limit"
 msgstr "Augšupielādes pieprasījums pārsniedz maksimālo pieļaujamo izmēru"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1406,9 +1406,6 @@ msgstr "Saņēmēji ir lūguši jūs aizpildīt papildu aptauju."
 
 msgid "Fill the additional questionnaire"
 msgstr "Aizpildiet papildu aptauju"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Atļaut trauksmes cēlējam rakstīt komentārus"
 
 msgid "From:"
 msgstr "No:"

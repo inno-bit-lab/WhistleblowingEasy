@@ -93,7 +93,7 @@ msgstr "প্লাটফর্ম উইজার্ড"
 msgid "Label the report"
 msgstr "রিপোর্টটিকে চিহ্নিত করুন"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "মেয়াদ উত্তীর্ণের তারিখ স্থগিত করুন"
 
 msgid "Select all"
@@ -652,9 +652,6 @@ msgstr "নির্বাচনযোগ্য প্রাপকদের স�
 msgid "Show recipients in alphabetical order"
 msgstr "প্রাপকদের বর্ণানুক্রমিক ক্রমে দেখান"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "হুইসেল ব্লোয়ারকে প্রতিবেদনে সংযুক্তি যুক্ত করতে দিন"
-
 msgid "Additional questionnaire"
 msgstr "অতিরিক্ত প্রশ্নাবলী"
 
@@ -1166,7 +1163,7 @@ msgstr "জোরপূর্বক নির্বাচিত"
 msgid "Allow the recipient to delete reports"
 msgstr "প্রাপককে প্রতিবেদনগুলি মুছে ফেলার অনুমতি দিন"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "প্রাপককে রিপোর্টের মেয়াদ শেষ হওয়ার তারিখ স্থগিত করার অনুমতি দিন"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1341,6 +1338,9 @@ msgstr "কেবলমাত্র টর নেটওয়ার্কের 
 msgid "The upload request exceeds the size limit"
 msgstr "আপলোডের অনুরোধটি আকারের সীমা অতিক্রম করেছে"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1408,9 +1408,6 @@ msgstr "প্রাপকরা আপনাকে একটি অতিরি
 
 msgid "Fill the additional questionnaire"
 msgstr "অতিরিক্ত প্রশ্নাবলী পূরণ করুন"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "হুইসেল ব্লোয়ারকে মন্তব্য লেখার অনুমতি দিন"
 
 msgid "From:"
 msgstr "থেকে:"

@@ -87,7 +87,7 @@ msgstr "Платформа оҫтаһы"
 msgid "Label the report"
 msgstr "Материалдар бирелешен билдәләү"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Мөҙҙәт тамамланышын кисектереү"
 
 msgid "Select all"
@@ -646,9 +646,6 @@ msgstr "Ҡабул итеүселәрҙең максималь һаны:"
 msgid "Show recipients in alphabetical order"
 msgstr "Ҡабул итеүселәрҙе алфавит тәртибендә бүлеү"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Информаторға ебәрелгән документарға ҡушымта өҫтәргә рөхсәт итергә"
-
 msgid "Additional questionnaire"
 msgstr "Өҫтәлмә һораулама"
 
@@ -1160,7 +1157,7 @@ msgstr "Үтенес буйынса һайланды"
 msgid "Allow the recipient to delete reports"
 msgstr "Ҡабул итеүсегә отчеттарҙы юйыу рөхсәте биреү"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Ҡабул итеүсегә отчеттарҙың мөҙҙәт ғәмәле сығыуын кисектереүгә рөхсәт бирергә"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1335,6 +1332,9 @@ msgstr "Ресурсҡа инеү мөмкинлеге тик Tor селтәре
 msgid "The upload request exceeds the size limit"
 msgstr "Серверға файлды тейәү үтенесе ҡуйылған лимитты үтә"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1402,9 +1402,6 @@ msgstr "Ҡабул итеүселәр һеҙҙән өҫтәлмә һораула
 
 msgid "Fill the additional questionnaire"
 msgstr "Өҫтәлмә һораулама тултырыу"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Информаторға комментарийҙар өҫтәргә рөхсәт итергә"
 
 msgid "From:"
 msgstr "Ошонан"

@@ -130,7 +130,7 @@ msgstr "Platformwizard"
 msgid "Label the report"
 msgstr "Label de inzending"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Vervaldatum uitstellen"
 
 msgid "Select all"
@@ -689,9 +689,6 @@ msgstr "Maximaal aantal selecteerbare ontvangers:"
 msgid "Show recipients in alphabetical order"
 msgstr "Toon ontvangers in alfabetische volgorde"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "De klokkenluider toestaan bestanden toe te voegen aan een inzending"
-
 msgid "Additional questionnaire"
 msgstr "Toegevoegde vragenformulier"
 
@@ -1203,7 +1200,7 @@ msgstr "Actief geselecteerd"
 msgid "Allow the recipient to delete reports"
 msgstr "Sta ontvangers toe tips te verwijderen"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "De ontvanger mag de einddatum van de inzending uitstellen"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1378,6 +1375,9 @@ msgstr "Bron is alleen toegankelijk binnen het Tor-netwerk"
 msgid "The upload request exceeds the size limit"
 msgstr "De uploadaanvraag overstijgt de MB limiet"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1445,9 +1445,6 @@ msgstr "Ontvangers hebben je verzocht dat je een additionele vragenlijst invult.
 
 msgid "Fill the additional questionnaire"
 msgstr "De toegevoegde vragenlijst invullen"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "De klokkenluider toestaan reacties achter te laten"
 
 msgid "From:"
 msgstr "Van:"

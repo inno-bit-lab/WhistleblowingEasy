@@ -4,8 +4,8 @@
 # Andreas Jantz, 2023
 # b33a4006134bb6ee62b30fc0fac5cec6, 2013,2016
 # Charles Peltier <charles@cl-info.fr>, 2015
-# Ettore Atalan <atalanttore@googlemail.com>, 2014-2023
-# Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>, 2014-2018,2020-2022
+# Ettore Atalan <atalanttore@googlemail.com>, 2014-2024
+# Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>, 2014-2018,2020-2022,2024
 # b33a4006134bb6ee62b30fc0fac5cec6, 2013,2016
 # b33a4006134bb6ee62b30fc0fac5cec6, 2013,2016
 # Jack Pudding, 2015
@@ -54,7 +54,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
 "PO-Revision-Date: 2013-05-29 17:59+0000\n"
-"Last-Translator: Andreas Jantz, 2023\n"
+"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>, 2014-2024\n"
 "Language-Team: German (http://app.transifex.com/otf/globaleaks/language/de/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -134,8 +134,8 @@ msgstr "Plattformassistent"
 msgid "Label the report"
 msgstr "Den Bericht bezeichnen"
 
-msgid "Postpone the expiration date"
-msgstr "Ablaufdatum hinausschieben"
+msgid "Edit the expiration date"
+msgstr "Ablaufdatum bearbeiten"
 
 msgid "Select all"
 msgstr "Alle auswählen"
@@ -547,7 +547,7 @@ msgid "Me only"
 msgstr "Nur ich"
 
 msgid "Returning whistleblowers"
-msgstr ""
+msgstr "Zurückkehrende Hinweisgeber"
 
 msgid "Anonymity"
 msgstr "Anonymität"
@@ -559,7 +559,7 @@ msgid "Subscribed"
 msgstr "Abonniert"
 
 msgid "Initially anonymous"
-msgstr ""
+msgstr "Anfänglich anonym"
 
 msgid "Tor"
 msgstr "Tor"
@@ -574,10 +574,10 @@ msgid "Mobile"
 msgstr "Mobil"
 
 msgid "Act on behalf of a whistleblower"
-msgstr ""
+msgstr "Im Auftrag eines Hinweisgebers handeln"
 
 msgid "The link will expire in 7 days."
-msgstr ""
+msgstr "Dieser Link wird in 7 Tagen ablaufen."
 
 msgid "File a report"
 msgstr "Einen Bericht einreichen"
@@ -692,9 +692,6 @@ msgstr "Maximale Anzahl auswählbarer Empfänger: "
 
 msgid "Show recipients in alphabetical order"
 msgstr "Empfänger in alphabetischer Reihenfolge anzeigen"
-
-msgid "Allow the whistleblower to add attachments"
-msgstr "Dem Hinweisgeber das Hinzufügen von Anhängen zum Bericht erlauben"
 
 msgid "Additional questionnaire"
 msgstr "Zusätzlicher Fragebogen"
@@ -1207,7 +1204,7 @@ msgstr "Zwingend ausgewählt"
 msgid "Allow the recipient to delete reports"
 msgstr "Empfängern das Löschen von Hinweisen erlauben"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Empfängern das Hinausschieben des Berichtablaufdatums erlauben"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1303,7 +1300,7 @@ msgid "Attention"
 msgstr "Achtung"
 
 msgid "For security reasons the code needs to be changed."
-msgstr ""
+msgstr "Aus Sicherheitsgründen muss der Code geändert werden."
 
 msgid "Enter a name for the copy"
 msgstr "Geben Sie einen Namen für die Kopie ein"
@@ -1312,10 +1309,10 @@ msgid "Mask"
 msgstr "Maskieren "
 
 msgid "Unselect"
-msgstr ""
+msgstr "Abwählen"
 
 msgid "Reopen"
-msgstr ""
+msgstr "Erneut öffnen"
 
 msgid "Request support"
 msgstr "Unterstützung anfordern"
@@ -1381,6 +1378,9 @@ msgstr "Ressource kann ausschließlich über das Tor-Netzwerk aufgerufen werden"
 
 msgid "The upload request exceeds the size limit"
 msgstr "Der Upload überschreitet das eingestellte MB Limit."
+
+msgid "A user with this username already exists"
+msgstr "Ein Benutzer mit diesem Benutzernamen existiert bereits"
 
 msgid "You are operating on behalf of a whistleblower."
 msgstr "Sie handeln im Auftrag eines Hinweisgebers."
@@ -1449,9 +1449,6 @@ msgstr "Empfänger haben Sie gebeten, einen zusätzlichen Fragebogen auszufülle
 
 msgid "Fill the additional questionnaire"
 msgstr "Den zusätzlichen Fragebogen ausfüllen"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Dem Hinweisgeber das Schreiben von Kommentaren erlauben"
 
 msgid "From:"
 msgstr "Von:"

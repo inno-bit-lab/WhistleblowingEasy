@@ -88,7 +88,7 @@ msgstr "平台設定精靈"
 msgid "Label the report"
 msgstr "標籤此報告"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "延遲到期日"
 
 msgid "Select all"
@@ -647,9 +647,6 @@ msgstr "可選接收者上限："
 msgid "Show recipients in alphabetical order"
 msgstr "以字母順序顯示接收者名單"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "吹哨者可在提交報告時新增附件"
-
 msgid "Additional questionnaire"
 msgstr "附加問卷"
 
@@ -1161,7 +1158,7 @@ msgstr "強制選擇"
 msgid "Allow the recipient to delete reports"
 msgstr "允許此接收者刪除報告"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "允許此接收者延遲報告到期日"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1336,6 +1333,9 @@ msgstr "資源僅能透過 Tor 網路讀取"
 msgid "The upload request exceeds the size limit"
 msgstr "上傳請求超出檔案大小上限"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1403,9 +1403,6 @@ msgstr "接收者想請您填寫一份附加問卷。"
 
 msgid "Fill the additional questionnaire"
 msgstr "填寫附加問卷"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "允許此吹哨者撰寫註釋"
 
 msgid "From:"
 msgstr "寄件人："

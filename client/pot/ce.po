@@ -88,7 +88,7 @@ msgstr "Платформин пхьар"
 msgid "Label the report"
 msgstr "Орзана тIе билгало хIоттае"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Чекхдаларан хан дlататта"
 
 msgid "Select all"
@@ -647,9 +647,6 @@ msgstr "Харжа мегачу дIаэцархойн лакхара терах�
 msgid "Show recipients in alphabetical order"
 msgstr "ДIаэцархой абатан рогlаллехь гайта"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Iорадаккхархочунна магийта орзана тIе юкъаехкина файлаш тIетоха"
-
 msgid "Additional questionnaire"
 msgstr "ТIеоьшуш долу хеттар"
 
@@ -1161,7 +1158,7 @@ msgstr "Нуьцкъала хаьржина"
 msgid "Allow the recipient to delete reports"
 msgstr "ДIаэцархочунна аьрзнаш дIадайъа бакъо луо"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "ДIаэцархочунна арз чекхдаларан хан дIататта бакъо луо "
 
 msgid "Give this user ability to grant user access to reports"
@@ -1336,6 +1333,9 @@ msgstr "Tor машанехула бен тlекхочийла дац ресур�
 msgid "The upload request exceeds the size limit"
 msgstr "Бараман лаккхарчу тlегlанал тlехдаьлла дIахIотторан дехар"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1403,9 +1403,6 @@ msgstr "ДIаэцархоша дехна хьоьга тIеоьшу хеттар
 
 msgid "Fill the additional questionnaire"
 msgstr "ТIеоьшуш долу хеттар язде"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Iорадаккхархочунна бакъо ло комменташ язъян"
 
 msgid "From:"
 msgstr "Хьаьнгара:"

@@ -23,23 +23,13 @@ class LocalizationEngine(object):
 
     def acquire_multilang_dict(self, obj):
         self._localized_strings = {}
-        for key in self._localized_keys:
-            value = obj[key] if key in obj else ''
-            self._localized_strings[key] = value
+        self._localized_strings = {key: obj.get(key, '') for key in self._localized_keys}
 
     def singlelang_to_multilang_dict(self, obj, language):
-        ret = {}
-
-        for key in self._localized_keys:
-            ret[key] = {language: obj[key]} if key in obj else {language: ''}
-
-        return ret
+        return {key: {language: obj.get(key, '')} for key in self._localized_keys}
 
     def dump_localized_key(self, key, language):
-        if key not in self._localized_strings:
-            return ""
-
-        translated_dict = self._localized_strings[key]
+        translated_dict = self._localized_strings.get(key, "")
 
         if not isinstance(translated_dict, dict):
             return ""
@@ -75,9 +65,7 @@ def get_localized_values(dictionary, obj, keys, language):
     if language is not None:
         dictionary.update({key: mo.dump_localized_key(key, language) for key in keys})
     else:
-        for key in keys:
-            value = mo._localized_strings[key] if key in mo._localized_strings else ''
-            dictionary.update({key: value})
+        dictionary.update({key: mo._localized_strings.get(key, '') for key in keys})
 
     return dictionary
 
@@ -181,7 +169,7 @@ class Model(object):
             if value is not None:
                 if k in self.localized_keys:
                     if language is not None:
-                        ret[k] = value[language] if language in value else ''
+                        ret[k] = value.get(language, '')
                     else:
                         ret[k] = value
 
@@ -219,7 +207,6 @@ class _AuditLog(Model):
     tid = Column(Integer, default=1)
     date = Column(DateTime, default=datetime_now, nullable=False)
     type = Column(UnicodeText(24), default='', nullable=False)
-    severity = Column(Integer, default=0, nullable=False)
     user_id = Column(UnicodeText(36))
     object_id = Column(UnicodeText(36))
     data = Column(JSON)
@@ -326,8 +313,6 @@ class _Context(Model):
     allow_recipients_selection = Column(Boolean, default=False, nullable=False)
     maximum_selectable_receivers = Column(Integer, default=0, nullable=False)
     select_all_receivers = Column(Boolean, default=True, nullable=False)
-    enable_two_way_comments = Column(Boolean, default=True, nullable=False)
-    enable_attachments = Column(Boolean, default=True, nullable=False)
     tip_timetolive = Column(Integer, default=90, nullable=False)
     tip_reminder = Column(Integer, default=0, nullable=False)
     name = Column(JSON, default=dict, nullable=False)
@@ -365,9 +350,7 @@ class _Context(Model):
         'show_context',
         'show_receivers_in_alphabetical_order',
         'show_steps_navigation_interface',
-        'allow_recipients_selection',
-        'enable_two_way_comments',
-        'enable_attachments'
+        'allow_recipients_selection'
     ]
 
     list_keys = ['receivers']
@@ -569,9 +552,7 @@ class _IdentityAccessRequest(Model):
 
     @declared_attr
     def __table_args__(self):
-        return (ForeignKeyConstraint(['internaltip_id'], ['internaltip.id'], ondelete='CASCADE', deferrable=True, initially='DEFERRED'),
-                ForeignKeyConstraint(['request_user_id'], ['user.id'], deferrable=True, initially='DEFERRED'),
-                ForeignKeyConstraint(['reply_user_id'], ['user.id'], deferrable=True, initially='DEFERRED'))
+        return ForeignKeyConstraint(['internaltip_id'], ['internaltip.id'], ondelete='CASCADE', deferrable=True, initially='DEFERRED'),
 
 
 class _IdentityAccessRequestCustodian(Model):
@@ -629,8 +610,6 @@ class _InternalTip(Model):
     score = Column(Integer, default=0, nullable=False)
     expiration_date = Column(DateTime, default=datetime_never, nullable=False)
     reminder_date = Column(DateTime, default=datetime_never, nullable=False)
-    enable_two_way_comments = Column(Boolean, default=True, nullable=False)
-    enable_attachments = Column(Boolean, default=True, nullable=False)
     enable_whistleblower_identity = Column(Boolean, default=False, nullable=False)
     important = Column(Boolean, default=False, nullable=False)
     label = Column(UnicodeText, default='', nullable=False)
@@ -888,12 +867,11 @@ class _Subscriber(Model):
     language = Column(UnicodeText(12), nullable=False)
     name = Column(UnicodeText, nullable=False)
     surname = Column(UnicodeText, nullable=False)
-    role = Column(UnicodeText, default='', nullable=False)
     phone = Column(UnicodeText, default='', nullable=False)
     email = Column(UnicodeText, nullable=False)
     organization_name = Column(UnicodeText, default='', nullable=False)
-    organization_tax_code = Column(UnicodeText, default='', nullable=False)
-    organization_vat_code = Column(UnicodeText, default='', nullable=False)
+    organization_tax_code = Column(UnicodeText, unique=True, nullable=True)
+    organization_vat_code = Column(UnicodeText, unique=True, nullable=True)
     organization_location = Column(UnicodeText, default='', nullable=False)
     activation_token = Column(UnicodeText, unique=True)
     client_ip_address = Column(UnicodeText, nullable=False)
@@ -902,8 +880,7 @@ class _Subscriber(Model):
     tos1 = Column(UnicodeText, default='', nullable=False)
     tos2 = Column(UnicodeText, default='', nullable=False)
 
-    unicode_keys = ['subdomain', 'language', 'name', 'surname', 'role', 'phone', 'email',
-                    'tax_code', 'vat_code',
+    unicode_keys = ['subdomain', 'language', 'name', 'surname', 'phone', 'email',
                     'organization_name',  'organization_tax_code',
                     'organization_vat_code', 'organization_location',
                     'client_ip_address', 'client_user_agent']
@@ -915,7 +892,6 @@ class _Subscriber(Model):
     @declared_attr
     def __table_args__(self):
         return ForeignKeyConstraint(['tid'], ['tenant.id'], ondelete='CASCADE', deferrable=True, initially='DEFERRED'),
-
 
 
 class _Tenant(Model):
@@ -1144,7 +1120,7 @@ class ReceiverContext(_ReceiverContext, Base):
     pass
 
 
-class WhistleblowerFile(_WhistleblowerFile, Base):
+class ReceiverFile(_ReceiverFile, Base):
     pass
 
 
@@ -1184,5 +1160,5 @@ class User(_User, Base):
     pass
 
 
-class ReceiverFile(_ReceiverFile, Base):
+class WhistleblowerFile(_WhistleblowerFile, Base):
     pass

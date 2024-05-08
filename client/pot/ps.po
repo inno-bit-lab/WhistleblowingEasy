@@ -86,7 +86,7 @@ msgstr "د پلیټ فارم ویزرډ"
 msgid "Label the report"
 msgstr "رپوټ لیبل کړئ"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "د انقضاء د نېټې ځنډول"
 
 msgid "Select all"
@@ -645,9 +645,6 @@ msgstr "د ټاکل کېدو وړ تر لاسه کوونکو حداکثر شمې
 msgid "Show recipients in alphabetical order"
 msgstr "تر لاسه کوونکي د الفبا د تورو په ترتیب وښیئ"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "افشاګر ته اجازه ورکړئ چې له دې رپوټ سره ضمیمې اضافه کړي"
-
 msgid "Additional questionnaire"
 msgstr "اضافي پوښتنلیکونه"
 
@@ -1159,7 +1156,7 @@ msgstr "په زور سره ټاکل شوي"
 msgid "Allow the recipient to delete reports"
 msgstr "تر لاسه کوونکي ته اجازه ورکړئ تر څو رپوټونه پاک کړي"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "تر لاسه کوونکي ته اجازه ورکړئ تر څو د رپوټ د انقضاء نېټه وځنډوي"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1334,6 +1331,9 @@ msgstr "سرچینو ته یوازې کېدای شي د Tor د شبکې له ل�
 msgid "The upload request exceeds the size limit"
 msgstr "د پورته کولو غوښتنه د ټاکل شوي اندازې له حد څخه زیاته ده"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1401,9 +1401,6 @@ msgstr "تر لاسه کوونکو له تاسې غوښتي تر څو یو اض�
 
 msgid "Fill the additional questionnaire"
 msgstr "اضافي پوښتنلیک ډک کړئ"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "افشاګر ته اجازه ورکړئ تر څو تبصرې ولیکي"
 
 msgid "From:"
 msgstr "له خوا:"

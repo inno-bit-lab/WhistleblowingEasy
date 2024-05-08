@@ -88,7 +88,7 @@ msgstr "Platformani sozlash"
 msgid "Label the report"
 msgstr "Xabarga yorliq biriktiring"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Muddatini uzaytirish"
 
 msgid "Select all"
@@ -647,9 +647,6 @@ msgstr "Tanlanadigan qabul qiluvchilarning maksimal soni:"
 msgid "Show recipients in alphabetical order"
 msgstr "Qabul qiluvchilarni alifbo tartibida saralash"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr ""
-
 msgid "Additional questionnaire"
 msgstr "Qoʻshimcha savolnomalar"
 
@@ -1161,7 +1158,7 @@ msgstr "Majburiy tanlangan"
 msgid "Allow the recipient to delete reports"
 msgstr "Qabul qiluvchiga anonim xabarlarni oʻchirish imkonini berish"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Qabul qiluvchi anonim xabar muddatini kechiktirishiga ruxsat berish"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1336,6 +1333,9 @@ msgstr "Manba faqatgina Tor tarmoq ulanishi orqali ochiladi"
 msgid "The upload request exceeds the size limit"
 msgstr "Yuklash soʻrovi belgilangan limitdan ortiq"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1403,9 +1403,6 @@ msgstr "Qabul qiluvchilar qoʻshimcha savolnomani toʻldirishingizni soʻradi."
 
 msgid "Fill the additional questionnaire"
 msgstr "Qoʻshimcha savolnomani toʻldirish"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Oshkor qiluvchilar fikr bildirishiga ruxsat berish"
 
 msgid "From:"
 msgstr "Kimdan:"

@@ -2,12 +2,12 @@
 # Translators:
 # A5h8d0wf0x <littleslyfoxie28@gmail.com>, 2014
 # b33a4006134bb6ee62b30fc0fac5cec6, 2013
-# Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>, 2014-2022
+# Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>, 2014-2022,2024
 # b33a4006134bb6ee62b30fc0fac5cec6, 2013
 # b33a4006134bb6ee62b30fc0fac5cec6, 2013
 # b33a4006134bb6ee62b30fc0fac5cec6, 2013
 # Jiří Podhorecký, 2019
-# Jiří Skryja, 2022-2023
+# Jiří Skryja, 2022-2024
 # Jiří Podhorecký, 2019
 # Jiří Podhorecký, 2018-2019,2021
 # Lenka Ježková <lenka.jezkova@oziveni.cz>, 2019-2020
@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
 "PO-Revision-Date: 2013-05-29 17:59+0000\n"
-"Last-Translator: Jiří Skryja, 2022-2023\n"
+"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>, 2014-2022,2024\n"
 "Language-Team: Czech (http://app.transifex.com/otf/globaleaks/language/cs/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -99,8 +99,8 @@ msgstr "Průvodce platformou"
 msgid "Label the report"
 msgstr "Označte oznámení štítkem"
 
-msgid "Postpone the expiration date"
-msgstr "Odložit datum vypršení"
+msgid "Edit the expiration date"
+msgstr " \nUpravte datum vypršení platnosti"
 
 msgid "Select all"
 msgstr "Označit vše"
@@ -509,28 +509,28 @@ msgid "Recipients only"
 msgstr "Pouze příjemci"
 
 msgid "Me only"
-msgstr ""
+msgstr "Pouze já"
 
 msgid "Returning whistleblowers"
-msgstr ""
+msgstr "Vracející se oznamovatelé"
 
 msgid "Anonymity"
-msgstr ""
+msgstr "Anonymita"
 
 msgid "Anonymous"
 msgstr "Anonymní"
 
 msgid "Subscribed"
-msgstr ""
+msgstr "Předplacené"
 
 msgid "Initially anonymous"
-msgstr ""
+msgstr "Původně anonymní"
 
 msgid "Tor"
 msgstr "Tor"
 
 msgid "Devices"
-msgstr ""
+msgstr "Zařízení"
 
 msgid "Computer"
 msgstr "Počítač"
@@ -539,10 +539,10 @@ msgid "Mobile"
 msgstr "Mobilní"
 
 msgid "Act on behalf of a whistleblower"
-msgstr ""
+msgstr "Jednat ve prospěch oznamovatele"
 
 msgid "The link will expire in 7 days."
-msgstr ""
+msgstr "Platnost odkazu vyprší za 7 dní."
 
 msgid "File a report"
 msgstr "Podat oznámení"
@@ -658,9 +658,6 @@ msgstr "Maximální počet zvolitelných příjemců"
 msgid "Show recipients in alphabetical order"
 msgstr "Ukázat příjemce v abecedním pořadí"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Povolit oznamovateli přidat přílohy k oznámení"
-
 msgid "Additional questionnaire"
 msgstr "Dodatečný dotazník"
 
@@ -695,7 +692,7 @@ msgid "Admin"
 msgstr "Admin"
 
 msgid "Analyst"
-msgstr ""
+msgstr "Analytik"
 
 msgid "Recipient"
 msgstr "Příjemce"
@@ -1172,7 +1169,7 @@ msgstr "Nastaveno administrátorem"
 msgid "Allow the recipient to delete reports"
 msgstr "Povolit příjemcům smazat oznámení"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Povolit příjemci odložit datum expirace oznámení"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1182,13 +1179,13 @@ msgid "Give this user ability to transfer reports to other users"
 msgstr "Umožnit tomuto uživateli přenášet zprávy ostatním uživatelům"
 
 msgid "Allow this user to reopen management of a report"
-msgstr ""
+msgstr "Povolit tomuto uživateli znovu otevřít správu sestavy"
 
 msgid "Give the user administrative access to the following features:"
 msgstr "Poskytněte uživateli administrativní přístup k následujícím funkcím:"
 
 msgid "Statistics"
-msgstr ""
+msgstr "Statistiky"
 
 msgid "Request date"
 msgstr "Datum požadavku"
@@ -1236,7 +1233,7 @@ msgid "Assign score points"
 msgstr "Přidělit bodové skóre"
 
 msgid "Change status"
-msgstr ""
+msgstr "Změna stavu"
 
 msgid "Status:"
 msgstr "Stav"
@@ -1265,10 +1262,10 @@ msgid ""
 msgstr "Vytvořte kopii a uložte ji na bezpečném místě. Pokud ztratíte heslo, budete moci obnovit přístup ke svému účtu bez ztráty dat."
 
 msgid "Attention"
-msgstr ""
+msgstr "Pozor"
 
 msgid "For security reasons the code needs to be changed."
-msgstr ""
+msgstr "Z bezpečnostních důvodů je třeba kód změnit."
 
 msgid "Enter a name for the copy"
 msgstr "Zadejte název kopie"
@@ -1277,10 +1274,10 @@ msgid "Mask"
 msgstr "Skrýt"
 
 msgid "Unselect"
-msgstr ""
+msgstr "Zrušit výběr"
 
 msgid "Reopen"
-msgstr ""
+msgstr "Znovu otevřít"
 
 msgid "Request support"
 msgstr "Požádat podporu"
@@ -1347,8 +1344,11 @@ msgstr "Zdroj může být přístupný pouze uvnitř sítě Tor"
 msgid "The upload request exceeds the size limit"
 msgstr "Požadavek na upload přesahuje povolenou velikost."
 
-msgid "You are operating on behalf of a whistleblower."
+msgid "A user with this username already exists"
 msgstr ""
+
+msgid "You are operating on behalf of a whistleblower."
+msgstr "Jednáte ve prospěch oznamovatele."
 
 msgid "Current password"
 msgstr "Současné heslo"
@@ -1414,9 +1414,6 @@ msgstr "Příjemci požadují, abyste vyplnili dodatečný dotazník."
 
 msgid "Fill the additional questionnaire"
 msgstr "Vyplňte dodatečný dotazník"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Povolit oznamovateli psát komentáře"
 
 msgid "From:"
 msgstr "Od:"
@@ -1713,7 +1710,7 @@ msgid "Other"
 msgstr "Další"
 
 msgid "Specify"
-msgstr ""
+msgstr "Specify"
 
 msgid "Dear {RecipientName},"
 msgstr "Vážený/á {RecipientName},"

@@ -104,7 +104,7 @@ msgstr "Platform varázsló"
 msgid "Label the report"
 msgstr "Címkézze a beküldést"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Lejárati idő meghosszabítása"
 
 msgid "Select all"
@@ -663,9 +663,6 @@ msgstr "Maximum kiválasztható címzettek száma:"
 msgid "Show recipients in alphabetical order"
 msgstr "A címzettek megjelenítése betűrendben"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Engedélyezi a bejelentőknek, hogy mellékleteket adjanak hozzá a beadványhoz"
-
 msgid "Additional questionnaire"
 msgstr "További kérdőívek"
 
@@ -1177,7 +1174,7 @@ msgstr "Erőteljesen kiválasztva"
 msgid "Allow the recipient to delete reports"
 msgstr "Engedélyezés a címzetteknek, hogy töröljék a tippeket"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "A címzett számára engedélyezi a füles lejárati dátumának hosszabítását"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1352,6 +1349,9 @@ msgstr "A forrást csak a Tor hálózatán keresztül lehet elérni"
 msgid "The upload request exceeds the size limit"
 msgstr "A feltöltés meghadja a megengedett limitet"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1419,9 +1419,6 @@ msgstr "A címzettek igényelték, hogy töltsön ki egy további kérdőívet."
 
 msgid "Fill the additional questionnaire"
 msgstr "Kérjük, töltse ki a kérdőívet"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "A bejelentő írhat megjegyzéseket"
 
 msgid "From:"
 msgstr "Feladó:"

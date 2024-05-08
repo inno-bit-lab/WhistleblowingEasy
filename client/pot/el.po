@@ -99,7 +99,7 @@ msgstr "Οδηγός πλατφόρμας"
 msgid "Label the report"
 msgstr "Ετικέτα αναφοράς"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Αναβολή της ημερομηνίας λήξης"
 
 msgid "Select all"
@@ -658,9 +658,6 @@ msgstr "Μέγιστος αριθμός επιλέξιμων παραληπτώ�
 msgid "Show recipients in alphabetical order"
 msgstr "Εμφάνιση παραληπτών σε αλφαβητική σειρά"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Να επιτρέπεται στο πρόσωπο που υποβάλλει αναφορά να προσθέτει συνημμένα"
-
 msgid "Additional questionnaire"
 msgstr "Επιπλέον ερωτηματολόγιο"
 
@@ -1172,7 +1169,7 @@ msgstr "Υποχρεωτικά επιλεγμένο"
 msgid "Allow the recipient to delete reports"
 msgstr "Επιτρέψτε στον παραλήπτη να διαγράφει αναφορές"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Επιτρέψτε στον παραλήπτη να αναβάλει την ημερομηνία λήξης της αναφοράς"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1347,6 +1344,9 @@ msgstr "Το περιεχόμενο είναι προσβάσιμο μόνο μ�
 msgid "The upload request exceeds the size limit"
 msgstr "Το αίτημα ανεβάσματος ξεπερνά τα όρια μεγέθους"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr "Κάνετε ενέργειες εκ μέρους ενός υποβάλλοντα."
 
@@ -1414,9 +1414,6 @@ msgstr "Οι παραλήπτες σας ζητούν να συμπληρώσε�
 
 msgid "Fill the additional questionnaire"
 msgstr "Συμπληρώστε το εππρόσθετο ερωτηματολόγιο"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Να επιτρέπεται στο πρόσωπο που υποβάλλει αναφορά να γράφει σχόλια"
 
 msgid "From:"
 msgstr "Από:"

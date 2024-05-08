@@ -6,7 +6,7 @@
 # Enrique Blat Puchades <enrique.blat@antifraucv.es>, 2020
 # estrella1876lc <estrella1876lc@gmail.com>, 2014
 # Francisco Huerta <francisco.huerta@davinci-ti.es>, 2016
-# Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>, 2018-2022
+# Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>, 2018-2022,2024
 # b33a4006134bb6ee62b30fc0fac5cec6, 2016
 # Joan Bitlloch <joanbit@gmail.com>, 2017
 # José Javier Alamá Izquierdo, 2022-2024
@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
 "PO-Revision-Date: 2013-05-29 17:59+0000\n"
-"Last-Translator: José Javier Alamá Izquierdo, 2022-2024\n"
+"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>, 2018-2022,2024\n"
 "Language-Team: Catalan (Valencian) (http://app.transifex.com/otf/globaleaks/language/ca@valencia/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -100,8 +100,8 @@ msgstr "Assistent de la plataforma"
 msgid "Label the report"
 msgstr "Etiqueta l’informe"
 
-msgid "Postpone the expiration date"
-msgstr "Pospose la data de caducitat"
+msgid "Edit the expiration date"
+msgstr "Editar la data de venciment"
 
 msgid "Select all"
 msgstr "Selecciona-ho tot"
@@ -540,10 +540,10 @@ msgid "Mobile"
 msgstr "Telèfon Mòbil"
 
 msgid "Act on behalf of a whistleblower"
-msgstr ""
+msgstr "Actuar en nom d'un denunciant"
 
 msgid "The link will expire in 7 days."
-msgstr ""
+msgstr "L'enllaç expirarà en 7 dies"
 
 msgid "File a report"
 msgstr "Presentar una denúncia."
@@ -658,9 +658,6 @@ msgstr "Nombre màxim de destinataris que es poden seleccionar:"
 
 msgid "Show recipients in alphabetical order"
 msgstr "Mostra els destinataris en ordre alfabètic"
-
-msgid "Allow the whistleblower to add attachments"
-msgstr "Permet als informadors afegir arxius adjunts a l'enviament"
 
 msgid "Additional questionnaire"
 msgstr "Qüestionari addicional"
@@ -1173,7 +1170,7 @@ msgstr "Obligatòriament seleccionats"
 msgid "Allow the recipient to delete reports"
 msgstr "Permet al destinatari eliminar denúncies"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Permet al destinatari pospondre la data d'expiració d'una denúncia"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1348,6 +1345,9 @@ msgstr "Només es pot accedir a aquest recurs mitjançant la xarxa Tor"
 msgid "The upload request exceeds the size limit"
 msgstr "La sol·licitud de pujada excedeix el limit de dades"
 
+msgid "A user with this username already exists"
+msgstr "Vosté està operant en nom d'un denunciant"
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr "Vosté està operant en nom d'un denunciant"
 
@@ -1415,9 +1415,6 @@ msgstr "Els receptors han solicitat que vosté reompliga un qüestionari addicio
 
 msgid "Fill the additional questionnaire"
 msgstr "Emplene el qüestionari addicional"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Permet als informadors escriure comentaris"
 
 msgid "From:"
 msgstr "De:"
@@ -2009,7 +2006,7 @@ msgid "New report"
 msgstr "Nova denúncia"
 
 msgid "One or more reports are expiring and will be soon deleted."
-msgstr "Una o més denúncies van a caducar i en breu se suprimiran."
+msgstr "Una o més denúncies van a caducar i en breu es suprimiran."
 
 msgid "The earliest expiration date is {EarliestExpirationDate}."
 msgstr "La data de venciment més propera és {EarliestExpirationDate}."

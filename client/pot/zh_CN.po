@@ -19,7 +19,7 @@
 # Qiaoyi Fang <selinaf1917@yahoo.com>, 2018
 # QinWeijie <qinweijie@live.com>, 2014
 # Runzhe Liang <18051080098@163.com>, 2020
-# Scott Lai <sonyfaye@gmail.com>, 2018,2020-2021
+# Scott Lai, 2018,2020-2021
 # YFdyh000 <yfdyh000@gmail.com>, 2015
 # YFdyh000 <yfdyh000@gmail.com>, 2015
 # 刘位, 2014
@@ -107,7 +107,7 @@ msgstr "平台向导"
 msgid "Label the report"
 msgstr "标记该报告"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "推迟过期日期"
 
 msgid "Select all"
@@ -666,9 +666,6 @@ msgstr "可选接收人的最多数量："
 msgid "Show recipients in alphabetical order"
 msgstr "按字母顺序显示接收人"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "允许揭发者向报告添加附件"
-
 msgid "Additional questionnaire"
 msgstr "其它问卷"
 
@@ -1180,7 +1177,7 @@ msgstr "强制已选"
 msgid "Allow the recipient to delete reports"
 msgstr "允许接收人删除报告"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "允许接收人推迟报告过期日期"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1355,6 +1352,9 @@ msgstr "资源仅可通过 Tor 网络访问"
 msgid "The upload request exceeds the size limit"
 msgstr "上传请求超过文件大小限制"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1422,9 +1422,6 @@ msgstr "接收人已请求您填写附加问卷。"
 
 msgid "Fill the additional questionnaire"
 msgstr "填写附加问卷"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "允许揭发者评论"
 
 msgid "From:"
 msgstr "来自："

@@ -108,8 +108,8 @@ msgstr "Installazione della piattaforma"
 msgid "Label the report"
 msgstr "Assegna una etichetta alla segnalazione"
 
-msgid "Postpone the expiration date"
-msgstr "Posticipa la data di scadenza"
+msgid "Edit the expiration date"
+msgstr "Modifica la data di scadenza"
 
 msgid "Select all"
 msgstr "Seleziona tutto"
@@ -667,9 +667,6 @@ msgstr "Numero massimo di riceventi selezionabili"
 msgid "Show recipients in alphabetical order"
 msgstr "Mostra i riceventi in ordine alfabetico"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Permetti al segnalante di aggiungere allegati alla segnalazione"
-
 msgid "Additional questionnaire"
 msgstr "Questionario aggiuntivo"
 
@@ -1181,7 +1178,7 @@ msgstr "Selezionato forzatamente"
 msgid "Allow the recipient to delete reports"
 msgstr "Permetti a questo ricevente di cancellare le segnalazioni."
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Permetti al ricevente di posticipare la data di scadenza"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1356,6 +1353,9 @@ msgstr "La risorsa può essere acceduta solo all'interno della rete Tor"
 msgid "The upload request exceeds the size limit"
 msgstr "La richiesta di upload supera la dimensione massima in MB"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr "Stai operando per conto di un segnalante."
 
@@ -1426,9 +1426,6 @@ msgstr "I riceventi ti richiedono di riempire un ultreriore questionario."
 
 msgid "Fill the additional questionnaire"
 msgstr "Compila il questionario aggiuntivo"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Permetti al segnalante di scrivere commenti"
 
 msgid "From:"
 msgstr "Da:"
@@ -1755,7 +1752,7 @@ msgid "Kind regards,"
 msgstr "Distinti saluti,"
 
 msgid "Account activation"
-msgstr "Attivazione accont"
+msgstr "Attivazione account"
 
 msgid "Your whistleblowing platform is now accessible at:"
 msgstr "La tua piattaforma di whistleblowing è ora accessibile all'indirizzo:"
@@ -1852,7 +1849,7 @@ msgstr "Questa è una email di test generata dall'interfaccia di amministrazione
 msgid ""
 "Reception of this email indicates that the server was able to authenticate "
 "to and interact with the SMTP mail server."
-msgstr "La ricezione di questa email indica the il server è stato in grado di autenticarsi ed interagire con il server di posta SMTP."
+msgstr "La ricezione di questa email indica che il server è stato in grado di autenticarsi ed interagire con il server di posta SMTP."
 
 msgid "Test email"
 msgstr "Email di test"
@@ -2037,13 +2034,13 @@ msgstr "Con la presente email ti notifichiamo la ricezione di una nuova segnalaz
 msgid ""
 "This is an email to notify you that the reminder date for one or more "
 "reports has been met."
-msgstr "Questa email è per notificati che la data di promemoria di una o più segnalazioni è stata raggiunta."
+msgstr "Questa email è per notificarti che la data di promemoria di una o più segnalazioni è stata raggiunta."
 
 msgid "Reminder"
 msgstr "Promemoria"
 
 msgid "This is an email to notify that an existing report has been updated."
-msgstr "Questa email ti notifica che un una segnalazione è stata aggiornata."
+msgstr "Questa email ti notifica che una segnalazione è stata aggiornata."
 
 msgid "Report updated"
 msgstr "Segnalazione aggiornata"

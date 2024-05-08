@@ -87,7 +87,7 @@ msgstr "የመሳርያ ስርዓት አዋቂ"
 msgid "Label the report"
 msgstr "ሪፖርቱን ሰይሙ"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "መቃጠያ ቀን አስተላልፍ"
 
 msgid "Select all"
@@ -646,9 +646,6 @@ msgstr "መምረጥ የሚቻለው የተቀባዮች ከፍተኛ ቁጥር"
 msgid "Show recipients in alphabetical order"
 msgstr "ተቀባዮችን በፊደል ተራ አሳይ"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "መረጃ ሰጪው ሪፖርቱ ላይ አባሪ እንዲጨምር ፍቀድ"
-
 msgid "Additional questionnaire"
 msgstr "ተጨማሪ መጠይቅ"
 
@@ -1160,7 +1157,7 @@ msgstr "በግድ የተመረጠ"
 msgid "Allow the recipient to delete reports"
 msgstr "ተቀባዩ ሪፖርቶች እንዲያጠፋ ፍቀዱ"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "ተቀባዩ የሪፖርት መቃጠያ ቀን እንዲያስተላልፍ ፍቀድ"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1335,6 +1332,9 @@ msgstr "ንብረቱ መዳረሻ በቶር ኔትዎርክ በኩል ብቻ ነ
 msgid "The upload request exceeds the size limit"
 msgstr "የጭነት ጥያቄው ከተፈቀደው ወሰን ያልፋል"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1402,9 +1402,6 @@ msgstr "ተቀባዮች ተጨማሪ መጠይቅ እንዲሞሉ ጠይቀዋ�
 
 msgid "Fill the additional questionnaire"
 msgstr "ተጨማሪ መጠይቁን ይሙሉ"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "መረጃ ሰጪው አስተያየት እንዲሰጥ ፍቀዱ"
 
 msgid "From:"
 msgstr "ከ"

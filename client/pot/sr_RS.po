@@ -94,7 +94,7 @@ msgstr "Чаробњак платформе"
 msgid "Label the report"
 msgstr "Označi prijavu"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Одложи датум истицања дојаве"
 
 msgid "Select all"
@@ -653,9 +653,6 @@ msgstr "Maksimalan broj primalaca koji se mogu izabrati:"
 msgid "Show recipients in alphabetical order"
 msgstr "Prikaži primaoce po abecednom redu"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Dozvoli uzbunjivaču da dodaje priloge u prijavu"
-
 msgid "Additional questionnaire"
 msgstr "Dodatni upitnik"
 
@@ -1167,7 +1164,7 @@ msgstr "Prisilno odabrano"
 msgid "Allow the recipient to delete reports"
 msgstr "Dozvoli primaocu da briše prijave"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Dozvoli primaocu da odloži datum isteka prijave"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1342,6 +1339,9 @@ msgstr "Овим извориштима се може приступити са�
 msgid "The upload request exceeds the size limit"
 msgstr "Захтев за слање превазилази ограничење величине"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1409,9 +1409,6 @@ msgstr "Primaoci su zatražili da popunite dodatni upitnik."
 
 msgid "Fill the additional questionnaire"
 msgstr "Popunite dodatni upitnik"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Dozvolite uzbunjivaču da piše komentare"
 
 msgid "From:"
 msgstr "Od:"

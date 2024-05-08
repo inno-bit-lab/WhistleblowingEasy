@@ -46,7 +46,7 @@ from globaleaks.state import State, TenantState
 from globaleaks.utils import tempdict
 from globaleaks.utils.crypto import generateRandomKey, GCE
 from globaleaks.utils.securetempfile import SecureTemporaryFile
-from globaleaks.utils.utility import datetime_now, sum_dicts, uuid4
+from globaleaks.utils.utility import datetime_now, uuid4
 from globaleaks.utils.log import log
 
 GCE.options['OPSLIMIT'] = 1
@@ -284,8 +284,6 @@ class MockDict:
             'maximum_selectable_receivers': 0,
             'show_context': True,
             'allow_recipients_selection': False,
-            'enable_two_way_comments': True,
-            'enable_attachments': True,
             'show_receivers_in_alphabetical_order': False,
         }
 
@@ -589,7 +587,7 @@ class TestGL(unittest.TestCase):
             )
         else:
             yield db.create_db()
-            yield db.init_db()
+            yield db.initialize_db()
 
         yield self.set_hostnames(1)
 
@@ -654,7 +652,7 @@ class TestGL(unittest.TestCase):
         new_u = self.get_dummy_user('receiver', username)
         new_r = dict(MockDict().dummyUser)
 
-        return sum_dicts(new_r, new_u)
+        return {**new_r, **new_u}
 
     def fill_random_field_recursively(self, answers, field):
         field_type = field['type']

@@ -87,7 +87,7 @@ msgstr "Platvormi viisard"
 msgid "Label the report"
 msgstr "Teate silt"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Lükka aegumiskuupäeva edasi"
 
 msgid "Select all"
@@ -646,9 +646,6 @@ msgstr "Valitavate saajate arvu ülempiir:"
 msgid "Show recipients in alphabetical order"
 msgstr "Näita saajaid tähestiku järjekorras"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Luba vihjeandjal teatele manuseid lisada"
-
 msgid "Additional questionnaire"
 msgstr "Täiendav ankeet"
 
@@ -1160,7 +1157,7 @@ msgstr "Valitud sundkorras"
 msgid "Allow the recipient to delete reports"
 msgstr "Luba saajal teavitusi kustutada"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Luba saajal teavituse aegumiskuupäeva edasi lükata"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1335,6 +1332,9 @@ msgstr "Ressursile pääseb ligi ainult Tor-i võrgu kaudu"
 msgid "The upload request exceeds the size limit"
 msgstr "Üleslaadimistaotlus ületab mahupiirangut"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1402,9 +1402,6 @@ msgstr "Saajad on soovinud, et täidaksite täiendava ankeedi."
 
 msgid "Fill the additional questionnaire"
 msgstr "Täiendavat ankeeti täitma"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Luba vihjeandjal kommentaare kirjutada"
 
 msgid "From:"
 msgstr "Saatja:"

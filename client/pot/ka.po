@@ -86,7 +86,7 @@ msgstr "პლატფორმის ოსტატი"
 msgid "Label the report"
 msgstr "ანგარიშის დასათაურება"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "ვადის გასვლის თარიღის გადავადება"
 
 msgid "Select all"
@@ -645,9 +645,6 @@ msgstr "მიმღებების არჩევის მაქსიმ�
 msgid "Show recipients in alphabetical order"
 msgstr "მიმღებების ჩვენება ანბანური წყობით"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "დართეთ ნება ინსტრუქტორს დაამატოს ანგარიშზე დანართები"
-
 msgid "Additional questionnaire"
 msgstr "დამატებითი კითხვარი"
 
@@ -1159,7 +1156,7 @@ msgstr "იძულებით შერჩეული"
 msgid "Allow the recipient to delete reports"
 msgstr "დართეთ ნება მიმღებს წაშალოს ანგარიშები"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "დართეთ ნება მიმღებს გადაავადოს ანგარიშის ვადის გასვლა"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1334,6 +1331,9 @@ msgstr "რესურსზე წვდომა შესაძლებე�
 msgid "The upload request exceeds the size limit"
 msgstr "ატვირთვის მოთხოვნა აღემატება ზომის ლიმიტს"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1401,9 +1401,6 @@ msgstr "მიმღებებმა მოითხოვეს, რომ �
 
 msgid "Fill the additional questionnaire"
 msgstr "შეავსეთ დამატებითი კითხვარი"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "დართეთ ნება ინტრუქტორმა დააკომენტაროს"
 
 msgid "From:"
 msgstr "ვისგან:"

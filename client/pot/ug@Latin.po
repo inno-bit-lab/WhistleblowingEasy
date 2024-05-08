@@ -86,7 +86,7 @@ msgstr "Supa séhirgeri"
 msgid "Label the report"
 msgstr "Melumatqa belge sal"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Sürük chéslasini keynige sür"
 
 msgid "Select all"
@@ -645,9 +645,6 @@ msgstr "Tallan’ghan tapshuriwalghuchilar sani eng köp bolghanda:"
 msgid "Show recipients in alphabetical order"
 msgstr "Tapshuriwalghuchilarni élipbe tertipi boyiche körset"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Pash qilghuchining melumatqa qoshumche qisturishigha ruxset qil"
-
 msgid "Additional questionnaire"
 msgstr "Qoshumche ray sinash"
 
@@ -1159,7 +1156,7 @@ msgstr "Mejburiy tallandi"
 msgid "Allow the recipient to delete reports"
 msgstr "Tapshuriwalghuchilarning melumatlarni öchürishige ruxset qil"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Tapshuriwalghuchining melumat sürükini keynige sürishige ruxset qil"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1334,6 +1331,9 @@ msgstr "Menbeni peqet Tor tori bilenla ziyaret qilghili bolidu "
 msgid "The upload request exceeds the size limit"
 msgstr "Yüklime telipi chongluq chékidin éship ketti"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1401,9 +1401,6 @@ msgstr "Tapshuriwalghuchilar sizning bir qoshumche ray sinashni toshquzishingizn
 
 msgid "Fill the additional questionnaire"
 msgstr "Bu qoshumche ray sinashni toshquz"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Pash qilghuchining baha yézishige ruxset qil"
 
 msgid "From:"
 msgstr "Ewetküchi:"

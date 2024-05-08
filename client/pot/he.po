@@ -28,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;\n"
 "mime-version: 1.0\n"
 
 msgid "Log in"
@@ -103,7 +103,7 @@ msgstr "אשף פלטפורמה"
 msgid "Label the report"
 msgstr "סווג את הדוח"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "דחה את תאריך התפוגה"
 
 msgid "Select all"
@@ -662,9 +662,6 @@ msgstr "מספר מקסימאלי של מקבלים לבחירה:"
 msgid "Show recipients in alphabetical order"
 msgstr "מקבלי הצג לפי סדר אלפביתי"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "התר לחושף השחיתות להוסיף צרופות אל ההגשה"
-
 msgid "Additional questionnaire"
 msgstr ""
 
@@ -1176,7 +1173,7 @@ msgstr "נבחר בכוח"
 msgid "Allow the recipient to delete reports"
 msgstr ""
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr ""
 
 msgid "Give this user ability to grant user access to reports"
@@ -1351,6 +1348,9 @@ msgstr "משאב ניתן לגשת רק בתוך רשת Tor"
 msgid "The upload request exceeds the size limit"
 msgstr "בקשת ההעלאה עולה על מגבלות הגודל"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1418,9 +1418,6 @@ msgstr ""
 
 msgid "Fill the additional questionnaire"
 msgstr ""
-
-msgid "Allow the whistleblower to write comments"
-msgstr "התר לחושף השחיתות לכתוב תגובות"
 
 msgid "From:"
 msgstr "מ:"

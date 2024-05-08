@@ -88,7 +88,7 @@ msgstr "மேடை வழிகாட்டி"
 msgid "Label the report"
 msgstr "சமர்ப்பிப்புக்கு லேபிளிடுங்கள்"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "காலாவதி தேதி ஒத்தி"
 
 msgid "Select all"
@@ -647,9 +647,6 @@ msgstr "தேர்ந்தெடுக்கும் பெற்றவர�
 msgid "Show recipients in alphabetical order"
 msgstr "அகரவரிசையில் பெற்றவர்கள் காட்டு"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "தகவல் தெரிவிப்பவர் சமர்ப்பிப்பு இணைப்புகளை சேர்க்க அனுமதி"
-
 msgid "Additional questionnaire"
 msgstr "கூடுதல் கேள்வித்தாள்"
 
@@ -1161,7 +1158,7 @@ msgstr "கட்டாயப்படுத்தி தேர்வு"
 msgid "Allow the recipient to delete reports"
 msgstr "பெற்றவர்கள் சமர்ப்பிப்புகளை நீக்க அனுமதிக்க"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "பெறுநர் சமர்ப்பிப்பு காலாவதி தேதி ஒத்தி அனுமதி"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1336,6 +1333,9 @@ msgstr "வள மட்டுமே தோர் நெட்வொர்
 msgid "The upload request exceeds the size limit"
 msgstr "பதிவேற்ற கோரிக்கை அளவு வரம்பை மீறுகிறது"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1403,9 +1403,6 @@ msgstr "கூடுதல் கேள்வித்தாள் நிரப�
 
 msgid "Fill the additional questionnaire"
 msgstr "கூடுதல் கேள்வித்தாளை நிரப்புக"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "தகவல் தெரிவிப்பவர் கருத்துக்கள் எழுத அனுமதி"
 
 msgid "From:"
 msgstr ""

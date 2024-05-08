@@ -11,11 +11,12 @@
 # Noah Böhme <noah0907@gmail.com>, 2021
 # Preben Sørensen <preben@rather.dk>, 2023
 # Preben Sørensen <preben@rather.dk>, 2023
+# Søren Christensen, 2024
 msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
 "PO-Revision-Date: 2013-05-29 17:59+0000\n"
-"Last-Translator: Preben Sørensen <preben@rather.dk>, 2023\n"
+"Last-Translator: Søren Christensen, 2024\n"
 "Language-Team: Danish (http://app.transifex.com/otf/globaleaks/language/da/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -66,7 +67,7 @@ msgid "Preferences"
 msgstr "Indstillinger"
 
 msgid "Notifications"
-msgstr "Underrettelser"
+msgstr "Underretninger"
 
 msgid "file unavailable"
 msgstr "fil utilgængelig"
@@ -95,7 +96,7 @@ msgstr "Platformsopsætning"
 msgid "Label the report"
 msgstr "Navngiv denne indberetningen"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Udsæt udløbsdatoen"
 
 msgid "Select all"
@@ -454,7 +455,7 @@ msgid "Assigned to"
 msgstr "Tildelt til"
 
 msgid "Not provided."
-msgstr "Ikke forudsat."
+msgstr "Ikke leveret"
 
 msgid "Set a reminder"
 msgstr "Sæt en påmindelse"
@@ -508,25 +509,25 @@ msgid "Me only"
 msgstr "Kun mig"
 
 msgid "Returning whistleblowers"
-msgstr ""
+msgstr "Tilbagevendende whistleblowere"
 
 msgid "Anonymity"
-msgstr ""
+msgstr "Anonymitet"
 
 msgid "Anonymous"
 msgstr "Anonym"
 
 msgid "Subscribed"
-msgstr ""
+msgstr "Abonnerer "
 
 msgid "Initially anonymous"
-msgstr ""
+msgstr "Indledningsvis anonym"
 
 msgid "Tor"
 msgstr "Tor"
 
 msgid "Devices"
-msgstr ""
+msgstr "Enheder"
 
 msgid "Computer"
 msgstr "Computer"
@@ -535,10 +536,10 @@ msgid "Mobile"
 msgstr "Mobil"
 
 msgid "Act on behalf of a whistleblower"
-msgstr ""
+msgstr "Handle på vegne af whistleblower"
 
 msgid "The link will expire in 7 days."
-msgstr ""
+msgstr "Dette link vil udløbe om 7 dage."
 
 msgid "File a report"
 msgstr "Indsend en rapportering"
@@ -653,9 +654,6 @@ msgstr "Maksimalt antal modtagere, der kan vælges:"
 
 msgid "Show recipients in alphabetical order"
 msgstr "Vis modtagere i alfabetisk rækkefølge"
-
-msgid "Allow the whistleblower to add attachments"
-msgstr "Tillad whistlebloweren at tilføje vedhæftelser til indsendelsen"
 
 msgid "Additional questionnaire"
 msgstr "Ekstra spørgeskema"
@@ -1168,7 +1166,7 @@ msgstr "Tvunget valgt"
 msgid "Allow the recipient to delete reports"
 msgstr "Tillad modtageren at slette indberetninger"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Tillad modtageren at udsætte udløbsdatoen på indberetningen"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1264,19 +1262,19 @@ msgid "Attention"
 msgstr "Bemærk"
 
 msgid "For security reasons the code needs to be changed."
-msgstr ""
+msgstr "Af sikkerhedshensyn, er det nødvendigt at ændre koden."
 
 msgid "Enter a name for the copy"
 msgstr "Indtast et navn på kopien"
 
 msgid "Mask"
-msgstr ""
+msgstr "Masker"
 
 msgid "Unselect"
-msgstr ""
+msgstr "Fravælg"
 
 msgid "Reopen"
-msgstr ""
+msgstr "Genåben"
 
 msgid "Request support"
 msgstr "Forespørg hjælp"
@@ -1342,6 +1340,9 @@ msgstr "Denne ressource kan kun tilgås via Tor netværket"
 
 msgid "The upload request exceeds the size limit"
 msgstr "Upload overstiger tilladt størrelse"
+
+msgid "A user with this username already exists"
+msgstr ""
 
 msgid "You are operating on behalf of a whistleblower."
 msgstr "Du handler på vegne af en whistleblower"
@@ -1410,9 +1411,6 @@ msgstr "Modtagere har anmodet dig om at udfylde et ekstra spørgeskema."
 
 msgid "Fill the additional questionnaire"
 msgstr "Udfyld det ekstra spørgeskema"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Tillad whistlebloweren at skrive kommentarer"
 
 msgid "From:"
 msgstr "Fra:"

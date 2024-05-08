@@ -91,7 +91,7 @@ msgstr "Čarobnjak za platformu"
 msgid "Label the report"
 msgstr "Postavi oznaku na prijavu"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Odgodi datum isteka"
 
 msgid "Select all"
@@ -650,9 +650,6 @@ msgstr "Maksimalan broj primatelja koji se mogu odabrati:"
 msgid "Show recipients in alphabetical order"
 msgstr "Prikaži primatelje u abecednom slijedu"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Dopusti zviždaču da doda privitke prijavi"
-
 msgid "Additional questionnaire"
 msgstr "Dodatni upitnik"
 
@@ -1164,7 +1161,7 @@ msgstr "Prisilno odabrani"
 msgid "Allow the recipient to delete reports"
 msgstr "Dozvoli primateljima da brišu prijave"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Dopusti primatelju da odgodi datum isteka prijave"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1339,6 +1336,9 @@ msgstr "Resursu se može pristupiti samo preko Tor mreže"
 msgid "The upload request exceeds the size limit"
 msgstr "Zahtjev za postavljanje premašuje ograničenja veličine"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1406,9 +1406,6 @@ msgstr "Primatelji traže da popunite dodatni upitnik."
 
 msgid "Fill the additional questionnaire"
 msgstr "Ispunite dodatni upitnik"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Dopusti zviždaču da piše komentare"
 
 msgid "From:"
 msgstr "Od:"

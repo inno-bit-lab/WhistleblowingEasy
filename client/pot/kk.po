@@ -88,7 +88,7 @@ msgstr "Платформа шебері"
 msgid "Label the report"
 msgstr "Есепті белгілеу"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Жарамдылық мерзімін кейінге жылжыту"
 
 msgid "Select all"
@@ -647,9 +647,6 @@ msgstr "Таңдалатын алушылардың ең көп саны:"
 msgid "Show recipients in alphabetical order"
 msgstr "Алушыларды алфавиттік тәртіпте көрсету"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Хабарлаушыға есепке тіркемелер қосуға рұқсат беру"
-
 msgid "Additional questionnaire"
 msgstr "Қосымша сауалнама"
 
@@ -1161,7 +1158,7 @@ msgstr "Мәжбүрлі түрде таңдалды"
 msgid "Allow the recipient to delete reports"
 msgstr "Алушыға есептерді жоюға рұқсат беру"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Алушыға есептің жарамдылық мерзімін кейінге қалдыруға рұқсат беру"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1336,6 +1333,9 @@ msgstr "Ресурстарға Tor желісі арқылы ғана қол ж�
 msgid "The upload request exceeds the size limit"
 msgstr "Жүктеу сұранысы шекті мөлшерден асып тұр"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1403,9 +1403,6 @@ msgstr "Алушылар сізден қосымша сауалнаманы то
 
 msgid "Fill the additional questionnaire"
 msgstr "Қосымша сауалнаманы толтыру"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Хабарлаушыға түсініктеме жазуға рұқсат ету"
 
 msgid "From:"
 msgstr "Жіберуші:"

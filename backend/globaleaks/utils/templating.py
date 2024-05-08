@@ -12,9 +12,11 @@ from globaleaks import __version__
 from globaleaks.rest import errors
 from globaleaks.utils.pgp import PGPContext
 from globaleaks.utils.sock import isIPAddress
-from globaleaks.utils.utility import datetime_to_pretty_str, \
+from globaleaks.utils.utility import \
+    datetime_to_pretty_str, \
     datetime_to_day_str, \
     bytes_to_pretty_str, \
+    ISO8601_to_day_str, \
     ISO8601_to_pretty_str
 
 
@@ -235,13 +237,13 @@ class TipKeyword(UserNodeKeyword):
         elif field_type == 'date':
             date = entry.get('value')
             if date is not None:
-                output += indent(indent_n) + ISO8601_to_pretty_str(date) + '\n'
+                output += indent(indent_n) + ISO8601_to_day_str(date) + '\n'
         elif field_type == 'daterange':
             daterange = entry.get('value')
             if daterange is not None:
                 daterange = daterange.split(':')
-                output += indent(indent_n) + datetime_to_pretty_str(datetime.fromtimestamp(int(daterange[0])/1000)) + '\n'
-                output += indent(indent_n) + datetime_to_pretty_str(datetime.fromtimestamp(int(daterange[1])/1000)) + '\n'
+                output += indent(indent_n) + datetime_to_day_str(datetime.fromtimestamp(int(daterange[0])/1000)) + '\n'
+                output += indent(indent_n) + datetime_to_day_str(datetime.fromtimestamp(int(daterange[1])/1000)) + '\n'
         elif field_type == 'tos':
             answer = '☑' if entry.get('value', '') is True else '☐'
             output += indent(indent_n) + answer + '\n'
@@ -300,6 +302,9 @@ class TipKeyword(UserNodeKeyword):
     def dump_comments(self, comments):
         ret = ''
         for comment in comments:
+            if comment['visibility'] == 'personal':
+                continue
+
             data = copy.deepcopy(self.data)
             data['type'] = 'export_comment'
             data['comment'] = copy.deepcopy(comment)
@@ -351,12 +356,8 @@ class TipKeyword(UserNodeKeyword):
 
     def Comments(self):
         comments = self.data.get('comments', [])
-        if not len(comments):
-            return ''
-
-        ret = 'Comments:\n'
-        ret += self.dump_comments(comments) + '\n'
-        return ret + '\n'
+        comments = self.dump_comments(comments)
+        return 'Comments\n' + comments + '\n' if comments else ''
 
 
 class ExportMessageKeyword(TipKeyword):

@@ -98,7 +98,7 @@ msgstr "پلیٹ فارم وزرڈ"
 msgid "Label the report"
 msgstr "رپورٹ لیبل کریں"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "آخری اپ ڈیٹ کی تاریخ ملتوی"
 
 msgid "Select all"
@@ -657,9 +657,6 @@ msgstr "انتخاب وصول کنندگان کی زیادہ سے زیادہ ت�
 msgid "Show recipients in alphabetical order"
 msgstr "الفبائی ترتیب میں وصول کنندگان دکھائیں"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "مخبر کو اٹیچمنٹ شامل کرنے کی اجازت دیں"
-
 msgid "Additional questionnaire"
 msgstr "اضافی سوالنامہ "
 
@@ -1171,7 +1168,7 @@ msgstr "زبردستی منتخب شدہ"
 msgid "Allow the recipient to delete reports"
 msgstr "وصول کنندگان کو اختیار دیجیے کہ تجاویز حذف کر سکیں"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "وصول کنندہ جمع کرانے کا وقت ختم ہونے کی تاریخ ملتوی کرنے کی اجازت دیں"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1346,6 +1343,9 @@ msgstr " صرف ٹور نیٹ ورک کے اندررہتے ہوئے وسائل �
 msgid "The upload request exceeds the size limit"
 msgstr "اپ لوڈ کی درخواست سائز کی حد سے تجاوز کر گئی ہے"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1413,9 +1413,6 @@ msgstr "وصول کنندگان نے آپ سے ایک اضافی سوالنام�
 
 msgid "Fill the additional questionnaire"
 msgstr "اضافی سوالنامہ پُر کریں۔= "
-
-msgid "Allow the whistleblower to write comments"
-msgstr "مخبر کو تبصرے لکھنے کے لئے کی اجازت دیں"
 
 msgid "From:"
 msgstr "From:"

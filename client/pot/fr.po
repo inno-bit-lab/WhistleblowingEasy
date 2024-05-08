@@ -10,7 +10,7 @@
 # AO <ao@localizationlab.org>, 2016-2017
 # AO <ao@localizationlab.org>, 2016
 # AO <ao@localizationlab.org>, 2016
-# Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>, 2013-2023
+# Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>, 2013-2024
 # b33a4006134bb6ee62b30fc0fac5cec6, 2013,2016
 # b33a4006134bb6ee62b30fc0fac5cec6, 2013,2016
 # b33a4006134bb6ee62b30fc0fac5cec6, 2013
@@ -124,8 +124,8 @@ msgstr "Assistant de la plateforme"
 msgid "Label the report"
 msgstr "Étiqueter le signalement"
 
-msgid "Postpone the expiration date"
-msgstr "Différer la date d’expiration"
+msgid "Edit the expiration date"
+msgstr "Modifier la date d’expiration"
 
 msgid "Select all"
 msgstr "Tout sélectionner"
@@ -564,7 +564,7 @@ msgid "Mobile"
 msgstr "Mobile"
 
 msgid "Act on behalf of a whistleblower"
-msgstr ""
+msgstr "Agir pour le compte d’un lanceur d’alerte."
 
 msgid "The link will expire in 7 days."
 msgstr "Le lien arrivera à expiration dans sept jours."
@@ -682,9 +682,6 @@ msgstr "Nombre maximal de destinataires sélectionnables :"
 
 msgid "Show recipients in alphabetical order"
 msgstr "Montrer les destinataires par ordre alphabétique"
-
-msgid "Allow the whistleblower to add attachments"
-msgstr "Permettre au lanceur d’alerte d’ajouter des fichiers joints"
 
 msgid "Additional questionnaire"
 msgstr "Questionnaire supplémentaire"
@@ -1197,8 +1194,8 @@ msgstr "Sélectionné de force"
 msgid "Allow the recipient to delete reports"
 msgstr "Permettre au destinataire de supprimer des signalements"
 
-msgid "Allow the recipient to postpone the report expiration date"
-msgstr "Permettre au destinataire de différer la date d’expiration du signalement"
+msgid "Allow the recipient to edit the report expiration date"
+msgstr "Permettre au destinataire de modifier la date d’expiration du signalement"
 
 msgid "Give this user ability to grant user access to reports"
 msgstr "Donner à cet utilisateur la possibilité d’accorder l’accès des utilisateurs aux signalements"
@@ -1372,6 +1369,9 @@ msgstr "L’accès à cette ressource ne peut se faire que par le réseau Tor"
 msgid "The upload request exceeds the size limit"
 msgstr "La demande de téléversement dépasse la limite de taille"
 
+msgid "A user with this username already exists"
+msgstr "Ce nom d’utilisateur existe déjà"
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr "Vous agissez pour le compte d’un lanceur d’alerte."
 
@@ -1439,9 +1439,6 @@ msgstr "Les destinataires ont demandé à ce que vous remplissiez un questionnai
 
 msgid "Fill the additional questionnaire"
 msgstr "Remplir le questionnaire supplémentaire"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Permettre au lanceur d’alerte de rédiger des commentaires"
 
 msgid "From:"
 msgstr "De :"

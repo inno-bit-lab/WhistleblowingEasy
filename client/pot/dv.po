@@ -91,7 +91,7 @@ msgstr "ޕްލެޓްފޯރމް ވިޒާރޑް"
 msgid "Label the report"
 msgstr "ރިޕޯޓް ލޭބަލްކުރުމަށް"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "މުއްދަތު ހަމަވާ ތާރީޙް ލަސްކުރުމަށް"
 
 msgid "Select all"
@@ -650,9 +650,6 @@ msgstr "އެންމެގިނަވެގެން އިޚްތިޔާރު ކުރެވޭނެ �
 msgid "Show recipients in alphabetical order"
 msgstr "ރިސިޕިއަންޓުން އެލްފަބެޓިކަލް  އޯޑަރަށް ދައްކާ"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "ރިޕޯޓުގައި އާ ފައިލްތައް ހިމެނުމުގެ ހުއްދަ ވިސިލްބްލޯވާރ އަށް ދިނުމަށް "
-
 msgid "Additional questionnaire"
 msgstr "އިތުރު ސުވާލުކަރުދާސް"
 
@@ -1164,7 +1161,7 @@ msgstr "ބާރާއެކު ސިލެކްޝަން ހެދުން"
 msgid "Allow the recipient to delete reports"
 msgstr "ރިސިޕިއަންޓަށް ރިޕޯޓު ފުހެލުމުގެ ހުއްދަ ދިނުމަށް"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "ރިސިޕިއަންޓަށް ރިޕޯޓްގެ މުއްދަތުހަމަވާ ތާރީޚް ފަސްކުރުމަށް ހުއްދަ ދިނުން"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1339,6 +1336,9 @@ msgstr "ވަޞީލަތްތަކުގެ ބޭނުންކުރެވޭނީ ހަމައެކ
 msgid "The upload request exceeds the size limit"
 msgstr "އަޕްލޯޑް ކުރަން ބޭނުންވާ މީޑިއާގެ ސައިޒް ލިމިޓަވުރެ ބޮޑު"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1406,9 +1406,6 @@ msgstr " އިތުރު ސަުވާލު ކަރުދާހަކަށް ޖަވާބުދިނ
 
 msgid "Fill the additional questionnaire"
 msgstr "އިތުރު ސުވާލުކަރުދާހަށް ޖަވާބު ދޭން"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "ކޮމެންޓްސް ލިޔުމުގެ ހުއްދަ ވިސިލްބްލޯވާރ އަށް ދިނުމަށް"
 
 msgid "From:"
 msgstr "ފޮނުވި ފަރާތް:"

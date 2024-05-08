@@ -86,7 +86,7 @@ msgstr "Wizard platform"
 msgid "Label the report"
 msgstr "Label laporan"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Tangguh tarikh tamat tempoh"
 
 msgid "Select all"
@@ -645,9 +645,6 @@ msgstr "Bilangan maksimum penerima boleh dipilih:"
 msgid "Show recipients in alphabetical order"
 msgstr "Tunjukkan penerima dalam susunan abjad"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Benarkan pemberi maklumat menambah lampiran kepada laporan"
-
 msgid "Additional questionnaire"
 msgstr "Soal selidik tambahan"
 
@@ -1159,7 +1156,7 @@ msgstr "Dipilih secara paksa"
 msgid "Allow the recipient to delete reports"
 msgstr "Benarkan penerima untuk memadam laporan"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Benarkan penerima untuk menunda tarikh tamat tempoh laporan"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1334,6 +1331,9 @@ msgstr "Sumber hanya boleh diakses melalui rangkaian Tor"
 msgid "The upload request exceeds the size limit"
 msgstr "Permintaan muat naik melebihi had saiz"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1401,9 +1401,6 @@ msgstr "Penerima telah meminta anda mengisi soal selidik tambahan."
 
 msgid "Fill the additional questionnaire"
 msgstr "Isikan soal selidik tambahan"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Benarkan pemberi maklumat menulis komen"
 
 msgid "From:"
 msgstr "Daripada:"

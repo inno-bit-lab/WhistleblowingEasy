@@ -107,7 +107,7 @@ msgstr "Майстер налаштування платформи"
 msgid "Label the report"
 msgstr "Позначте звіт"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Відтермінувати дату зачінчення терміну дії"
 
 msgid "Select all"
@@ -666,9 +666,6 @@ msgstr "Максимальна кількість обраних отримув�
 msgid "Show recipients in alphabetical order"
 msgstr "Упорядкувати отримувачів за алфавітом"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Дозволити інформаторам додавати файли до звіту"
-
 msgid "Additional questionnaire"
 msgstr "Додаткова анкета"
 
@@ -1180,7 +1177,7 @@ msgstr "Примусовий вибір"
 msgid "Allow the recipient to delete reports"
 msgstr "Дозволити отримувачу видаляти звіти"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Дозволити отримувачам відтерміновувати видалення звітів"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1355,6 +1352,9 @@ msgstr "Ресурс доступний лише через браузер Tor"
 msgid "The upload request exceeds the size limit"
 msgstr "Завантаження перевищує дозволений розмір"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1422,9 +1422,6 @@ msgstr "Отримувачі попросили вас заповнити дод
 
 msgid "Fill the additional questionnaire"
 msgstr "Заповнити додаткову анкету"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Дозволити інформатору коментувати"
 
 msgid "From:"
 msgstr "Від:"

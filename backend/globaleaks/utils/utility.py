@@ -32,16 +32,6 @@ def uuid4():
     return str(uuid.uuid4())
 
 
-def sum_dicts(*dicts):
-    ret = {}
-
-    for d in dicts:
-        for k, v in d.items():
-            ret[k] = v
-
-    return ret
-
-
 def deferred_sleep(timeout):
     d = Deferred()
 
@@ -118,7 +108,7 @@ def datetime_to_pretty_str(date):
 
 def datetime_to_day_str(date, tz=0):
     """
-    Print a ISO8601 in DD/MM/YYYY formatted str
+    Print a datetime in DD/MM/YYYY formatted str
     """
     if tz != 0:
         tz_i, tz_d = divmod(tz, 1)
@@ -150,6 +140,22 @@ def ISO8601_to_pretty_str(isodate, tz=0):
 
     return datetime_to_pretty_str(date)
 
+
+def ISO8601_to_day_str(isodate, tz=0):
+    """
+    convert a ISO8601 in DD/MM/YYYY formatted str
+    """
+    if isodate is None:
+        isodate = datetime_null().isoformat()
+
+    date = datetime(year=int(isodate[0:4]),
+                    month=int(isodate[5:7]),
+                    day=int(isodate[8:10]),
+                    hour=int(isodate[11:13]),
+                    minute=int(isodate[14:16]),
+                    second=int(isodate[17:19]))
+
+    return datetime_to_day_str(date, tz)
 
 def iso_year_start(iso_year):
     """Returns the gregorian calendar date of the first day of the given ISO year"""

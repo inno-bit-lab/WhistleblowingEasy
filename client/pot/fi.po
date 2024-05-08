@@ -1,8 +1,8 @@
 # 
 # Translators:
 # Akseli Pihlajamaa <akselijuhanipihlajamaa@gmail.com>, 2020-2022
-# Eva Simonsson, 2020-2021,2023
-# Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>, 2015-2018,2020-2022
+# Eva Simonsson, 2020-2021,2023-2024
+# Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>, 2015-2018,2020-2022,2024
 # Jaakko Korhonen <jaakko.korhonen@gmail.com>, 2018
 # John Wild <ac@elephantleague.org>, 2015
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2015,2017,2020
@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GlobaLeaks\n"
 "PO-Revision-Date: 2013-05-29 17:59+0000\n"
-"Last-Translator: Panu Ahvenharju, 2018-2020,2023\n"
+"Last-Translator: Giovanni Pellerano <giovanni.pellerano@evilaliv3.org>, 2015-2018,2020-2022,2024\n"
 "Language-Team: Finnish (http://app.transifex.com/otf/globaleaks/language/fi/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -96,8 +96,8 @@ msgstr "Ohjattu alustan luominen"
 msgid "Label the report"
 msgstr "Anna ilmoitukselle nimi"
 
-msgid "Postpone the expiration date"
-msgstr "Siirrä vanhentumispäivää myöhäisemmäksi"
+msgid "Edit the expiration date"
+msgstr "Muokkaa vanhentumispäivää"
 
 msgid "Select all"
 msgstr "Valitse kaikki"
@@ -461,13 +461,13 @@ msgid "Set a reminder"
 msgstr "Aseta muistutus"
 
 msgid "Privileges"
-msgstr ""
+msgstr "Oikeudet"
 
 msgid "Hide"
 msgstr "Piilota"
 
 msgid "Unhide"
-msgstr ""
+msgstr "Kumoa piilotus"
 
 msgid "Redact"
 msgstr "Poista pysyvästi"
@@ -509,10 +509,10 @@ msgid "Me only"
 msgstr "Vain minä"
 
 msgid "Returning whistleblowers"
-msgstr ""
+msgstr "Palaavat ilmoittajat"
 
 msgid "Anonymity"
-msgstr ""
+msgstr "Nimettömyys"
 
 msgid "Anonymous"
 msgstr "Anonyymi"
@@ -527,7 +527,7 @@ msgid "Tor"
 msgstr "Tor"
 
 msgid "Devices"
-msgstr ""
+msgstr "Laitteet"
 
 msgid "Computer"
 msgstr "Tietokone"
@@ -536,10 +536,10 @@ msgid "Mobile"
 msgstr "Mobiili"
 
 msgid "Act on behalf of a whistleblower"
-msgstr ""
+msgstr "Toimi ilmoittajan puolesta"
 
 msgid "The link will expire in 7 days."
-msgstr ""
+msgstr "Linkki vanhenee 7 päivän kuluttua."
 
 msgid "File a report"
 msgstr "Jätä vihje"
@@ -654,9 +654,6 @@ msgstr "Valittavissa olevien vastaanottajien enimmäismäärä:"
 
 msgid "Show recipients in alphabetical order"
 msgstr "Näytä vastaanottajat aakkosjärjestyksessä"
-
-msgid "Allow the whistleblower to add attachments"
-msgstr "Anna ilmoittajan lisätä liitteitä"
 
 msgid "Additional questionnaire"
 msgstr "Täydentävä vihjelomake"
@@ -1020,7 +1017,7 @@ msgid "Enable search engines indexing"
 msgstr "Salli hakukoneiden indeksointi"
 
 msgid "Show channels in alphabetical order"
-msgstr ""
+msgstr "Näytä kanavat aakkosjärjestyksessä"
 
 msgid "Size limit for file attachments"
 msgstr "Liitetiedostojen kokorajoitus"
@@ -1169,7 +1166,7 @@ msgstr "Pakotetusti valittu"
 msgid "Allow the recipient to delete reports"
 msgstr "Salli vastaanottajan poistaa raportteja"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Salli vastaanottajan lykätä raportin vanhentumispäivää"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1179,7 +1176,7 @@ msgid "Give this user ability to transfer reports to other users"
 msgstr "Anna käyttäjälle mahdollisuus siirtää ilmoituksia toisille käyttäjille"
 
 msgid "Allow this user to reopen management of a report"
-msgstr ""
+msgstr "Salli tämän käyttäjän avata ilmoituksen hallinta uudelleen."
 
 msgid "Give the user administrative access to the following features:"
 msgstr "Anna käyttäjälle ylläpito-oikeudet seuraaviin toimintoihin:"
@@ -1233,7 +1230,7 @@ msgid "Assign score points"
 msgstr "Määritä pistemäärät"
 
 msgid "Change status"
-msgstr ""
+msgstr "Vaihda tila"
 
 msgid "Status:"
 msgstr "Tila:"
@@ -1262,22 +1259,22 @@ msgid ""
 msgstr "Tee kopio ja säilytä se turvallisessa paikassa. Se on tarpeen, jos kadotat salasanasi, jotta voit palauttaa tilisi käyttöoikeuden ilman tietojen menetystä."
 
 msgid "Attention"
-msgstr ""
+msgstr "Huomio"
 
 msgid "For security reasons the code needs to be changed."
-msgstr ""
+msgstr "Turvallisuussyistä koodi on vaihdettava."
 
 msgid "Enter a name for the copy"
 msgstr "Anna kopiolle nimi"
 
 msgid "Mask"
-msgstr ""
+msgstr "Peitä"
 
 msgid "Unselect"
-msgstr ""
+msgstr "Poista valinta"
 
 msgid "Reopen"
-msgstr ""
+msgstr "Avaa uudelleen"
 
 msgid "Request support"
 msgstr "Pyydä tukea"
@@ -1344,8 +1341,11 @@ msgstr "Resurssia voi käyttää vain Tor-verkon kautta"
 msgid "The upload request exceeds the size limit"
 msgstr "Lähetyspyyntö palvelimelle ylittää kokorajan"
 
-msgid "You are operating on behalf of a whistleblower."
+msgid "A user with this username already exists"
 msgstr ""
+
+msgid "You are operating on behalf of a whistleblower."
+msgstr "Toimit ilmoittajan puolesta."
 
 msgid "Current password"
 msgstr "Nykyinen salasana"
@@ -1411,9 +1411,6 @@ msgstr "Vastaanottajat ovat pyytäneet sinua täyttämään lisäkyselylomakkeen
 
 msgid "Fill the additional questionnaire"
 msgstr "Täytä lisäkyselylomake"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Anna ilmoittajan kirjoittaa kommentteja"
 
 msgid "From:"
 msgstr "Lähettäjä:"

@@ -94,7 +94,7 @@ msgstr "Устоди платформа"
 msgid "Label the report"
 msgstr "Гузоришро қайд кунед"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Ба таъхир гузоштани мӯҳлати итмоми эътибор "
 
 msgid "Select all"
@@ -653,9 +653,6 @@ msgstr "Шумораи зиёдтарини гирандагони интихо�
 msgid "Show recipients in alphabetical order"
 msgstr "Гирандагонро бо тартиби алифбо нишон додан"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Ба хабардиҳанда иҷозаи илова кардани замима ба гузориш додан"
-
 msgid "Additional questionnaire"
 msgstr "Саволномаи иловагӣ"
 
@@ -1167,7 +1164,7 @@ msgstr "Маҷбуран интихобшуда"
 msgid "Allow the recipient to delete reports"
 msgstr "Ба гиранда иҷозаи пок кардани гузоришро додан"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Ба гиранда иҷозаи ба таъхир гузоштани мӯҳлати анҷоми эътибори гузоришро додан"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1342,6 +1339,9 @@ msgstr "Дастрасӣ ба ин манбаъ танҳо тавассути ш
 msgid "The upload request exceeds the size limit"
 msgstr "Дархости боркунӣ аз ҳадди андозаи муқарраршуда зиёд аст"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1409,9 +1409,6 @@ msgstr "Гирандагон аз шумо дархост кардаанд са�
 
 msgid "Fill the additional questionnaire"
 msgstr "Пур кардани саволномаи иловагӣ"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Ба хабардиҳанда иҷозаи навиштани шарҳҳоро додан"
 
 msgid "From:"
 msgstr "Аз:"

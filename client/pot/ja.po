@@ -91,7 +91,7 @@ msgstr "プラットフォーム ウィザード"
 msgid "Label the report"
 msgstr "報告にラベルを付ける"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "有効期限を延期する"
 
 msgid "Select all"
@@ -650,9 +650,6 @@ msgstr "選択可能な受信者の最大数:"
 msgid "Show recipients in alphabetical order"
 msgstr "受信者をアルファベット順に表示"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "その内部告発者が、報告に添付ファイルを追加することを許可する"
-
 msgid "Additional questionnaire"
 msgstr "追加のアンケート"
 
@@ -1164,7 +1161,7 @@ msgstr "強制的に選択"
 msgid "Allow the recipient to delete reports"
 msgstr "受信者が報告を削除することを許可する"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "受信者が報告の有効期限を延長することを許可する"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1339,6 +1336,9 @@ msgstr "リソースはTorネットワーク内でのみアクセスできます
 msgid "The upload request exceeds the size limit"
 msgstr "アップロードリクエストがサイズ制限を超過しました"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1406,9 +1406,6 @@ msgstr "受領者があなたに追加のアンケートを記入するよう依
 
 msgid "Fill the additional questionnaire"
 msgstr "追加のアンケートを入力してください"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "その内部告発者が、コメントを書くことを許可"
 
 msgid "From:"
 msgstr "差出人:"

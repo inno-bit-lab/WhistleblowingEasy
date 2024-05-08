@@ -10,6 +10,15 @@ from globaleaks.models.properties import *
 from globaleaks.utils.utility import datetime_now, datetime_never, datetime_null
 
 
+class FieldAttr_v_52(Model):
+    __tablename__ = 'fieldattr'
+    id = Column(UnicodeText(36), primary_key=True, default=uuid4, nullable=False)
+    field_id = Column(UnicodeText(36), nullable=False)
+    name = Column(UnicodeText, nullable=False)
+    type = Column(UnicodeText, nullable=False)
+    value = Column(JSON, default=dict, nullable=False)
+
+
 class InternalTip_v_52(Model):
     __tablename__ = 'internaltip'
 
@@ -23,8 +32,6 @@ class InternalTip_v_52(Model):
     mobile = Column(Boolean, default=False, nullable=False)
     total_score = Column(Integer, default=0, nullable=False)
     expiration_date = Column(DateTime, default=datetime_never, nullable=False)
-    enable_two_way_comments = Column(Boolean, default=True, nullable=False)
-    enable_attachments = Column(Boolean, default=True, nullable=False)
     enable_whistleblower_identity = Column(Boolean, default=False, nullable=False)
     label = Column(UnicodeText, default='', nullable=False)
     wb_last_access = Column(DateTime, default=datetime_now, nullable=False)
@@ -55,13 +62,9 @@ class Subscriber_v_52(Model):
     language = Column(UnicodeText(12), nullable=False)
     name = Column(UnicodeText, nullable=False)
     surname = Column(UnicodeText, nullable=False)
-    role = Column(UnicodeText, default='', nullable=False)
     phone = Column(UnicodeText, default='', nullable=False)
     email = Column(UnicodeText, nullable=False)
-    use_case = Column(UnicodeText, default='', nullable=False)
-    use_case_other = Column(UnicodeText, default='', nullable=False)
     organization_name = Column(UnicodeText, default='', nullable=False)
-    organization_type = Column(UnicodeText, default='', nullable=False)
     organization_location4 = Column(UnicodeText, default='', nullable=False)
     activation_token = Column(UnicodeText, unique=True, nullable=True)
     client_ip_address = Column(UnicodeText, default='', nullable=False)

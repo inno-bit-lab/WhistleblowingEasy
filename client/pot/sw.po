@@ -86,7 +86,7 @@ msgstr "Kivinjari cha jukwaa"
 msgid "Label the report"
 msgstr "Lebo ripoti"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Ahirisha tarehe ya kumalizika muda"
 
 msgid "Select all"
@@ -645,9 +645,6 @@ msgstr "Idadi ya juu ya wapokeaji wanaochaguliwa:"
 msgid "Show recipients in alphabetical order"
 msgstr "Onyesha wapokeaji kwa mpangilio wa alfabeti"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Ruhusu mtoa taarifa ya siri kuongeza viambatanisho kwenye ripoti"
-
 msgid "Additional questionnaire"
 msgstr "Dodoso la nyongeza"
 
@@ -1159,7 +1156,7 @@ msgstr "Imechaguliwa kwa nguvu"
 msgid "Allow the recipient to delete reports"
 msgstr "Ruhusu mpokeaji kufuta ripoti"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Ruhusu wapokeaji kuahirisha tarehe ya kumalizika muda wa ripoti."
 
 msgid "Give this user ability to grant user access to reports"
@@ -1334,6 +1331,9 @@ msgstr "Rasilimali zinaweza kupatikana tu kupitia mtandao wa Tor"
 msgid "The upload request exceeds the size limit"
 msgstr "Ombi la kupakia linazidi kikomo cha ukubwa"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1401,9 +1401,6 @@ msgstr "Wapokeaji wamekuomba ujaze hadidu za nyongeza."
 
 msgid "Fill the additional questionnaire"
 msgstr "Jaza dodoso za nyongeza"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Ruhusu mtoa taarifa ya siri kuandika maoni."
 
 msgid "From:"
 msgstr "Kutoka:"

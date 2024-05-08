@@ -111,7 +111,7 @@ msgstr "Wisaya platform"
 msgid "Label the report"
 msgstr "Tandai laporan"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Menunda tanggal kedaluwarsa"
 
 msgid "Select all"
@@ -670,9 +670,6 @@ msgstr "Jumlah tertinggi penerima yang dapat dipilih:"
 msgid "Show recipients in alphabetical order"
 msgstr "Tunjukkan penerima-penerima berdasarkan susunan abjad"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Izinkan informan publik untuk menambahkan lampiran ke dalam laporan"
-
 msgid "Additional questionnaire"
 msgstr "Kuesioner tambahan"
 
@@ -1184,7 +1181,7 @@ msgstr "Secara paksa dipilih"
 msgid "Allow the recipient to delete reports"
 msgstr "Izinkan penerima untuk menghapus laporan"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Izinkan penerima untuk menunda tanggal kedaluwarsa laporan"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1359,6 +1356,9 @@ msgstr "Sumber hanya dapat diakses melalui jaringan Tor"
 msgid "The upload request exceeds the size limit"
 msgstr "Permintaan unggahan melebihi batas ukuran"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1426,9 +1426,6 @@ msgstr "Penerima meminta Anda untuk mengisi kuesioner tambahan."
 
 msgid "Fill the additional questionnaire"
 msgstr "Isi kuesioner tambahan"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Izinkan informan publik untuk menulis komentar"
 
 msgid "From:"
 msgstr "Dari:"

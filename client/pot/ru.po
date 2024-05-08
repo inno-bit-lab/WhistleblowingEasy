@@ -116,7 +116,7 @@ msgstr "Мастер платформы"
 msgid "Label the report"
 msgstr "Пометить подачу материалов"
 
-msgid "Postpone the expiration date"
+msgid "Edit the expiration date"
 msgstr "Отложить срок истечения"
 
 msgid "Select all"
@@ -675,9 +675,6 @@ msgstr "Максимальное число получателей:"
 msgid "Show recipients in alphabetical order"
 msgstr "Сортировать получателей в алфавитном порядке"
 
-msgid "Allow the whistleblower to add attachments"
-msgstr "Разрешить информатору добавлять приложения к поданным документам"
-
 msgid "Additional questionnaire"
 msgstr "Дополнительный опросник"
 
@@ -1189,7 +1186,7 @@ msgstr "Выбрано по требованию"
 msgid "Allow the recipient to delete reports"
 msgstr "Разрешить получателю удалять отчеты"
 
-msgid "Allow the recipient to postpone the report expiration date"
+msgid "Allow the recipient to edit the report expiration date"
 msgstr "Разрешить получателю откладывать истечение срока действия отчета"
 
 msgid "Give this user ability to grant user access to reports"
@@ -1364,6 +1361,9 @@ msgstr "Доступ к ресурсу возможен только из сет
 msgid "The upload request exceeds the size limit"
 msgstr "Запрос на загрузку файла на сервер превышает установленный лимит"
 
+msgid "A user with this username already exists"
+msgstr ""
+
 msgid "You are operating on behalf of a whistleblower."
 msgstr ""
 
@@ -1431,9 +1431,6 @@ msgstr "Получатели попросили вас заполнить доп
 
 msgid "Fill the additional questionnaire"
 msgstr "Заполнить дополнительный опросник"
-
-msgid "Allow the whistleblower to write comments"
-msgstr "Разрешить информатору добавлять комментарии"
 
 msgid "From:"
 msgstr "От кого:"

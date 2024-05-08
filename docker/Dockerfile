@@ -1,21 +1,15 @@
 FROM debian:12-slim
 
 RUN apt-get update -q && \
-    apt-get install -y wget lsb-release && \
+    apt-get dist-upgrade -y && \
+    apt-get install -y apt-utils wget lsb-release && \
+    wget https://raw.githubusercontent.com/inno-bit-lab/WhistleblowingEasy/main/scripts/install.sh && \
+    chmod +x install-globaleaks.sh && \
+    ./install-globaleaks.sh -y -n && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN wget https://raw.githubusercontent.com/inno-bit-lab/WhistleblowingEasy/main/scripts/install.sh -O install-globaleaks.sh
-RUN chmod +x install-globaleaks.sh
-RUN ./install-globaleaks.sh -y -n
-
-RUN apt-get update -q && \
-    apt-get install -y globaleaks && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-EXPOSE 8080
-EXPOSE 8443
+EXPOSE 8080 8443
 
 USER globaleaks
 
