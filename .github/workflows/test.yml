@@ -1,6 +1,6 @@
 name: Test
 
-on: [ push, pull_request ]
+on: [ pull_request ]
 
 env:
   CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
