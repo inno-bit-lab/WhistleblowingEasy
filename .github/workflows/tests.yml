@@ -20,7 +20,9 @@ jobs:
           fetch-depth: 1
 
       - name: Check channel proxy routing
-        run: python3 -m unittest discover -s install/traefik/tests -v
+        run: |
+          python3 -m unittest discover -s install/traefik/tests -v
+          python3 -m unittest discover -s .github/workflows/scripts/tests -v
 
       - name: Cache npm dependencies
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0

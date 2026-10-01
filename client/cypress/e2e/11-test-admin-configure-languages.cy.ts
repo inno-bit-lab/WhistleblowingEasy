@@ -26,8 +26,13 @@ describe("admin configure languages", () => {
       cy.get('ul.selection-list li').should('contain', 'German [de]');
     }
 
+    cy.intercept("PUT", "**/api/admin/node").as("saveLanguages");
     cy.get("#save_language").click();
+    cy.wait("@saveLanguages").its("response.statusCode").should("eq", 202);
 
+    // Saving languages reloads the settings route through /blank. Wait for
+    // the default tab to return before starting the language switch reload.
+    cy.get('[name="node.dataModel.header_title_homepage"]').should("be.visible");
     cy.waitForUrl("/#/admin/settings");
     cy.get('#LanguagePickerBox [data-cy="it"]').should('be.visible').click().should('have.attr', 'aria-pressed', 'true');
     cy.get('html').should('have.attr', 'lang', 'it');
