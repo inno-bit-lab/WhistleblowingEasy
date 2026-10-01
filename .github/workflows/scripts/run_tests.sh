@@ -13,6 +13,7 @@ pip3 install --require-hashes -r requirements/requirements.txt.$(. /etc/os-relea
 
 cd $GITHUB_WORKSPACE/client  # to install frontend dependencies
 npm ci
+node tests/submission-navigation.test.cjs
 ./node_modules/grunt/bin/grunt build_and_instrument
 
 cd $GITHUB_WORKSPACE/backend && coverage run -m twisted.trial globaleaks.tests

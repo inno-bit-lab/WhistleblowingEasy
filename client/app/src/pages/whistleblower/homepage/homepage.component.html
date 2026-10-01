@@ -1,4 +1,7 @@
 <div id="HomePageBox" class="kronos-home">
+  @if (appDataService.public.node.disable_submissions) {
+    <div id="submissions_disabled" class="alert alert-warning" role="status">{{'Submissions disabled' | translate}}</div>
+  }
   <section class="kronos-hero" aria-labelledby="kronos-home-title">
     <div class="kronos-intro">
       <p class="kronos-eyebrow">Kronos Finance <span aria-hidden="true">/</span> Whistleblowing</p>

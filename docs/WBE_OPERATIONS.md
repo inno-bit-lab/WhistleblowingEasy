@@ -103,3 +103,13 @@ Intervento futuro:
 5. Verificare discovery Docker, Flow homepage/health/API e WBE home/slug/login/admin. Solo allora rimuovere il fallback file e ripetere le verifiche.
 
 Log Traefik: `/var/log/traefik/traefik.log` e `access.log`. Non indebolire il requisito minimo API Docker come soluzione permanente. L'aggiornamento non è stato eseguito in questa sessione.
+
+## Pulizia del 1 ottobre 2026
+
+Eliminati i 119 percorsi approvati nel piano locale `analysis/CLEANUP-PLAN-20261001.json`, con risultato in `analysis/CLEANUP-RESULT-20261001.json`: circa 1,85 GiB liberati, nessun errore. Arrestati soltanto backend e proxy di test. Rimossi anteprime client superate, staging installato, copie dei dati di test, screenshot/log temporanei e tooling temporaneo sotto /tmp. Conservata build precedente `node1/client/build-preview-previous-20261001-102651`. I backup, i nodi storici, i repository e lo stato di rollback sono conservati. I vecchi strumenti di test sotto /tmp non sono più disponibili: prepararli nuovamente in un ambiente isolato se servono.
+
+## Diagnosi CI
+
+Il workflow `.github/workflows/tests.yml` esegue prima i controlli del proxy, poi `.github/workflows/scripts/run_tests.sh`: dipendenze vincolate, build strumentata, Twisted backend e Cypress frontend, quindi coverage. Esaminare `gh run view RUN_ID --repo inno-bit-lab/WhistleblowingEasy --log-failed`, distinguendo errori backend dai fallimenti browser. In caso di fallimento vengono conservati screenshot/video dei test per sette giorni.
+
+Il run 36839266958 sul commit db79a98fe8 aveva backend 648/648 superati e Cypress 61/73: avviso di segnalazioni disabilitate rimosso dalla home, test ancora riferiti al vecchio selettore lingua e input di identità trovati tramite posizione globale. Il fallimento iniziale dell'invio audio causava errori successivi sul report/identità. I test dipendono dalla preparazione dei canali, questionari e utenti negli spec precedenti: riprodurre la sequenza necessaria su database isolato. Non puntare Cypress all'istanza pubblica né aggirare i fallimenti con force click o test disabilitati.

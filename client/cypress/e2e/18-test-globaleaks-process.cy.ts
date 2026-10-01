@@ -282,16 +282,19 @@ describe("globaleaks process", function () {
     cy.get("#delete_recording").should("be.visible");
     cy.get("#NextStepButton").click();
     cy.takeScreenshot("whistleblower/report_identity", "#SubmissionTabsContentBox");
-    cy.get("input[type='text']").eq(2).should("be.visible").type("abc");
-    cy.get("input[type='text']").eq(3).should("be.visible").type("xyz");
-    cy.get("select").first().select(1);
+    cy.get("#SubmissionForm src-whistleblower-identity-field").should("be.visible").within(() => {
+      cy.get("input[type='text']").should("have.length", 2);
+      cy.get("input[type='text']").eq(0).type("abc");
+      cy.get("input[type='text']").eq(1).type("xyz");
+      cy.get("select").first().select(1);
+    });
     cy.get("#SubmitButton").should("be.visible");
     cy.get("#SubmitButton").click();
     cy.get("#ViewReportButton").should("be.visible");
     cy.wait(5000);
     cy.get("#ViewReportButton").click();
     cy.get("#open_additional_questionnaire").click();
-    cy.get("input[type='text']").eq(1).should("be.visible").type("single line text input");
+    cy.get(".modal-dialog #SubmissionForm input[type='text']").should("have.length", 1).should("be.visible").type("single line text input");
     cy.get("#SubmitButton").click();
     cy.logout();
   });
