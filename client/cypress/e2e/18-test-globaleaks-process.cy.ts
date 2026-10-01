@@ -59,6 +59,22 @@ describe("globaleaks process", function () {
   });
 
   it("Recipient should be able to access a report and perform further actions", function () {
+    const confirmDateOperation = (operation: "postpone" | "set_reminder") => {
+      cy.intercept("PUT", /\/api\/recipient\/rtips\/[^/]+$/, (request) => {
+        if (request.body.operation === operation) {
+          request.alias = operation;
+        }
+      });
+      cy.intercept("GET", /\/api\/recipient\/rtips\/[^/]+$/).as(`${operation}Reload`);
+      cy.get('#modal-action-ok').click();
+      cy.wait(`@${operation}`).its("response.statusCode").should("eq", 202);
+      // Confirm closes the modal before the request finishes. Wait for the
+      // subsequent route reload so the next action uses the new report DOM.
+      cy.wait(`@${operation}Reload`).its("response.statusCode").should("eq", 200);
+      cy.get('.modal').should('not.exist');
+      cy.get("#TipInfoBox").should("be.visible");
+    };
+
     cy.login_receiver();
 
     cy.visit("/#/recipient/reports");
@@ -109,7 +125,7 @@ describe("globaleaks process", function () {
       cy.get('.btn-link[aria-label="Next month"]').click();
       cy.get('.ngb-dp-day').contains(day).click();
     });
-    cy.get('#modal-action-ok').click();
+    confirmDateOperation("postpone");
 
     // Set a reminder
     cy.get("#tip-action-reminder").click();
@@ -120,7 +136,7 @@ describe("globaleaks process", function () {
     const formattedDate = tomorrow.toISOString().split('T')[0];
     cy.get('input[name="dp"]').click().clear();
     cy.get('input[name="dp"]').click().type(formattedDate);
-    cy.get('#modal-action-ok').click();
+    confirmDateOperation("set_reminder");
 
     // Silence email notifications
     cy.get('[id="tip-action-silence"]').should('be.visible').click();
