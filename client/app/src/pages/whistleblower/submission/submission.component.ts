@@ -59,10 +59,14 @@ export class SubmissionComponent implements OnInit {
 
   openReportForm(): void {
     this.reportFormOpened = true;
+    this.scrollToReportForm(true);
+  }
+
+  scrollToReportForm(animate = false): void {
     requestAnimationFrame(() => {
       const region = document.getElementById('kronos-report-form');
       region?.focus({preventScroll: true});
-      region?.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'});
+      region?.scrollIntoView({behavior: animate && !window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'auto', block: 'start'});
     });
   }
 
@@ -187,7 +191,7 @@ export class SubmissionComponent implements OnInit {
 
   goToStep(step: number) {
     this.navigation = step;
-    this.utilsService.scrollToTop();
+    this.scrollToReportForm();
   }
 
   hasPreviousStep() {
@@ -286,7 +290,7 @@ export class SubmissionComponent implements OnInit {
    this.fieldUtilitiesService.onAnswersUpdate(this);
 
     if (!this.runValidation()) {
-      this.utilsService.scrollToTop();
+      this.scrollToReportForm();
       return;
     }
 

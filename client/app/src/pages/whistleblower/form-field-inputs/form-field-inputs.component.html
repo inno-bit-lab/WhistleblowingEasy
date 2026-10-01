@@ -37,7 +37,7 @@
         }
         @if (field.multi_entry && field.type === 'fieldgroup') {
           <div class="float-end">
-            <button class="btn btn-outline-secondary" [attr.aria-label]="'Add' | translate" (click)="addAnswerEntry(entries)">
+            <button type="button" class="btn btn-outline-secondary" [attr.aria-label]="'Add' | translate" (click)="addAnswerEntry(entries)">
               <i class="fas fa-plus"></i>
             </button>
           </div>
@@ -49,13 +49,10 @@
 @if ((['checkbox', 'fieldgroup', 'multichoice'].indexOf(field.type) !== -1) || (['whistleblower_identity'].indexOf(field.template_id) !== -1)) {
   <fieldset id="{{fieldId}}" class="question">
     @if (field.label) {
-      <legend class="title">{{field.label|translate}}</legend>
+      <legend class="title">{{field.label|translate}} @if (field.required) { <span class="text-danger sup" ngbTooltip="{{'This field is mandatory' | translate}}">*</span> }</legend>
     }
     @if (field.hint) {
       <span [ngbTooltip]="field.hint"><i class="fas fa-circle-question"></i></span>
-    }
-    @if (field.required) {
-      <span class="text-danger sup" ngbTooltip="{{'This field is mandatory' | translate}}">*</span>
     }
     <div class="question-body">
       @if (field.description) {
@@ -83,7 +80,7 @@
         }
         @if (field.multi_entry && field.type === 'fieldgroup') {
           <div class="float-end">
-            <button class="btn btn-outline-secondary" [attr.aria-label]="'Add' | translate" (click)="addAnswerEntry(entries)">
+            <button type="button" class="btn btn-outline-secondary" [attr.aria-label]="'Add' | translate" (click)="addAnswerEntry(entries)">
               <i class="fas fa-plus"></i>
             </button>
           </div>

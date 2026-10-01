@@ -69,7 +69,7 @@
             <ul id="SubmissionTabsNavigationBox" class="nav nav-tabs" role="tablist">
               @if (submission.context.allow_recipients_selection) {
                 <li id="step-recipient-selection-tab" class="nav-item" role="presentation">
-                  <button id="receiver-selection-link" [ngClass]="{active: navigation === -1}" class="nav-link nav-link-custom" (click)="goToStep(-1)" [attr.aria-selected]="navigation === -1" [attr.aria-current]="navigation === -1 ? 'step' : 'false'" aria-controls="step-recipient-selection" role="tab">
+                  <button type="button" id="receiver-selection-link" [ngClass]="{active: navigation === -1}" class="nav-link nav-link-custom" (click)="goToStep(-1)" [attr.aria-selected]="navigation === -1" [attr.aria-current]="navigation === -1 ? 'step' : 'false'" aria-controls="step-recipient-selection" role="tab">
                     <span class="step-index" [ngClass]="{'step-index-selected': navigation === -1}">1</span>
                     <span class="step-label">{{'Recipient selection'|translate}}</span>
                   </button>
@@ -78,7 +78,7 @@
               @for (step of (questionnaire.steps | orderBy:'order'); let index = $index; track step.id) {
                 <li id="context-{{index}}" class="nav-item" role="presentation">
                   @if (step?.enabled) {
-                    <button id="step-{{index}}-link" [ngClass]="{active: navigation === index}" class="nav-link nav-link-custom" (click)="goToStep(index)" [attr.aria-selected]="navigation === index" [attr.aria-current]="navigation === index ? 'step' : 'false'" [attr.aria-controls]="'step-' + index" role="tab">
+                    <button type="button" id="step-{{index}}-link" [ngClass]="{active: navigation === index}" class="nav-link nav-link-custom" (click)="goToStep(index)" [attr.aria-selected]="navigation === index" [attr.aria-current]="navigation === index ? 'step' : 'false'" [attr.aria-controls]="'step-' + index" role="tab">
                       <span class="step-index" [ngClass]="{'step-index-selected': navigation === index}">{{index + (submission.context.allow_recipients_selection ? 2 : 1)}}</span>
                       <span class="step-label">{{step.label}}</span>
                     </button>
@@ -122,13 +122,13 @@
         </div>
         <div id="SubmissionButtons">
           @if (hasPreviousStep()) {
-            <button id="PreviousStepButton" class="btn btn-outline-secondary" (click)="whistleblowerSubmissionService.decrementStep(this)">
+            <button type="button" id="PreviousStepButton" class="btn btn-outline-secondary" (click)="whistleblowerSubmissionService.decrementStep(this)">
               <i class="fas fa-circle-arrow-left"></i>
               <span>{{'Previous'|translate}}</span>
             </button>
           }
           @if (hasNextStep()) {
-            <button id="NextStepButton" class="btn btn-outline-secondary" [disabled]="submission.blocked" (click)="whistleblowerSubmissionService.incrementStep(this)">
+            <button type="button" id="NextStepButton" class="btn btn-outline-secondary" [disabled]="submission.blocked" (click)="whistleblowerSubmissionService.incrementStep(this)">
               <span>{{'Next'|translate}}</span>
               <i class="fas fa-circle-arrow-right"></i>
             </button>

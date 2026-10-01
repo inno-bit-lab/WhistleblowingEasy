@@ -29,7 +29,7 @@ export class WhistleblowerSubmissionService {
     for (let i = scope.navigation - 1; i >= scope.firstStepIndex(); i--) {
       if (i === -1 || scope.fieldUtilitiesService.isFieldTriggered(null, scope.questionnaire.steps[i], scope.answers, scope.identity_provided, false)) {
         scope.navigation = i;
-        scope.utilsService.scrollToTop();
+        scope.scrollToReportForm();
         return;
       }
     }
@@ -43,14 +43,14 @@ export class WhistleblowerSubmissionService {
     scope.fieldUtilitiesService.onAnswersUpdate(scope);
 
     if (!scope.runValidation()) {
-      scope.utilsService.scrollToTop();
+      scope.scrollToReportForm();
       return;
     }
 
     for (let i = scope.navigation + 1; i <= scope.lastStepIndex(); i++) {
       if (scope.fieldUtilitiesService.isFieldTriggered(null, scope.questionnaire.steps[i], scope.answers, scope.submission.identity_provided, false)) {
         scope.navigation = i;
-        scope.utilsService.scrollToTop();
+        scope.scrollToReportForm();
         return;
       }
     }

@@ -1277,3 +1277,50 @@ body .dropdown-visible > div.multiselect-dropdown > div > span.dropdown-btn {
 #kronos-report-form[hidden] { display: none !important; }
 #kronos-report-form:focus { outline: none; }
 @media (max-width: 640px) { .kronos-channel-start .btn { width: 100%; } .kronos-channel-information h2 { font-size: 1.25rem; } }
+
+.kronos-submission-shell .question { min-width: 0; margin-bottom: 24px; }
+.kronos-submission-shell .question-label { display: block; line-height: 1.5; margin-bottom: 10px; }
+.kronos-submission-shell .question-label .title { display: inline; }
+.kronos-submission-shell .question-label .sup { display: inline; margin-inline-start: 4px; }
+.kronos-submission-shell .question-body { min-width: 0; }
+.kronos-submission-shell .form-control { max-width: 100%; }
+.kronos-submission-shell .kronos-date-range { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: end; gap: 16px; width: 100%; }
+.kronos-date-field { min-width: 0; }
+.kronos-date-field > label { display: block; font-size: .875rem; color: #506377; margin-bottom: 8px; }
+.kronos-submission-shell .kronos-date-control { flex-wrap: nowrap; width: 100%; }
+.kronos-submission-shell .kronos-date-control input { min-width: 0; width: 0; flex: 1 1 auto; border-radius: 6px 0 0 6px; }
+.kronos-submission-shell .kronos-calendar-button { flex: 0 0 48px; width: 48px; min-height: 48px; border-color: #ccdbe4; border-radius: 0 6px 6px 0; background: #f3f7f9; color: #102c46; }
+.kronos-submission-shell .kronos-date-clear { min-width: 48px; min-height: 48px; }
+.kronos-submission-shell .form-check-input { width: 20px; height: 20px; margin-inline-end: 8px; accent-color: #087f83; }
+@media(max-width:640px) { .kronos-submission-shell .kronos-date-range { grid-template-columns: minmax(0,1fr); gap: 12px; } .kronos-submission-shell .kronos-date-clear { justify-self: start; } }
+
+.kronos-submission-shell .kronos-date-range-column { min-width: min(100%, 480px); }
+.kronos-submission-shell .kronos-date-column { min-width: min(100%, 260px); }
+.kronos-submission-shell .kronos-date-clear { grid-column: 1 / -1; justify-self: start; }
+
+/* Questionnaire primitives: consistent reading width, including conditional fields. */
+.kronos-submission-shell .kronos-question-row { display: block; }
+.kronos-submission-shell .kronos-question-column { width: 100%; max-width: 100%; min-width: 0; }
+.kronos-submission-shell .question-label, .kronos-submission-shell .question > legend { font-size: 1rem; font-weight: 600; line-height: 1.55; margin-bottom: 10px; }
+.kronos-submission-shell .question-label .title { font-weight: inherit; }
+.kronos-submission-shell .question > legend { float: none; width: 100%; }
+.kronos-submission-shell .question .description { color: #506377; line-height: 1.65; }
+.kronos-submission-shell :is(input.form-control,textarea.form-control,select.form-control) { background: #f8fafb; color: #102c46; padding: 12px 14px; }
+.kronos-submission-shell :is(input.form-control,textarea.form-control,select.form-control):disabled { background: #edf2f5; color: #506377; opacity: 1; }
+.kronos-submission-shell textarea.form-control { min-height: 160px; resize: vertical; }
+.kronos-submission-shell select.form-control { appearance: auto; padding-inline-end: 28px; }
+.kronos-submission-shell ng-select { width: 100% !important; }
+.kronos-submission-shell ng-select .ng-select-container { min-height: 48px; border-color: #ccdbe4; border-radius: 6px; background: #f8fafb; }
+.kronos-submission-shell .kronos-choice { display: flex; align-items: flex-start; gap: 12px; min-height: 48px; padding: 12px 14px; margin-bottom: 8px; border: 1px solid #dce5eb; border-radius: 8px; background: #f8fafb; }
+.kronos-submission-shell .kronos-choice:has(input:checked) { border-color: #087f83; background: #edf7f7; }
+.kronos-submission-shell .kronos-choice input { flex: 0 0 20px; margin: 2px 0 0; }
+.kronos-submission-shell .kronos-choice label { flex: 1; margin: 0; line-height: 1.5; cursor: pointer; }
+.kronos-submission-shell .form-check-label { line-height: 1.6; }
+.kronos-submission-shell .drag-drop { padding: 20px; border: 1px dashed #9fb5c4; border-radius: 10px; background: #f8fafb; }
+.kronos-submission-shell .custom-file { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.kronos-submission-shell .custom-file label { margin: 0; }
+.kronos-submission-shell .custom-file .mx-2 { margin: 0 !important; color: #506377; font-size: .875rem; }
+.kronos-submission-shell .fileUploadBox { padding: 12px; border: 1px solid #dce5eb; border-radius: 8px; }
+.kronos-submission-shell .audio-box { padding: 16px; background: #f3f7f9; border: 1px solid #dce5eb; border-radius: 10px; }
+.kronos-submission-shell :is(audio,video) { max-width: 100%; }
+.kronos-submission-shell input[type=file]:focus-visible + label { outline: 3px solid #087f83; outline-offset: 3px; }

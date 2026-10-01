@@ -36,7 +36,7 @@
               <div>
                 @if (field.options.length < 10) {
                   <select id="{{fieldEntry}}" [name]="fieldEntry" class="form-control" [(ngModel)]="entry['value']" [required]="entry.required_status" [attr.aria-label]="field.label | translate">
-                    <option class="d-none" value="">Select an option</option>
+                    <option class="d-none" value="">{{'Select an option' | translate}}</option>
                     @for (option of field.options | orderBy:field.attrs.display_alphabetically.value ? 'label' : 'order'; track option; let index = $index) {
                       <option id="{{fieldEntry}}-option-{{index}}" [value]="option.id">{{option.label}}</option>
                     }
@@ -61,8 +61,8 @@
             @case ('multichoice') {
               <div>
                 @for (option of field.options | orderBy:'order'; track option; let innerindex = $index) {
-                  <div>
-                    <input [name]="fieldEntry" id="{{fieldEntry + '-option-' + innerindex}}" class="form-control-inputform-check-input" type="checkbox" [ngModel]="entry['value'] === option.id" (ngModelChange)="entry['value'] = $event ? option.id : ''" value="{{option.id}}" [required]="field.required" />
+                  <div class="kronos-choice">
+                    <input [name]="fieldEntry" id="{{fieldEntry + '-option-' + innerindex}}" class="form-check-input" type="checkbox" [ngModel]="entry['value'] === option.id" (ngModelChange)="entry['value'] = $event ? option.id : ''" value="{{option.id}}" [required]="field.required" />
                     <label for="{{fieldEntry + '-option-' + innerindex}}" ngbTooltip="{{option.hint1}}" class="form-control-label" [ngClass]="{'text-underline': option.hint1}">{{option.label}}</label>
                   </div>
                 }
@@ -71,7 +71,7 @@
             @case ('checkbox') {
               <div>
                 @for (option of field.options | orderBy:field.attrs.display_alphabetically.value ? 'label' : 'order'; track option; let index = $index) {
-                  <div>
+                  <div class="kronos-choice">
                     <input id="{{fieldEntry + '-option-' + index}}" [name]="fieldEntry" class="form-control-input inputelinem form-check-input" [(ngModel)]="entry[option.id]" value="{{option.id}}" [required]="entry.required_status" type="checkbox" />
                     <label for="{{fieldEntry + '-option-' + index}}" ngbTooltip="{{option.hint1}}" class="form-control-label" [ngClass]="{'text-underline': option.hint1}">{{option.label}}</label>
                   </div>
@@ -82,42 +82,28 @@
               <div>
                 <div class="input-group">
                   <input id="{{fieldEntry}}" class="form-control" [name]="fieldEntry" [minDate]="dateOptions.min_date" [maxDate]="dateOptions.max_date" type="text" readonly="readonly" [attr.aria-label]="field.label" [(ngModel)]="input_date" [required]="entry.required_status" ngbDatepicker #datepicker="ngbDatepicker" (click)="datepicker.toggle()" (ngModelChange)="onDateSelection()" />
-                  <span class="input-group-append btn btn-light border border-1" (click)="datepicker.toggle()">
-                    <i class="fas fa-calendar"></i>
-                  </span>
+                  <button type="button" class="btn btn-outline-secondary kronos-calendar-button" [attr.aria-label]="field.label" (click)="datepicker.toggle()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></button>
                 </div>
               </div>
             }
             @case ('daterange') {
-              <div class="form-inline d-inline-flex align-items-center">
-                <span class="form-group">
+              <div class="kronos-date-range">
+                <div class="kronos-date-field">
                   <label [for]="fieldEntry+'-startDate'">{{'From' | translate}}</label>
-                </span>
-                <span class="form-group ms-1">
-                  <div class="input-group ms-1">
-                    <input id="{{fieldEntry}}" class="form-control" [name]="fieldEntry+'-startDate'" [minDate]="dateOptions1" [maxDate]="dateOptions2" type="text" [readOnly]="true" [attr.aria-label]="field.label" [(ngModel)]="input_start_date" [required]="entry.required_status" ngbDatepicker #datepickerstart="ngbDatepicker" (click)="datepickerstart.toggle()" (ngModelChange)="onStartDateSelection(input_start_date)" />
-                    <span class="input-group-append btn btn-light border border-1" (click)="datepickerstart.toggle()">
-                      <i class="fas fa-calendar"></i>
-                    </span>
+                  <div class="input-group kronos-date-control">
+                    <input id="{{fieldEntry}}-startDate" class="form-control" [name]="fieldEntry+'-startDate'" [minDate]="dateOptions1" [maxDate]="dateOptions2" type="text" [readOnly]="true" [attr.aria-label]="field.label + ' — ' + ('From' | translate)" [(ngModel)]="input_start_date" [required]="entry.required_status" ngbDatepicker #datepickerstart="ngbDatepicker" (click)="datepickerstart.toggle()" (ngModelChange)="onStartDateSelection(input_start_date)" />
+                    <button type="button" class="btn btn-outline-secondary kronos-calendar-button" [attr.aria-label]="field.label + ' — ' + ('From' | translate)" (click)="datepickerstart.toggle()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></button>
                   </div>
-                </span>
-                <span class="form-group ms-2">
+                </div>
+                <div class="kronos-date-field">
                   <label [for]="fieldEntry+'-endDate'">{{'To' | translate}}</label>
-                </span>
-                <span class="form-group ms-2">
-                  <div class="input-group ms-1">
-                    <input id="{{fieldEntry}}" class="form-control" [name]="fieldEntry+'-endDate'" [minDate]="input_start_date" [maxDate]="dateOptions2" type="text" [readonly]="true" [attr.aria-label]="field.label" [(ngModel)]="input_end_date" [required]="entry.required_status" ngbDatepicker #datepickerend="ngbDatepicker" (click)="datepickerend.toggle()" (ngModelChange)="onEndDateSelection(input_end_date)" [disabled]="!input_start_date" />
-                    <span class="input-group-append btn btn-light border border-1" (click)="input_start_date && datepickerend.toggle()">
-                      <i class="fas fa-calendar"></i>
-                    </span>
+                  <div class="input-group kronos-date-control">
+                    <input id="{{fieldEntry}}-endDate" class="form-control" [name]="fieldEntry+'-endDate'" [minDate]="input_start_date" [maxDate]="dateOptions2" type="text" [readonly]="true" [attr.aria-label]="field.label + ' — ' + ('To' | translate)" [(ngModel)]="input_end_date" [required]="entry.required_status" ngbDatepicker #datepickerend="ngbDatepicker" (click)="datepickerend.toggle()" (ngModelChange)="onEndDateSelection(input_end_date)" [disabled]="!input_start_date" />
+                    <button type="button" class="btn btn-outline-secondary kronos-calendar-button" [attr.aria-label]="field.label + ' — ' + ('To' | translate)" (click)="datepickerend.toggle()" [disabled]="!input_start_date"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></button>
                   </div>
-                </span>
+                </div>
                 @if (input_start_date) {
-                  <span class="form-group ms-2">
-                    <button type="button" class="btn btn-outline-secondary" (click)="clearDateRange()">
-                      <i class="fas fa-circle-xmark"></i>
-                    </button>
-                  </span>
+                  <button type="button" class="btn btn-outline-secondary kronos-date-clear" [attr.aria-label]="'Remove' | translate" (click)="clearDateRange()"><i class="fas fa-xmark" aria-hidden="true"></i></button>
                 }
               </div>
             }

@@ -1,8 +1,8 @@
 @for (row of rows; track row; let fieldRow = $index) {
-  <div class="row">
+  <div class="row kronos-question-row">
     @for (field of row | orderBy:'x'; let fieldCol = $index; track $index) {
       @if (field?.enabled) {
-        <div [ngClass]="fieldUtilitiesService.getClass(field, row.length)">
+        <div class="kronos-question-column" [ngClass]="fieldUtilitiesService.getClass(field, row.length)" [class.kronos-date-range-column]="field.type === 'daterange'" [class.kronos-date-column]="field.type === 'date'">
           <src-form-field-inputs [fileUploadUrl]="fileUploadUrl" (notifyFileUpload)="notifyFileUpload.emit()" [fieldEntry] = fieldEntry [uploads]="uploads" [entry]="entry" [fields]="fields" [step]="step" [displayErrors]="displayErrors" [index]="index" [submission]="submission" [answers]="answers" [stepId]="stepId" [fieldCol]="fieldCol" [fieldRow]="fieldRow" [field]="field"></src-form-field-inputs>
         </div>
       }
