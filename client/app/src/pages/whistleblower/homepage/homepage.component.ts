@@ -14,6 +14,7 @@ import {StripHtmlPipe} from "@app/shared/pipes/strip-html.pipe";
 @Component({
     selector: "src-homepage",
     templateUrl: "./homepage.component.html",
+    styleUrl: "./homepage.component.css",
     standalone: true,
     imports: [MarkdownComponent, ReceiptComponent, TranslateModule, TranslatorPipe, StripHtmlPipe]
 })
@@ -27,6 +28,16 @@ export class HomepageComponent  implements OnInit {
     if (this.appDataService.public.node.homepage === '/submission') {
       this.appConfigService.setPage("submissionpage");
     }
+  }
+
+  get publicContexts() {
+    const contexts = (this.appDataService.public.contexts || []).filter(context => !context.hidden);
+    return [...contexts].sort((a, b) => this.appDataService.public.node.show_contexts_in_alphabetical_order ? a.name.localeCompare(b.name) : a.order - b.order);
+  }
+
+  selectOrganization(contextId: string) {
+    this.appDataService.context_id = contextId;
+    this.openSubmission();
   }
 
   openSubmission() {

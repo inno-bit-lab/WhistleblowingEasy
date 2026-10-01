@@ -1,3 +1,4 @@
+import re
 from sqlalchemy.sql.expression import not_
 
 from globaleaks import models
@@ -25,6 +26,7 @@ def admin_serialize_context(session, context, language):
 
     ret = {
         'id': context.id,
+        'slug': context.slug or '',
         'hidden': context.hidden,
         'tip_timetolive': context.tip_timetolive,
         'tip_reminder': context.tip_reminder,
@@ -151,6 +153,21 @@ def fill_context_request(tid, request, language):
     return request
 
 
+def validate_context_slug(session, tid, request, context_id=None):
+    slug = request.get('slug', '') or ''
+    if slug and not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', slug):
+        raise errors.InputValidationError
+    if len(slug) > 64:
+        raise errors.InputValidationError
+    if slug:
+        query = session.query(models.Context).filter(models.Context.tid == tid, models.Context.slug == slug)
+        if context_id:
+            query = query.filter(models.Context.id != context_id)
+        if query.first() is not None:
+            raise errors.InputValidationError
+    request['slug'] = slug or None
+
+
 def db_create_context(session, tid, user_session, request, language):
     """
     Transaction for creating a context
@@ -166,6 +183,7 @@ def db_create_context(session, tid, user_session, request, language):
 
     check_context_questionnaire_association(session, tid, request)
 
+    validate_context_slug(session, tid, request)
     context = db_add(session, models.Context, request)
 
     db_associate_context_receivers(session, context, request['receivers'])
@@ -205,6 +223,8 @@ def db_update_context(session, tid, context, request, language):
 
     check_context_questionnaire_association(session, tid, request)
 
+    validate_context_slug(session, tid, request, context.id)
+    context.slug = request['slug']
     context.update(request)
 
     db_associate_context_receivers(session, context, request['receivers'])

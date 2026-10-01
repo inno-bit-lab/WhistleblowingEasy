@@ -46,6 +46,10 @@
             <div appImageUpload [imageUploadModel]="contextResolver" [imageUploadModelAttr]="'picture'" [imageUploadId]="contextResolver.id"></div>
           </div>
           <div class="form-group">
+            <label for="context-slug-input">Slug</label>
+            <input id="context-slug-input" name="slug" class="form-control" [(ngModel)]="contextResolver.slug" type="text" maxlength="64" pattern="[a-z0-9]+(-[a-z0-9]+)*" placeholder="zeverino">
+            @if (contextResolver.slug) { <a [href]="'/' + contextResolver.slug + '/report'" target="_blank" rel="noopener noreferrer">/{{contextResolver.slug}}/report</a> }
+          </div><div class="form-group">
             <label for="context-name-input">{{ 'Name' | translate }}</label>
             <input id="context-name-input" name="name" class="form-control" [(ngModel)]="contextResolver.name" type="text" required>
             @if (editContext.form.get('name')?.errors?.['required']) {

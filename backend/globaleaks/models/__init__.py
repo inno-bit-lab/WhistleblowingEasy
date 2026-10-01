@@ -330,6 +330,7 @@ class _Context(Model):
 
     id = Column(UnicodeText(36), primary_key=True, default=uuid4)
     tid = Column(Integer, default=1, nullable=False)
+    slug = Column(UnicodeText(64), nullable=True)
     show_steps_navigation_interface = Column(Boolean, default=True, nullable=False)
     allow_recipients_selection = Column(Boolean, default=False, nullable=False)
     maximum_selectable_receivers = Column(Integer, default=0, nullable=False)
@@ -347,6 +348,7 @@ class _Context(Model):
     order = Column(Integer, default=0, nullable=False)
 
     unicode_keys = [
+        'slug',
         'questionnaire_id',
         'additional_questionnaire_id'
     ]
@@ -378,7 +380,7 @@ class _Context(Model):
 
     @declared_attr
     def __table_args__(self):
-        return (ForeignKeyConstraint(['tid'], ['tenant.id'], ondelete='CASCADE', deferrable=True, initially='DEFERRED'),
+        return (UniqueConstraint('tid', 'slug'), ForeignKeyConstraint(['tid'], ['tenant.id'], ondelete='CASCADE', deferrable=True, initially='DEFERRED'),
                 ForeignKeyConstraint(['questionnaire_id'], ['questionnaire.id'], deferrable=True, initially='DEFERRED'))
 
 

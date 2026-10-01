@@ -1,3 +1,4 @@
+import {kronosTranslations} from './kronos-translations';
 import {BehaviorSubject} from 'rxjs';
 import {Injectable, inject} from "@angular/core";
 import {TranslateService} from "@ngx-translate/core";
@@ -34,7 +35,11 @@ export class TranslationService {
       sessionStorage.setItem("language", this.language);
       document.documentElement.dir = this.utilsService.getDirection(this.language);
       this.changeLocale(this.language);
-      this.translate.use(this.language);
+      this.translate.use(this.language).subscribe(() => {
+        if (kronosTranslations[language]) {
+          this.translate.setTranslation(language, kronosTranslations[language], true);
+        }
+      });
     };
   }
 }

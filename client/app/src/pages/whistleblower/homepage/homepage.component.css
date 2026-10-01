@@ -1,0 +1,64 @@
+:host { display: block; }
+.kronos-home { --kf-ink: #102c46; --kf-muted: #506377; --kf-accent: #087f83; --kf-line: #dce5eb; --kf-surface: #f3f7f9; --kf-paper: #fff; max-width: 1160px; padding: 20px 0 40px; text-align: start !important; color: var(--kf-ink); }
+.kronos-home h1, .kronos-home h2, .kronos-home h3, .kronos-home p { margin: 0; }
+.kronos-hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .85fr); align-items: center; gap: clamp(32px, 6vw, 88px); padding: 24px 0 56px; }
+.kronos-eyebrow { color: var(--kf-accent); font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; line-height: 1.6; }
+.kronos-eyebrow span { margin-inline: 10px; color: var(--kf-muted); }
+.kronos-home h1 { max-width: 16ch; margin-block: 20px; font-size: clamp(2.25rem, 4.8vw, 3.7rem); line-height: 1.1; letter-spacing: -.045em; font-weight: 650; text-wrap: balance; }
+.kronos-lead { max-width: 47ch; font-size: 1.125rem; line-height: 1.7; color: var(--kf-muted); }
+.kronos-rule { width: 48px; height: 3px; background: var(--kf-accent); margin-block: 28px 20px; }
+.kronos-service-note { font-size: .875rem; line-height: 1.7; color: var(--kf-muted); }
+.kronos-home a { color: var(--kf-ink); text-decoration: underline; text-underline-offset: 4px; }
+.kronos-access { min-width: 0; border: 1px solid var(--kf-line); border-top: 3px solid var(--kf-accent); padding: clamp(24px, 3vw, 36px); border-radius: 4px 4px 16px 16px; background: var(--kf-surface); }
+.kronos-access-icon { display: inline-flex; width: 44px; height: 44px; align-items: center; justify-content: center; border: 1px solid var(--kf-line); border-radius: 50%; background: var(--kf-paper); margin-bottom: 20px; color: var(--kf-accent); }
+.kronos-home h2 { font-size: clamp(1.5rem, 2.5vw, 1.9rem); font-weight: 600; letter-spacing: -.025em; line-height: 1.25; margin-top: 8px; }
+.kronos-access > p:not(.kronos-eyebrow) { color: var(--kf-muted); line-height: 1.65; margin-top: 14px; font-size: .9375rem; }
+.kronos-access .kronos-access-hint { font-size: .8125rem !important; }
+.kronos-access-hint i { margin-inline-end: 5px; }
+.kronos-organizations { border-top: 1px solid var(--kf-line); padding-block: 36px 44px; }
+.kronos-section-heading { display: flex; gap: 24px; align-items: end; justify-content: space-between; margin-bottom: 24px; }
+.kronos-section-heading > p { max-width: 42ch; font-size: .9375rem; line-height: 1.65; color: var(--kf-muted); }
+.kronos-organization-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.kronos-organization { display: flex; flex-direction: column; align-items: stretch; justify-content: space-between; gap: 20px; min-height: 124px; padding: 22px; text-align: start; color: var(--kf-ink); background: var(--kf-paper); border: 1px solid var(--kf-line); border-radius: 8px; transition: border-color 160ms ease, background-color 160ms ease; }
+.kronos-organization:hover { background: var(--kf-surface); border-color: var(--kf-accent); }
+.kronos-organization-name { font-size: 1rem; font-weight: 600; line-height: 1.4; }
+.kronos-organization-action { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: .8125rem; color: var(--kf-accent); }
+.kronos-home :is(button, a, summary):focus-visible { outline: 3px solid var(--kf-accent); outline-offset: 4px; }
+.kronos-guide { padding: 32px; background: var(--kf-surface); border-radius: 12px; }
+.kronos-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; list-style: none; margin: 0; padding: 0; }
+.kronos-steps li { display: flex; gap: 14px; min-width: 0; }
+.kronos-step-number { color: var(--kf-accent); font-size: .875rem; font-weight: 700; padding-top: 3px; }
+.kronos-home h3 { font-size: 1rem; font-weight: 650; line-height: 1.4; }
+.kronos-steps p { margin-top: 8px; font-size: .875rem; color: var(--kf-muted); line-height: 1.65; }
+.kronos-about { display: grid; grid-template-columns: 1fr 1.25fr; gap: 40px; padding-block: 44px 28px; }
+.kronos-about p:not(.kronos-eyebrow) { color: var(--kf-muted); font-size: .9375rem; line-height: 1.75; }
+.kronos-about-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; margin-top: 12px; font-size: .875rem; }
+.kronos-presentation { border-top: 1px solid var(--kf-line); padding-top: 12px; color: var(--kf-muted); font-size: .875rem; line-height: 1.7; }
+.kronos-presentation summary { cursor: pointer; padding-block: 12px; min-height: 44px; font-weight: 600; }
+@media (max-width: 900px) { .kronos-hero { gap: 32px; } .kronos-organization-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .kronos-steps { gap: 20px; } }
+@media (max-width: 640px) { .kronos-home { padding-top: 8px; } .kronos-hero { grid-template-columns: minmax(0, 1fr); padding-top: 12px; padding-bottom: 32px; gap: 28px; } .kronos-home h1 { max-width: 18ch; } .kronos-access { padding: 24px; } .kronos-section-heading { align-items: start; flex-direction: column; gap: 12px; } .kronos-organization-grid { grid-template-columns: minmax(0, 1fr); } .kronos-organization { min-height: 104px; padding: 20px; } .kronos-guide { padding: 24px; } .kronos-steps { grid-template-columns: minmax(0, 1fr); gap: 24px; } .kronos-about { grid-template-columns: minmax(0, 1fr); gap: 16px; padding-top: 32px; } }
+@media (prefers-reduced-motion: reduce) { .kronos-organization { transition: none; } }
+
+.kronos-hero { align-items: start; }
+.kronos-intro .kronos-guide { margin-top: 28px; padding: 24px; }
+.kronos-intro .kronos-steps { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+.kronos-intro .kronos-guide h2 { font-size: 1.5rem; }
+.kronos-access { margin-top: 8px; }
+.kronos-about { border-top: 1px solid var(--kf-line); }
+@media (max-width: 640px) {
+  .kronos-hero { row-gap: 0; }
+  .kronos-intro { display: contents; }
+  .kronos-intro > .kronos-eyebrow { grid-row: 1; }
+  .kronos-intro > h1 { grid-row: 2; }
+  .kronos-intro > .kronos-lead { grid-row: 3; }
+  .kronos-hero > .kronos-access { grid-row: 4; margin-block: 28px; }
+  .kronos-intro > .kronos-guide { grid-row: 5; margin-top: 0; }
+  .kronos-intro > .kronos-rule { grid-row: 6; }
+  .kronos-intro > .kronos-service-note { grid-row: 7; }
+}
+
+@media (min-width: 641px) { .kronos-hero { align-items: stretch; } .kronos-access { margin-top: 0; height: 100%; display: flex; flex-direction: column; } .kronos-access .kronos-access-hint { margin-top: auto; padding-top: 20px; } }
+@media (max-width: 640px) {
+  .kronos-home h1 { font-size: clamp(1.75rem, 7.2vw, 2.25rem); line-height: 1.15; max-width: none; text-wrap: initial; letter-spacing: -.03em; }
+  .kronos-home h2, .kronos-intro .kronos-guide h2 { font-size: clamp(1.25rem, 5.4vw, 1.5rem); line-height: 1.25; }
+}

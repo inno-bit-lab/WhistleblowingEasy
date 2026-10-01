@@ -1,0 +1,32 @@
+{
+  "http": {
+    "routers": {
+      "wbe-channel-slugs": {
+        "rule": "Host(`wbe.kronosfinance.it`) && PathRegexp(`^/[a-z0-9]+(-[a-z0-9]+)*/(report/?|admin(/.*)?|login(/.*)?)$`)",
+        "entryPoints": [
+          "websecure"
+        ],
+        "priority": 200,
+        "service": "wbe-kronosfinance-https",
+        "tls": {
+          "certResolver": "letsencrypt",
+          "options": "modern-tls"
+        },
+        "middlewares": [
+          "default-headers",
+          "security-headers",
+          "compression",
+          "rate-limit-standard",
+          "wbe-channel-document"
+        ]
+      }
+    },
+    "middlewares": {
+      "wbe-channel-document": {
+        "replacePath": {
+          "path": "/"
+        }
+      }
+    }
+  }
+}

@@ -39,6 +39,7 @@ from globaleaks.db.migrations.update_66 import SubmissionSubStatus_v_65
 from globaleaks.db.migrations.update_67 import \
         InternalTip_v_66, ReceiverFile_v_66, Redaction_v_66, User_v_66, WhistleblowerFile_v_66
 from globaleaks.db.migrations.update_68 import Subscriber_v_67
+from globaleaks.db.migrations.update_69 import Context_v_68
 
 from globaleaks.orm import get_engine, get_session, make_db_uri
 from globaleaks.models import config, Base
@@ -54,7 +55,7 @@ migration_mapping = OrderedDict([
     ('Comment', [Comment_v_64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, models._Comment, 0, 0, 0]),
     ('Config', [models._Config, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]),
     ('ConfigL10N', [models._ConfigL10N, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]),
-    ('Context', [Context_v_61, 0, 0, 0, 0, 0, 0, 0, 0, 0, Context_v_63, 0, models._Context, 0, 0, 0, 0]),
+    ('Context', [Context_v_61, 0, 0, 0, 0, 0, 0, 0, 0, 0, Context_v_63, 0, Context_v_68, 0, 0, 0, 0]),
     ('CustomTexts', [models._CustomTexts, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]),
     ('EnabledLanguage', [models._EnabledLanguage, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]),
     ('Field', [models._Field, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]),
@@ -88,6 +89,9 @@ migration_mapping = OrderedDict([
     ('WhistleblowerTip', [WhistleblowerTip_v_59, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1])
 ])
 
+
+for model_name, history in migration_mapping.items():
+    history.append(models._Context if model_name == 'Context' else (-1 if history[-1] == -1 else 0))
 
 def get_right_model(migration_mapping, model_name, version):
     """

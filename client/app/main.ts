@@ -1,3 +1,4 @@
+import {ChannelLocationStrategy, initializeChannelRouting} from '@app/services/helper/channel-location.strategy';
 (function() {
   // Limit usage of setAttribute on 'stlyle'
   // This is intended to limit our own libraries to scatter CSP policies violations,
@@ -39,7 +40,7 @@ import { TranslatorPipe } from "@app/shared/pipes/translate";
 import { TranslateService, TranslateModule } from "@ngx-translate/core";
 import { HTTP_INTERCEPTORS, withInterceptorsFromDi, provideHttpClient } from "@angular/common/http";
 import { appInterceptor, ErrorCatchingInterceptor, CompletedInterceptor } from "@app/services/root/app-interceptor.service";
-import { APP_BASE_HREF, LocationStrategy, HashLocationStrategy } from "@angular/common";
+import { APP_BASE_HREF, LocationStrategy } from "@angular/common";
 import { FlowInjectionToken, NgxFlowModule } from "@flowjs/ngx-flow";
 import { NgbDatepickerI18n, NgbModule, NgbPaginationConfig, NgbTooltipConfig, NgbTooltipModule} from "@ng-bootstrap/ng-bootstrap";
 import { CustomDatepickerI18n } from "@app/shared/services/custom-datepicker-i18n";
@@ -50,14 +51,14 @@ import { FormsModule } from "@angular/forms";
 import { provideNgIdleKeepalive } from "@ng-idle/keepalive";
 import { MarkdownModule, MARKED_OPTIONS } from "ngx-markdown";
 import { AppComponent } from "@app/pages/app/app.component";
-import { provideRouter } from "@angular/router";
+import { Router, provideRouter } from "@angular/router";
 import { ApplicationRef, enableProdMode, importProvidersFrom, provideZonelessChangeDetection } from '@angular/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import Flow from "@flowjs/flow.js";
 
 enableProdMode();
 
-bootstrapApplication(AppComponent, {
+initializeChannelRouting().then(() => bootstrapApplication(AppComponent, {
     providers: [
         provideZonelessChangeDetection(),
         provideRouter(appRoutes),
@@ -86,7 +87,7 @@ bootstrapApplication(AppComponent, {
         { provide: HTTP_INTERCEPTORS, useClass: ErrorCatchingInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: CompletedInterceptor, multi: true },
         { provide: FlowInjectionToken, useValue: Flow },
-        { provide: LocationStrategy, useClass: HashLocationStrategy },
+        { provide: LocationStrategy, useClass: ChannelLocationStrategy },
         { provide: NgbDatepickerI18n, useClass: CustomDatepickerI18n },
         {
           provide: NgbPaginationConfig,
@@ -117,7 +118,18 @@ bootstrapApplication(AppComponent, {
         TranslateService,
         provideHttpClient(withInterceptorsFromDi())
     ]
-}).then(moduleRef => {
+})).then(moduleRef => {
+    const router = moduleRef.injector.get(Router);
+    document.addEventListener('click', event => {
+      if (!(event instanceof MouseEvent) || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      const anchor = (event.target as Element)?.closest('a');
+      const href = anchor?.getAttribute('href') || '';
+      if (anchor?.target === '_blank' || !/^\/[a-z0-9-]+\/(report|admin|login)(\/|$)/.test(window.location.pathname)) return;
+      if (/^#\/(admin|login)(\/|$)/.test(href)) {
+        event.preventDefault();
+        router.navigateByUrl(href.slice(1));
+      }
+    });
     // Expose Angular stability status to Cypress
     const appRef = moduleRef.injector.get(ApplicationRef);
     (window as any).isAngularStable = () => appRef.isStable;

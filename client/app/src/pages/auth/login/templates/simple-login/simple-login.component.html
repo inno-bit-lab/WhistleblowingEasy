@@ -3,7 +3,7 @@
     @if (appDataService.public.receivers.length === 1) {
       <div>
         <div class="form-group">
-          <label for="simple-login-password" class="visually-hidden">{{'Password' | translate}}</label>
+          <label for="simple-login-password" class="kronos-field-label">{{'Password' | translate}}</label>
           <input id="simple-login-password" class="form-control" name="password" [(ngModel)]="authentication.loginData.loginPassword" placeholder="{{'Password' | translate}}" type="password" required />
         </div>
         <div class="form-group">

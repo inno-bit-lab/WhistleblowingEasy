@@ -235,11 +235,11 @@ module.exports = function(grunt) {
           replacements: [
             {
               pattern: /<script src="/g,
-              replacement: "<script src=\"js/"
+              replacement: "<script src=\"/js/"
             },
             {
               pattern: /<link rel="stylesheet" href="/g,
-              replacement: "<link rel=\"stylesheet\" href=\"css/"
+              replacement: "<link rel=\"stylesheet\" href=\"/css/"
             },
             {
               pattern: /.\/media\//gi,

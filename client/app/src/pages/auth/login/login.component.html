@@ -1,11 +1,21 @@
+<section class="kronos-auth-shell kronos-login-layout">
+<aside class="kronos-login-intro">
+<p class="kronos-page-eyebrow">Kronos Finance / Whistleblowing</p>
+<h2>{{'A dedicated space for those who listen.' | translate}}</h2>
+<p class="kronos-page-lead">{{'Access for authorized users who receive and manage reports on this platform.' | translate}}</p>
+<div class="kronos-login-note"><h3>{{'Are you following a report?' | translate}}</h3><p>{{'Use the access code you received when submitting your report, from the homepage.' | translate}}</p><a class="kronos-back-link" href="#/">← {{'Go to the homepage' | translate}}</a></div>
+</aside><div class="kronos-auth-card">
+<p class="kronos-page-eyebrow">Kronos Finance / Whistleblowing</p>
+<h2>{{'Access your workspace' | translate}}</h2>
+<p class="kronos-page-lead">{{'Sign in to manage the reports assigned to you.' | translate}}</p>
 <div class="row">
-  <div class="col-3 col-sm-auto login-form" id="login-form">
+  <div class="login-form" id="login-form">
     <form #loginValidator="ngForm" autocomplete="off">
       <input class="d-none" type="password" name="disable-autocomplete" />
-      @if (location.hash !== '#/admin' && appDataService.public.node.simplified_login) {
+      @if ((location.hash !== '#/admin' && !location.pathname.endsWith('/admin')) && appDataService.public.node.simplified_login) {
         <app-simple-login [loginValidator]="loginValidator" [loginData]='loginData'></app-simple-login>
       }
-      @if (location.hash === '#/admin' || !appDataService.public.node.simplified_login) {
+      @if ((location.hash === '#/admin' || location.pathname.endsWith('/admin')) || !appDataService.public.node.simplified_login) {
         <app-default-login [loginValidator]="loginValidator" [loginData]='loginData'></app-default-login>
       }
       <br />
@@ -22,3 +32,5 @@
     </form>
   </div>
 </div>
+
+</div></section>

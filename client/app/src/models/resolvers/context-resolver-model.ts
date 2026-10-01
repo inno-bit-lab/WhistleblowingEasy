@@ -1,5 +1,6 @@
 export class contextResolverModel {
   id: string;
+  slug: string;
   hidden: boolean;
   tip_timetolive: number;
   tip_reminder: number;

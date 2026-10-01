@@ -2205,3 +2205,148 @@ msgstr "Se hai bisogno di supporto tecnico o hai domande generali, scrivici qui:
 
 msgid "For a detailed overview, click here and watch the video guide:"
 msgstr "Per una panoramica dettagliata, fai clic qui e guarda il video guida:"
+
+msgid "Transparency starts with a report."
+msgstr "La trasparenza inizia da una segnalazione."
+
+msgid ""
+"A dedicated channel to raise concerns and keep a dialogue with your "
+"organization."
+msgstr ""
+"Un canale dedicato per condividere le tue segnalazioni e dialogare con la "
+"tua organizzazione."
+
+msgid "Whistleblowing service offered and managed by"
+msgstr "Servizio di whistleblowing proposto e gestito da"
+
+msgid "Your report"
+msgstr "La tua segnalazione"
+
+msgid "Already sent a report?"
+msgstr "Hai già inviato una segnalazione?"
+
+msgid "Use your access code to read replies and continue the conversation."
+msgstr ""
+"Usa il tuo codice di accesso per leggere le risposte e continuare il "
+"dialogo."
+
+msgid "Enter your access code"
+msgstr "Inserisci il tuo codice di accesso"
+
+msgid "Access your report"
+msgstr "Accedi alla segnalazione"
+
+msgid "Keep your code: you will need it to return to your report."
+msgstr "Conserva il codice: ti servirà per tornare alla tua segnalazione."
+
+msgid "Start here"
+msgstr "Inizia da qui"
+
+msgid "Choose your organization"
+msgstr "Scegli la tua organizzazione"
+
+msgid ""
+"Each organization has its own reporting channel. Select the one your report "
+"concerns."
+msgstr ""
+"Ogni organizzazione ha un canale dedicato. Seleziona quella a cui si "
+"riferisce la tua segnalazione."
+
+msgid "Open channel"
+msgstr "Apri il canale"
+
+msgid "No public reporting channels are available."
+msgstr "Non sono disponibili canali di segnalazione pubblici."
+
+msgid "A clear path"
+msgstr "Un percorso chiaro"
+
+msgid "How it works"
+msgstr "Come funziona"
+
+msgid "Choose the channel"
+msgstr "Scegli il canale"
+
+msgid "Select the organization concerned before starting your report."
+msgstr "Seleziona l’organizzazione interessata prima di iniziare la segnalazione."
+
+msgid "Describe what happened"
+msgstr "Descrivi i fatti"
+
+msgid ""
+"Follow the form and include the information and documents you consider "
+"useful."
+msgstr "Segui il modulo e aggiungi le informazioni e i documenti che ritieni utili."
+
+msgid "Stay in contact"
+msgstr "Rimani in contatto"
+
+msgid ""
+"Save your access code to follow updates and reply to requests for "
+"information."
+msgstr ""
+"Conserva il codice di accesso per seguire gli aggiornamenti e rispondere "
+"alle richieste di informazioni."
+
+msgid "Expertise alongside businesses."
+msgstr "Competenze al fianco delle imprese."
+
+msgid ""
+"Kronos Finance supports businesses through corporate advisory, subsidized "
+"finance and innovation. This portal is dedicated to its whistleblowing "
+"service."
+msgstr ""
+"Kronos Finance affianca le imprese nella consulenza aziendale, nella "
+"finanza agevolata e nell’innovazione. Questo portale è dedicato al suo "
+"servizio di whistleblowing."
+
+msgid "Discover Kronos Finance"
+msgstr "Scopri Kronos Finance"
+
+msgid "About this reporting platform"
+msgstr "Informazioni sulla piattaforma"
+
+msgid "Service offered and managed by"
+msgstr "Servizio proposto e gestito da"
+
+msgid "Platform maintained by"
+msgstr "Piattaforma mantenuta da"
+
+msgid "Access your workspace"
+msgstr "Accedi alla tua area di lavoro"
+
+msgid "Sign in to manage the reports assigned to you."
+msgstr "Accedi per gestire le segnalazioni a te assegnate."
+
+msgid "Recover access"
+msgstr "Recupera l’accesso"
+
+msgid "Back to login"
+msgstr "Torna al login"
+
+msgid "Reporting channel"
+msgstr "Canale di segnalazione"
+
+msgid "Complete the form with the information you consider useful."
+msgstr "Compila il modulo con le informazioni che ritieni utili."
+
+msgid "A dedicated space for those who listen."
+msgstr "Uno spazio dedicato a chi ascolta."
+
+msgid "Access for authorized users who receive and manage reports on this platform."
+msgstr ""
+"Accesso riservato agli utenti autorizzati a ricevere e gestire le "
+"segnalazioni su questa piattaforma."
+
+msgid "Are you following a report?"
+msgstr "Vuoi consultare una segnalazione?"
+
+msgid ""
+"Use the access code you received when submitting your report, from the "
+"homepage."
+msgstr ""
+"Usa il codice di accesso ricevuto al momento dell’invio, dalla pagina "
+"iniziale."
+
+msgid "Go to the homepage"
+msgstr "Vai alla pagina iniziale"

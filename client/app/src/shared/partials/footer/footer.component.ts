@@ -9,6 +9,7 @@ import {StripHtmlPipe} from "@app/shared/pipes/strip-html.pipe";
 @Component({
     selector: "app-footer",
     templateUrl: "./footer.component.html",
+    styleUrl: "./footer.component.css",
     standalone: true,
     imports: [MarkdownComponent, TranslateModule, TranslatorPipe, StripHtmlPipe]
 })

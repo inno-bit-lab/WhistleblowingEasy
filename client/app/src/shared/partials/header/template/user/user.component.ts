@@ -19,6 +19,7 @@ import {NgbTooltipModule} from '@ng-bootstrap/ng-bootstrap';
 @Component({
     selector: "views-user",
     templateUrl: "./user.component.html",
+    styleUrl: "./user.component.css",
     standalone: true,
     imports: [NgbTooltipModule, NgClass, NgSelectComponent, FormsModule, NgOptionComponent, TranslateModule, TranslatorPipe, OrderByPipe]
 })

@@ -19,6 +19,7 @@ export class ReceiptComponent{
   protected authenticationService = inject(AuthenticationService);
   protected appDataService = inject(AppDataService);
 
+  @Input() questionLabel = "Have you already submitted a report? Enter your access code.";
   @Input() loginLabel = "Log in";
   formattedReceipt = "";
 

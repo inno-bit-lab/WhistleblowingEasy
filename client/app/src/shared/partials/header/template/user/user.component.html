@@ -1,14 +1,9 @@
 <div class="d-flex justify-content-end">
   @if (appDataService.public.node.languages_enabled.length > 1 && appDataService.showGlobalBranding) {
-    <div id="LanguagePickerBox" class="order-2" [ngClass]="appDataService.public.node.wizard_done ? 'language-box' : 'language-box-extended'">
-      <label id="language-picker-label" for="language-picker-select" class="visually-hidden">{{'Select your language' | translate}}</label>
-      <ng-select id="language-picker-select" [clearable]="false" [ngModel]="translationService.language" (ngModelChange)="onChangeLanguage($event)" [ariaLabel]="'Select your language' | translate">
-        @for (lang of appDataService.languages_enabled_selector | orderBy: 'native'; track lang) {
-          <ng-option [value]="lang.code">
-            <span [attr.data-cy]="lang.code">{{lang.native}}</span>
-          </ng-option>
-        }
-      </ng-select>
+    <div id="LanguagePickerBox" class="order-2 kronos-language-switch" role="group" [attr.aria-label]="'Select your language' | translate">
+      @for (lang of appDataService.languages_enabled_selector | orderBy: 'code'; track lang.code) {
+        <button type="button" [class.is-active]="translationService.language === lang.code" [attr.aria-pressed]="translationService.language === lang.code" [attr.aria-label]="lang.native" [attr.title]="lang.native" [attr.data-cy]="lang.code" (click)="onChangeLanguage(lang.code)">{{lang.code.toUpperCase()}}</button>
+      }
     </div>
   }
   @if (utilsService.showUserStatusBox()) {

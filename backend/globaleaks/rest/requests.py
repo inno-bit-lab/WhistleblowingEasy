@@ -356,6 +356,7 @@ AdminQuestionnaireDescRaw = get_multilang_request_format(AdminQuestionnaireDesc,
 AdminQuestionnaireDescRaw['steps'] = list
 
 AdminContextDesc = {
+    'slug': str,
     'id': uuid_regexp_or_empty,
     'name': str,
     'hidden': bool,

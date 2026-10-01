@@ -1,0 +1,14 @@
+:host { display: block; }
+#FooterBox { border-top: 1px solid #dce5eb; background: #f5f7f9; color: #506377; padding: 18px max(16px, env(safe-area-inset-left)); font-size: .8125rem; line-height: 1.6; }
+.kronos-footer-credits { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 28px; max-width: 1160px; margin: 0 auto; }
+.kronos-footer-credits span { min-width: 0; }
+#FooterBox a { color: #102c46; font-size: inherit; font-weight: 600; text-underline-offset: 3px; }
+#FooterBox a:hover { text-decoration: underline; }
+#FooterBox a:focus-visible { outline: 3px solid #087f83; outline-offset: 3px; }
+#Policies { margin-bottom: 10px; }
+#Policies a { display: inline-flex; align-items: center; min-height: 44px; }
+#CustomFooter { display: block; margin-bottom: 10px; font-size: inherit; }
+@media (max-width: 640px) { .kronos-footer-credits { flex-direction: column; align-items: center; gap: 4px; } .kronos-footer-credits a { display: inline-flex; align-items: center; min-height: 44px; } }
+
+.kronos-footer-credits { flex-direction: column; gap: 6px; text-align: center; }
+#AttributionClause { margin-top: 6px; padding-top: 10px; border-top: 1px solid #dce5eb; font-size: .75rem; }

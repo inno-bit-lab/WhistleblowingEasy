@@ -322,6 +322,7 @@ def serialize_context(session, context, language, data=None):
     """
     ret = {
         'id': context.id,
+        'slug': context.slug or '',
         'hidden': context.hidden,
         'order': context.order,
         'tip_timetolive': context.tip_timetolive,
@@ -704,3 +705,15 @@ class ContextInstance(BaseHandler):
         Get a single context by its identifier
         """
         return get_context(self.request.tid, context_id, self.request.language)
+
+
+@transact
+def get_context_by_slug(session, tid, slug, language):
+    context = db_get(session, models.Context, (models.Context.tid == tid, models.Context.slug == slug))
+    return {'id': context.id, 'slug': context.slug}
+
+
+class ContextSlugInstance(BaseHandler):
+    check_roles = 'any'
+    def get(self, slug):
+        return get_context_by_slug(self.request.tid, slug, self.request.language)

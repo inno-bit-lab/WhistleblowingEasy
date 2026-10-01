@@ -1197,3 +1197,71 @@ body .dropdown-visible > div.multiselect-dropdown > div > span.dropdown-btn {
     linear-gradient(-45deg, transparent 50%, #1d1f2a 50%) right 0.4em center / 8px 8px no-repeat;
   background-color: white;
 }
+
+/* Scoped to the Kronos homepage; receipt forms elsewhere keep their layout. */
+#HomePageBox.kronos-home #WhistleblowerLoginBox { width: 100%; display: block !important; margin-top: 24px; text-align: start; }
+#HomePageBox.kronos-home #WhistleblowerLoginForm label { display: block; font-size: .8125rem; font-weight: 600; margin-bottom: 10px; }
+#HomePageBox.kronos-home #WhistleblowerLoginForm .input-group { gap: 10px; flex-direction: column; }
+#HomePageBox.kronos-home #WhistleblowerLoginForm input:not(.d-none) { width: 100%; min-width: 0; min-height: 48px; border-radius: 6px !important; font-size: 1rem; flex: auto; }
+#HomePageBox.kronos-home #ReceiptButton { width: 100%; min-height: 48px; border-radius: 6px; background: #102c46; border-color: #102c46; font-size: .9375rem; }
+#HomePageBox.kronos-home #ReceiptButton:hover:not(:disabled) { background: #1c466b; }
+#HomePageBox.kronos-home #ReceiptButton:disabled { opacity: .65; }
+#FooterBox #CustomFooter :is(p, h1, h2, h3, h4) { font-size: .8125rem; line-height: 1.6; margin: 0; }
+@media (max-width: 640px) { #LogoBox img { max-width: min(20rem, 100%); } #HeaderBox1, #HeaderBox2 { max-width: 100%; } }
+
+/* Kronos Finance: reporting and account pages */
+.kronos-auth-shell, .kronos-submission-shell { color: #102c46; text-align: start; width: 100%; }
+.kronos-auth-shell { max-width: 480px; margin: 24px auto 56px; }
+.kronos-auth-card { border: 1px solid #dce5eb; border-top: 3px solid #087f83; border-radius: 4px 4px 16px 16px; background: #f3f7f9; padding: clamp(24px, 4vw, 40px); }
+.kronos-page-eyebrow { color: #087f83; font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 12px; }
+.kronos-auth-card h2, .kronos-submission-heading h2 { font-size: clamp(1.6rem, 3vw, 2rem); font-weight: 650; letter-spacing: -.025em; margin-bottom: 16px; }
+.kronos-page-lead { color: #506377; font-size: 1rem; line-height: 1.65; margin-bottom: 28px; }
+.kronos-auth-card .row { margin-inline: 0; }
+.kronos-auth-card .row > div { padding-inline: 0; width: 100%; }
+.kronos-auth-card .login-form { max-width: none; }
+.kronos-auth-card label { display: block; color: #102c46; line-height: 1.6; margin-bottom: 8px; font-size: .9375rem; }
+.kronos-auth-card .form-group { margin-bottom: 20px; }
+.kronos-auth-card .form-control, .kronos-submission-shell :is(input.form-control:not([type=checkbox]):not([type=radio]),select.form-control) { min-height: 48px; font-size: 1rem; border-color: #ccdbe4; border-radius: 6px; }
+.kronos-auth-card .ng-select-container { min-height: 48px; border-color: #ccdbe4; }
+.kronos-auth-card .input-group-text { background: #fff; border-color: #ccdbe4; color: #506377; }
+.kronos-auth-card .btn, .kronos-submission-shell .btn { min-height: 44px; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+.kronos-auth-card .btn-primary, .kronos-submission-shell .btn-primary { background: #102c46; border-color: #102c46; }
+.kronos-auth-card #login-button { width: 100%; margin: 8px 0 0; }
+.kronos-auth-card #forgot-button { display: block; text-align: center; margin-top: 12px; }
+.kronos-auth-card #passwordreset { border-color: transparent; color: #506377; }
+.kronos-auth-card .input-group:has(#password-reset-username) { flex-direction: column; gap: 16px; }
+.kronos-auth-card #password-reset-username { width: 100%; border-radius: 6px; }
+.kronos-auth-card .input-group-append { display: flex; gap: 8px; }
+.kronos-auth-card .input-group-append #submit { flex: 1; border-radius: 6px !important; }
+.kronos-back-link { display: inline-flex; align-items: center; min-height: 44px; margin-top: 20px; color: #102c46; font-size: .875rem; }
+.kronos-submission-shell { max-width: 1160px; margin: 20px auto 48px; }
+.kronos-submission-heading { margin: 28px 0 24px; }
+.kronos-submission-shell .context-image { max-height: 110px; max-width: 100%; object-fit: contain; }
+.kronos-submission-access { padding: 20px 24px; background: #f3f7f9; border: 1px solid #dce5eb; border-radius: 10px; margin-top: 24px; }
+.kronos-submission-access #WhistleblowerLoginBox { display: block; width: 100%; text-align: start; }
+.kronos-submission-access #WhistleblowerLoginForm { max-width: 560px; margin: auto; }
+.kronos-submission-access input { min-height: 44px; }
+.kronos-submission-shell #SubmissionForm { border: 1px solid #dce5eb; border-radius: 12px; padding: clamp(20px, 3vw, 36px); background: #fff; }
+.kronos-submission-shell .nav-tabs { gap: 8px; border-bottom: 1px solid #dce5eb; padding-bottom: 16px; margin-bottom: 24px; }
+.kronos-submission-shell .nav-link { min-height: 48px; border-radius: 8px; color: #506377; }
+.kronos-submission-shell .nav-link.active { color: #102c46; background: #f3f7f9; border-color: #dce5eb; }
+.kronos-submission-shell #SubmissionButtons { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 12px; border-top: 1px solid #dce5eb; margin-top: 28px; padding-top: 24px; }
+.kronos-submission-shell #SubmissionButtons .btn { margin: 0; }
+.kronos-submission-shell textarea.form-control { min-height: 140px; font-size: 1rem; border-radius: 6px; }
+.kronos-submission-shell :is(input,textarea,select):focus, .kronos-auth-card input:focus { border-color: #087f83; box-shadow: 0 0 0 3px rgba(8,127,131,.16); }
+:is(.kronos-auth-shell,.kronos-submission-shell) :is(a,button):focus-visible { outline: 3px solid #087f83; outline-offset: 3px; }
+@media(max-width:640px) { .kronos-auth-shell { margin-top: 12px; } .kronos-submission-access { padding: 16px; } .kronos-submission-access .input-group { flex-direction: column; gap: 8px; } .kronos-submission-access .input-group input { width: 100%; border-radius: 6px !important; } .kronos-submission-access #ReceiptButton { width: 100%; border-radius: 6px; } .kronos-submission-shell #SubmissionButtons .btn { flex: 1; } .kronos-submission-shell .nav-item { max-width: 100%; } }
+.kronos-login-layout { max-width: 1040px; display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); gap: clamp(32px,6vw,80px); align-items: center; margin-block: 40px 64px; }
+.kronos-login-intro h2 { font-size: clamp(2rem,4vw,3rem); line-height: 1.15; letter-spacing: -.035em; font-weight: 650; margin-block: 18px 24px; text-wrap: balance; }
+.kronos-login-note { border-top: 1px solid #dce5eb; margin-top: 32px; padding-top: 24px; }
+.kronos-login-note h3 { font-size: 1rem; font-weight: 650; }
+.kronos-login-note p { font-size: .9375rem; line-height: 1.65; color: #506377; margin: 12px 0 0; }
+@media(max-width:740px) { .kronos-login-layout { grid-template-columns: minmax(0,1fr); max-width: 480px; gap: 24px; margin-top: 16px; } .kronos-login-intro h2 { font-size: 2rem; } .kronos-login-note { margin-top: 20px; padding-top: 16px; } }
+.kronos-auth-card .login-form { min-width: 0; width: 100%; }
+.kronos-auth-card, .kronos-login-intro { min-width: 0; }
+/* Compact mobile headings, with readable wrapping on narrow screens. */
+@media (max-width: 640px) {
+  #HeaderBox #TitleBox h1 { font-size: clamp(1.125rem, 4.5vw, 1.375rem); line-height: 1.3; }
+  .kronos-auth-card h2, .kronos-submission-heading h2 { font-size: clamp(1.375rem, 5.5vw, 1.625rem); line-height: 1.25; }
+  .kronos-login-intro h2 { font-size: clamp(1.625rem, 6.5vw, 2rem); line-height: 1.2; text-wrap: initial; }
+}

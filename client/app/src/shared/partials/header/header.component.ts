@@ -9,6 +9,7 @@ import {TranslatorPipe} from "@app/shared/pipes/translate";
 @Component({
     selector: "views-header",
     templateUrl: "./header.component.html",
+    styleUrl: "./header.component.css",
     standalone: true,
     imports: [UserComponent, TranslateModule, TranslatorPipe]
 })

@@ -13,9 +13,13 @@
         }
       </div>
     }
-    @if (appDataService.public.node.footer) {
+    @if (appDataService.public.node.footer && appDataService.public.node.footer.trim() !== "Servizio gestito da Kronos Finance") {
       <span id="CustomFooter" class="vcenter"><markdown [data]="appDataService.public.node.footer | stripHtml"></markdown></span>
     }
-    <div id="AttributionClause" class="vcenter">Powered by <a href="https://www.globaleaks.org/" title="GlobaLeaks - Secure Whistleblowing Software" target="_blank">GlobaLeaks</a></div>
+    <div class="kronos-footer-credits">
+      <span>{{'Service offered and managed by' | translate}} <a href="https://www.kronosfinance.it/" target="_blank" rel="noopener noreferrer">Kronos Finance</a></span>
+      <span>{{'Platform maintained by' | translate}} <a href="https://www.innobitlab.it/" target="_blank" rel="noopener noreferrer">InnoBitLab</a></span>
+      <span id="AttributionClause">Powered by <a href="https://www.globaleaks.org/" title="GlobaLeaks - Secure Whistleblowing Software" target="_blank" rel="noopener noreferrer">GlobaLeaks</a></span>
+    </div>
   }
 </footer>

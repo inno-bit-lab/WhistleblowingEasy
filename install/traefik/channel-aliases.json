@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "kronos-finance",
+    "name": "Kronos Finance",
+    "context": "8511cdb9-fcce-4889-8bf6-e0492ea0cc16"
+  },
+  {
+    "slug": "zeverino",
+    "name": "Manifatture Sartoriali Zeverino s.r.l.",
+    "context": "a985e6ea-147c-47d9-baca-7bc955bf8232"
+  },
+  {
+    "slug": "longo-euroservice",
+    "name": "Longo Euroservice s.r.l.",
+    "context": "ec928d88-f9e4-490e-8d51-97222826c1a6"
+  },
+  {
+    "slug": "lama-distribuzione",
+    "name": "Lama Distribuzione s.r.l.",
+    "context": "b7e82a06-11df-404d-8bb3-b388a977a960"
+  },
+  {
+    "slug": "donato-trasporti",
+    "name": "Donato Trasporti s.r.l.",
+    "context": "448ef625-393f-4da1-a602-a2542eb21e86"
+  },
+  {
+    "slug": "test",
+    "name": "Canale di Test",
+    "context": "7c392242-9ccc-4cdf-a132-f90b67f1e8d6"
+  },
+  {
+    "slug": "lagolosadipuglia",
+    "name": "LAGOLOSADIPUGLIA",
+    "context": "1e908330-c085-4494-ad5f-fe6c0e26daa4"
+  },
+  {
+    "slug": "impresa-resta",
+    "name": "Impresa Resta S.r.l.",
+    "context": "32f2c037-c6cb-4aae-b2de-036d397efe30"
+  },
+  {
+    "name": "Innobitlab",
+    "slug": "innobitlab",
+    "context": "e343d732-79ff-4257-8c6f-301c3053d347"
+  }
+]

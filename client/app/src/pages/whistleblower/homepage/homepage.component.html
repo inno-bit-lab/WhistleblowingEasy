@@ -1,35 +1,41 @@
-<div id="HomePageBox">
-  @if (appDataService.public.node.presentation) {
-    <span id="Presentation" class="mb-4"><markdown [data]="appDataService.public.node.presentation | stripHtml"></markdown></span>
-  }
-  <div id="WhistleblowerBox" class="d-block mx-auto">
-    @if (appDataService.public.node.disable_submissions || (!appDataService.public.node.https_whistleblower && !appDataService.connection.tor)) {
-      <div id="WhistleblowerSubmitBoxButtonDisabled" class="mt-4">
-        <button class="btn btn-danger disabled">
-          <i class="fas fa-ban"></i>
-          <span id="submissions_disabled">{{'Submissions disabled'|translate}}</span>
-        </button>
-      </div>
-    }
-    @if (!appDataService.public.node.https_whistleblower && !appDataService.connection.tor) {
-      <div class="mt-4">
-        <p class="text-danger">{{'You are connecting to the server without anonymity and this server supports only anonymous submissions'|translate}}</p>
-      </div>
-    }
-    @if (!appDataService.public.node.disable_submissions && (appDataService.public.node.https_whistleblower || appDataService.connection.tor)) {
-      <div id="WhistleblowerSubmitBox" class="mt-4">
-        @if (appDataService.public.node.whistleblowing_question) {
-          <span id="WhistleblowingQuestion"><markdown [data]="appDataService.public.node.whistleblowing_question | stripHtml"></markdown></span>
-        }
-
-      </div>
-    }
-    <div>
-      @if (appDataService.public.node.https_whistleblower || appDataService.connection.tor) {
-        <div id="WhistleblowerLoginBox">
-          <src-receipt></src-receipt>
-        </div>
-      }
+<div id="HomePageBox" class="kronos-home">
+  <section class="kronos-hero" aria-labelledby="kronos-home-title">
+    <div class="kronos-intro">
+      <p class="kronos-eyebrow">Kronos Finance <span aria-hidden="true">/</span> Whistleblowing</p>
+      <h1 id="kronos-home-title">{{'Transparency starts with a report.' | translate}}</h1>
+      <p class="kronos-lead">{{'A dedicated channel to raise concerns and keep a dialogue with your organization.' | translate}}</p>
+  <section class="kronos-guide" aria-labelledby="kronos-guide-title">
+    <div class="kronos-section-heading">
+      <div><p class="kronos-eyebrow">{{'A clear path' | translate}}</p><h2 id="kronos-guide-title">{{'How it works' | translate}}</h2></div>
     </div>
-  </div>
+    <ol class="kronos-steps">
+      <li><span class="kronos-step-number" aria-hidden="true">01</span><div><h3>{{'Choose the channel' | translate}}</h3><p>{{'Select the organization concerned before starting your report.' | translate}}</p></div></li>
+      <li><span class="kronos-step-number" aria-hidden="true">02</span><div><h3>{{'Describe what happened' | translate}}</h3><p>{{'Follow the form and include the information and documents you consider useful.' | translate}}</p></div></li>
+      <li><span class="kronos-step-number" aria-hidden="true">03</span><div><h3>{{'Stay in contact' | translate}}</h3><p>{{'Save your access code to follow updates and reply to requests for information.' | translate}}</p></div></li>
+    </ol>
+  </section>
+
+
+    </div>
+    @if (appDataService.public.node.https_whistleblower || appDataService.connection.tor) {
+      <aside class="kronos-access" aria-labelledby="kronos-access-title">
+        <span class="kronos-access-icon" aria-hidden="true">↳</span>
+        <p class="kronos-eyebrow">{{'Your report' | translate}}</p>
+        <h2 id="kronos-access-title">{{'Already sent a report?' | translate}}</h2>
+        <p>{{'Use your access code to read replies and continue the conversation.' | translate}}</p>
+        <div id="WhistleblowerLoginBox">
+          <src-receipt loginLabel="Access your report" questionLabel="Enter your access code"></src-receipt>
+        </div>
+        <p class="kronos-access-hint"><i class="fas fa-lock" aria-hidden="true"></i> {{'Keep your code: you will need it to return to your report.' | translate}}</p>
+      </aside>
+    }
+  </section>
+
+  <section class="kronos-about" aria-labelledby="kronos-about-title">
+    <div><p class="kronos-eyebrow">Kronos Finance</p><h2 id="kronos-about-title">{{'Expertise alongside businesses.' | translate}}</h2></div>
+    <div><p>{{'Kronos Finance supports businesses through corporate advisory, subsidized finance and innovation. This portal is dedicated to its whistleblowing service.' | translate}}</p><a class="kronos-about-link" href="https://www.kronosfinance.it/" target="_blank" rel="noopener noreferrer">{{'Discover Kronos Finance' | translate}} <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div>
+  </section>
+  @if (appDataService.public.node.presentation) {
+    <details class="kronos-presentation"><summary>{{'About this reporting platform' | translate}}</summary><markdown [data]="appDataService.public.node.presentation | stripHtml"></markdown></details>
+  }
 </div>

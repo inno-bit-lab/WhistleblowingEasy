@@ -104,6 +104,9 @@ export class appInterceptor implements HttpInterceptor {
   }
 
   intercept(httpRequest: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    if (!/^(?:\/|[a-z]+:)/i.test(httpRequest.url)) {
+      httpRequest = httpRequest.clone({url: "/" + httpRequest.url});
+    }
     if (httpRequest.url.endsWith("/data/i18n/.json")) {
       return next.handle(httpRequest);
     }
@@ -124,7 +127,7 @@ export class appInterceptor implements HttpInterceptor {
 
     if (httpRequest.url.includes("api/signup")
       || (httpRequest.url.endsWith("api/auth/receiptauth") && !this.authenticationService.session)
-      || protectedUrls.includes(httpRequest.url)) {
+      || protectedUrls.includes(httpRequest.url.replace(/^\/+/, ""))) {
       return this.httpClient.post("api/auth/token", {}).pipe(
         switchMap((response) =>
           from(this.cryptoService.proofOfWork(Object.assign(new TokenResponse(), response))).pipe(

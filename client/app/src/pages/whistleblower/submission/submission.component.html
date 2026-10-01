@@ -1,3 +1,4 @@
+<section class="kronos-submission-shell">
 @if (submission) {
   @if (selectable_contexts.length && !submission.context) {
     <div>
@@ -18,9 +19,10 @@
           </div>
         </div>
       }
-      <div class="d-flex justify-content-center my-2">
+      <div class="kronos-submission-access">
         <src-receipt loginLabel="Search"></src-receipt>
       </div>
+      <div class="kronos-submission-heading"><p class="kronos-page-eyebrow">{{'Reporting channel' | translate}}</p><h2>{{submission.context.name}}</h2><p class="kronos-page-lead">{{'Complete the form with the information you consider useful.' | translate}}</p></div>
       <form #submissionForm="ngForm" id="SubmissionForm" [ngClass]="{'was-validated': displaySubmissionErrors()}" autocomplete="off" novalidate>
         <div class="tabbable tabs-below mb-3">
           @if (submission.context.show_steps_navigation_interface && questionnaire.steps.length > 1) {
@@ -102,3 +104,5 @@
     </div>
   }
 }
+
+</section>

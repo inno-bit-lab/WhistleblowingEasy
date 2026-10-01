@@ -1,0 +1,11 @@
+:host { display: block; }
+#HeaderBox > div { max-width: 1160px; margin-inline: auto; width: 100%; }
+@media (max-width: 640px) {
+  #HeaderBox > div { display: grid !important; grid-template-columns: minmax(0, 1fr) auto; align-items: start; column-gap: 12px; row-gap: 16px; }
+  #HeaderBox1:not(.d-none) { display: contents; }
+  #LogoBox { grid-column: 1; grid-row: 1; margin-bottom: 0 !important; min-width: 0; }
+  #LogoBox img { width: 140px; max-width: 100%; height: auto; }
+  #HeaderBox2 { grid-column: 2; grid-row: 1; justify-self: end; }
+  #TitleBox { grid-column: 1 / -1; grid-row: 2; min-width: 0; }
+  #TitleBox h1 { margin-bottom: 0; overflow-wrap: anywhere; }
+}

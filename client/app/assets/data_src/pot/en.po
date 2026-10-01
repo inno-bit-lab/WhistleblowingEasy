@@ -2124,3 +2124,146 @@ msgid "For a detailed overview, click here and watch the video guide:"
 msgstr ""
 "If you want to contribute to software development or report a bug, please "
 "open an issue in our ticketing system:"
+
+msgid "Transparency starts with a report."
+msgstr "Transparency starts with a report."
+
+msgid ""
+"A dedicated channel to raise concerns and keep a dialogue with your "
+"organization."
+msgstr ""
+"A dedicated channel to raise concerns and keep a dialogue with your "
+"organization."
+
+msgid "Whistleblowing service offered and managed by"
+msgstr "Whistleblowing service offered and managed by"
+
+msgid "Your report"
+msgstr "Your report"
+
+msgid "Already sent a report?"
+msgstr "Already sent a report?"
+
+msgid "Use your access code to read replies and continue the conversation."
+msgstr "Use your access code to read replies and continue the conversation."
+
+msgid "Enter your access code"
+msgstr "Enter your access code"
+
+msgid "Access your report"
+msgstr "Access your report"
+
+msgid "Keep your code: you will need it to return to your report."
+msgstr "Keep your code: you will need it to return to your report."
+
+msgid "Start here"
+msgstr "Start here"
+
+msgid "Choose your organization"
+msgstr "Choose your organization"
+
+msgid ""
+"Each organization has its own reporting channel. Select the one your report "
+"concerns."
+msgstr ""
+"Each organization has its own reporting channel. Select the one your report "
+"concerns."
+
+msgid "Open channel"
+msgstr "Open channel"
+
+msgid "No public reporting channels are available."
+msgstr "No public reporting channels are available."
+
+msgid "A clear path"
+msgstr "A clear path"
+
+msgid "How it works"
+msgstr "How it works"
+
+msgid "Choose the channel"
+msgstr "Choose the channel"
+
+msgid "Select the organization concerned before starting your report."
+msgstr "Select the organization concerned before starting your report."
+
+msgid "Describe what happened"
+msgstr "Describe what happened"
+
+msgid ""
+"Follow the form and include the information and documents you consider "
+"useful."
+msgstr ""
+"Follow the form and include the information and documents you consider "
+"useful."
+
+msgid "Stay in contact"
+msgstr "Stay in contact"
+
+msgid ""
+"Save your access code to follow updates and reply to requests for "
+"information."
+msgstr ""
+"Save your access code to follow updates and reply to requests for "
+"information."
+
+msgid "Expertise alongside businesses."
+msgstr "Expertise alongside businesses."
+
+msgid ""
+"Kronos Finance supports businesses through corporate advisory, subsidized "
+"finance and innovation. This portal is dedicated to its whistleblowing "
+"service."
+msgstr ""
+"Kronos Finance supports businesses through corporate advisory, subsidized "
+"finance and innovation. This portal is dedicated to its whistleblowing "
+"service."
+
+msgid "Discover Kronos Finance"
+msgstr "Discover Kronos Finance"
+
+msgid "About this reporting platform"
+msgstr "About this reporting platform"
+
+msgid "Service offered and managed by"
+msgstr "Service offered and managed by"
+
+msgid "Platform maintained by"
+msgstr "Platform maintained by"
+
+msgid "Access your workspace"
+msgstr "Access your workspace"
+
+msgid "Sign in to manage the reports assigned to you."
+msgstr "Sign in to manage the reports assigned to you."
+
+msgid "Recover access"
+msgstr "Recover access"
+
+msgid "Back to login"
+msgstr "Back to login"
+
+msgid "Reporting channel"
+msgstr "Reporting channel"
+
+msgid "Complete the form with the information you consider useful."
+msgstr "Complete the form with the information you consider useful."
+
+msgid "A dedicated space for those who listen."
+msgstr "A dedicated space for those who listen."
+
+msgid "Access for authorized users who receive and manage reports on this platform."
+msgstr "Access for authorized users who receive and manage reports on this platform."
+
+msgid "Are you following a report?"
+msgstr "Are you following a report?"
+
+msgid ""
+"Use the access code you received when submitting your report, from the "
+"homepage."
+msgstr ""
+"Use the access code you received when submitting your report, from the "
+"homepage."
+
+msgid "Go to the homepage"
+msgstr "Go to the homepage"

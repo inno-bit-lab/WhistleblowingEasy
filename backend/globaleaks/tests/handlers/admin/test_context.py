@@ -52,3 +52,29 @@ class TestContextInstance(helpers.TestInstanceHandler):
         handler = self.request(data, role='admin', headers={'x-confirmation': confirmation})
 
         yield handler.delete(data['id'])
+
+
+class TestChannelSlugs(helpers.TestGLWithPopulatedDB):
+    @inlineCallbacks
+    def test_slug_unique_and_clearable(self):
+        request = dict(self.dummyContext)
+        request['id'] = ''
+        request['slug'] = 'test-company'
+        first = yield context.create_context(1, None, request, 'en')
+        self.assertEqual(first['slug'], 'test-company')
+        second = dict(self.dummyContext)
+        second['id'] = ''
+        second['slug'] = 'test-company'
+        yield self.assertFailure(context.create_context(1, None, second, 'en'), errors.InputValidationError)
+        first['slug'] = ''
+        cleared = yield context.update_context(1, first['id'], first, 'en')
+        self.assertEqual(cleared['slug'], '')
+        created = yield context.create_context(1, None, second, 'en')
+        self.assertEqual(created['slug'], 'test-company')
+
+    @inlineCallbacks
+    def test_reject_invalid_slug(self):
+        for slug in ['Azienda', 'two words', '../admin', '-company', 'company-', 'a' * 65]:
+            request = dict(self.dummyContext)
+            request['slug'] = slug
+            yield self.assertFailure(context.create_context(1, None, request, 'en'), errors.InputValidationError)
