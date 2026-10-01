@@ -59,7 +59,7 @@ describe("globaleaks process", function () {
   });
 
   it("Recipient should be able to access a report and perform further actions", function () {
-    const confirmDateOperation = (operation: "postpone" | "set_reminder") => {
+    const confirmReportOperation = (operation: "postpone" | "set_reminder" | "update_status" | "grant" | "revoke") => {
       cy.intercept("PUT", /\/api\/recipient\/rtips\/[^/]+$/, (request) => {
         if (request.body.operation === operation) {
           request.alias = operation;
@@ -125,7 +125,7 @@ describe("globaleaks process", function () {
       cy.get('.btn-link[aria-label="Next month"]').click();
       cy.get('.ngb-dp-day').contains(day).click();
     });
-    confirmDateOperation("postpone");
+    confirmReportOperation("postpone");
 
     // Set a reminder
     cy.get("#tip-action-reminder").click();
@@ -136,7 +136,7 @@ describe("globaleaks process", function () {
     const formattedDate = tomorrow.toISOString().split('T')[0];
     cy.get('input[name="dp"]').click().clear();
     cy.get('input[name="dp"]').click().type(formattedDate);
-    confirmDateOperation("set_reminder");
+    confirmReportOperation("set_reminder");
 
     // Silence email notifications
     cy.get('[id="tip-action-silence"]').should('be.visible').click();
@@ -211,10 +211,10 @@ describe("globaleaks process", function () {
     cy.get("#tip-action-change-status").click();
     cy.takeScreenshot("recipient/modal_change_status", ".modal-dialog");
     cy.get('#assignSubmissionStatus').select(2);
-    cy.get("#modal-action-ok").click();
+    confirmReportOperation("update_status");
     cy.get('#actionsDropdownButton').click();
     cy.get("#tip-action-reopen").click();
-    cy.get("#modal-action-ok").click();
+    confirmReportOperation("update_status");
 
     // Grant access to Recipient3
     cy.get('#usersDropdownButton').click();
@@ -226,7 +226,7 @@ describe("globaleaks process", function () {
     cy.get('.ng-dropdown-panel').should('be.visible');
     cy.get('[data-cy="receiver_selection"]').click();
     cy.contains('.ng-option', 'Recipient3').click();
-    cy.get("#modal-action-ok").click();
+    confirmReportOperation("grant");
 
     // Navigate list and acquire screenshot for documentation
     cy.visit("/#/recipient/reports");
@@ -245,7 +245,7 @@ describe("globaleaks process", function () {
     cy.get('.ng-dropdown-panel').should('be.visible');
     cy.get('[data-cy="receiver_selection"]').click();
     cy.contains('.ng-option', 'Recipient2').click();
-    cy.get("#modal-action-ok").click();
+    confirmReportOperation("revoke");
 
     // Delete report
     cy.get('#actionsDropdownButton').click();
