@@ -19,12 +19,37 @@
           "rate-limit-standard",
           "wbe-channel-document"
         ]
+      },
+      "wbe-channel-base": {
+        "rule": "Host(`wbe.kronosfinance.it`) && PathRegexp(`^/[a-z0-9]+(-[a-z0-9]+)*/?$`) && !PathRegexp(`^/(api|s|js|css|fonts|workers|l10n|data|login|admin|recipient|custodian|analyst|action|wizard|signup|submission|password|activation|reports|blank)(/|$)`)",
+        "entryPoints": [
+          "websecure"
+        ],
+        "priority": 200,
+        "service": "wbe-kronosfinance-https",
+        "tls": {
+          "certResolver": "letsencrypt",
+          "options": "modern-tls"
+        },
+        "middlewares": [
+          "default-headers",
+          "security-headers",
+          "rate-limit-standard",
+          "wbe-channel-report-redirect"
+        ]
       }
     },
     "middlewares": {
       "wbe-channel-document": {
         "replacePath": {
           "path": "/"
+        }
+      },
+      "wbe-channel-report-redirect": {
+        "redirectRegex": {
+          "regex": "^https://wbe\\.kronosfinance\\.it/([a-z0-9]+(?:-[a-z0-9]+)*)/?(\\?.*)?$",
+          "replacement": "https://wbe.kronosfinance.it/${1}/report${2}",
+          "permanent": false
         }
       }
     }

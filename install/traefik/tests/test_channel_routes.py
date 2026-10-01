@@ -29,6 +29,23 @@ class ChannelRoutesTest(unittest.TestCase):
             with self.subTest(path=path):
                 self.assertFalse(self.matches(path))
 
+    def test_base_slug_redirect_and_reserved_paths(self):
+        config = Path(__file__).resolve().parents[1] / 'dynamic/25-wbe-channel-aliases.yml'
+        data = json.loads(config.read_text())['http']
+        rule = data['routers']['wbe-channel-base']['rule']
+        allowed = re.compile(re.search(r'(?<!!)PathRegexp\(`([^`]+)`\)', rule).group(1))
+        excluded = re.compile(re.search(r'!PathRegexp\(`([^`]+)`\)', rule).group(1))
+        for path in ['/lama-distribuzione', '/innobitlab/', '/zeverino']:
+            self.assertTrue(allowed.search(path) and not excluded.search(path))
+        for path in ['/', '/api', '/login', '/admin', '/submission', '/wizard', '/l10n']:
+            self.assertFalse(allowed.search(path) and not excluded.search(path))
+        redirect = data['middlewares']['wbe-channel-report-redirect']['redirectRegex']
+        for suffix in ['', '/', '?lang=en', '/?lang=en']:
+            match = re.match(redirect['regex'], 'https://wbe.kronosfinance.it/lama-distribuzione' + suffix)
+            self.assertIsNotNone(match)
+            self.assertEqual(match.group(1), 'lama-distribuzione')
+            self.assertEqual(match.group(2) or '', '?lang=en' if '?' in suffix else '')
+
 
 if __name__ == '__main__':
     unittest.main()
