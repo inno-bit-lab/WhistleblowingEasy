@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Toto je e-mailové upozornění na přítomnost nepřečtených nebo aktualizovaných oznámení.",
   "Reminder about unread or updated reports": "Připomínka o nepřečtených nebo aktualizovaných oznámení",
   "Role: {Role}": "Role: {Role}",
-  "Password: {Password}": "Heslo: {Password}"
+  "Password: {Password}": "Heslo: {Password}",
+  "For the user documentation, download here:": "Pro uživatelskou dokumentaci navštivte:",
+  "If you need technical support or have general questions, write to us here:": "Pokud potřebujete technickou podporu, máte obecné dotazy nebo máte nové nápady pro software:",
+  "For a detailed overview, click here and watch the video guide:": "Pokud chcete přispět k vývoji software nebo nahlásit chybu, založte, prosím, hlášení v našem ticket systému:"
 }

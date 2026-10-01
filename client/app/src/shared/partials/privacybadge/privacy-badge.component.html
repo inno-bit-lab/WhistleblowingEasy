@@ -3,7 +3,7 @@
     <div id="PrivacyBadge">
       @if (!appDataService.public.node.enable_custom_privacy_badge) {
         <div>
-          <div id="PrivacyBadgeTextBox">
+          <div id="PrivacyBadgeTextBox" class="d-none">
             <span class="badge badge-warning-custom text-bg-warning">
               <i class="fas fa-circle-exclamation"></i>
               <span>{{'Warning'|translate}}</span>

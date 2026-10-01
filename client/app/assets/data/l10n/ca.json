@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Aquest correu electrònic us recorda la presència d’informes no llegits o actualitzats.",
   "Reminder about unread or updated reports": "Recordatori sobre els informes no llegits o actualitzats",
   "Role: {Role}": "Rol: {Role}",
-  "Password: {Password}": "Contrasenya: {Password}"
+  "Password: {Password}": "Contrasenya: {Password}",
+  "For the user documentation, download here:": "Per a la documentació d'usuari visiti:",
+  "If you need technical support or have general questions, write to us here:": "Si necessiteu assistència tècnica, teniu preguntes generals o teniu idees noves per al programari:",
+  "For a detailed overview, click here and watch the video guide:": "Si voleu contribuir al desenvolupament de programari o informar d'un error, obriu un cas en el nostre gestor d'incidències:"
 }

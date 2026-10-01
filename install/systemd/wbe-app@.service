@@ -1,0 +1,24 @@
+[Unit]
+Description=WBE Application for Node %i
+After=network.target
+
+[Service]
+Type=exec
+RuntimeDirectory=wbe-%i
+RuntimeDirectoryMode=0700
+RuntimeDirectoryPreserve=yes
+Environment="WBE_RUNTIME_DIRECTORY=/run/wbe-%i"
+User=iblapps
+Group=iblapps
+WorkingDirectory=/opt/apps/wbe
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+Environment="LC_ALL=C.UTF-8"
+Environment="LANG=C.UTF-8"
+ExecStart=/opt/apps/wbe/scripts/startup_node.sh --node-name %i
+Restart=on-failure
+RestartSec=10s
+TimeoutStopSec=60s
+KillMode=control-group
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=wbe-app-%i

@@ -1,0 +1,17 @@
+[Unit]
+Description=WBE Process Monitor for Node %i
+Wants=wbe-app@%i.service
+After=network.target wbe-app@%i.service
+
+[Service]
+Type=oneshot
+TimeoutStartSec=90s
+User=iblapps
+Group=iblapps
+WorkingDirectory=/opt/apps/wbe
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+Environment="LC_ALL=C.UTF-8"
+Environment="LANG=C.UTF-8"
+ExecStart=/opt/apps/wbe/scripts/process_monitor.sh --node-name %i
+StandardOutput=append:/opt/apps/wbe/%i/appdata/log/process_monitor.log
+StandardError=inherit

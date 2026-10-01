@@ -1,19 +1,23 @@
-import re
+import ipaddress
 
 from globaleaks.utils.agent import get_page
 
 
-EXIT_ADDR_URL = b'https://deb.globaleaks.org/app/exit-addresses'
+EXIT_ADDR_URL = b'https://check.torproject.org/torbulkexitlist'
 
 
 class TorExitSet(set):
     """Set that keep the list of Tor exit nodes ip using check.torproject.org"""
 
     def processData(self, data):
+        addresses = set()
+        for line in data.decode().splitlines():
+            try:
+                addresses.add(str(ipaddress.ip_address(line.strip())))
+            except ValueError:
+                continue
         self.clear()
-
-        for ip in re.findall(r'ExitAddress ([^ ]*) ', data.decode()):
-            self.add(ip)
+        super().update(addresses)
 
     def update(self, agent):
         return get_page(agent, EXIT_ADDR_URL).addCallback(self.processData)

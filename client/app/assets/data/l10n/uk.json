@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Цим листом нагадуємо вам про наявність непрочитаних або оновлених звітів.",
   "Reminder about unread or updated reports": "Нагадування про непрочитані або оновлені звіти",
   "Role: {Role}": "Роль: {Role}",
-  "Password: {Password}": "Пароль: {Password}"
+  "Password: {Password}": "Пароль: {Password}",
+  "For the user documentation, download here:": "З документацією користувача можна ознайомитися на сторінці:",
+  "If you need technical support or have general questions, write to us here:": "Якщо вам необхідна технічна підтримка, у вас виникли загальні питання, або є пропозиції для удосконалення програмного забезпечення:",
+  "For a detailed overview, click here and watch the video guide:": "Якщо ви хочете брати участь в розробці програмного забезпечення або повідомити про помилку, будь ласка, надішліть запит у нашу систему підтримки:"
 }

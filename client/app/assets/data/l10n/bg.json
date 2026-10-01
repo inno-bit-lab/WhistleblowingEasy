@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Този имейл Ви напомня за наличието на непрочетени или актуализирани сигнали.",
   "Reminder about unread or updated reports": "Напомняне за непрочетени или актуализирани сигнали",
   "Role: {Role}": "Роля: {Role}",
-  "Password: {Password}": "Парола: {Password}"
+  "Password: {Password}": "Парола: {Password}",
+  "For the user documentation, download here:": "За потребителска документация, посетете:",
+  "If you need technical support or have general questions, write to us here:": "Ако се нуждаете от техническа поддръжка, имате въпроси от общ характер или нови идеи за софтуера:",
+  "For a detailed overview, click here and watch the video guide:": "Ако желаете да допринесете за разработването на софтуера или да докладвате за грешка, моля, отворете билет за поддръжка в системата ни:"
 }

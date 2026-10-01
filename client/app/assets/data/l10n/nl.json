@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Deze e-mail is om u te herinneren aan de aanwezigheid van ongelezen of bijgewerkte inzendingen.",
   "Reminder about unread or updated reports": "Herinnering over ongelezen of bijgewerkte inzendingen",
   "Role: {Role}": "Rol: {Role}",
-  "Password: {Password}": "Wachtwoord: {Password}"
+  "Password: {Password}": "Wachtwoord: {Password}",
+  "For the user documentation, download here:": "Voor de gebruikershandleiding, bezoek:",
+  "If you need technical support or have general questions, write to us here:": "Indien u technische ondersteuning nodig heeft, algemene vragen of nieuwe ideeën heeft betreffende de software:",
+  "For a detailed overview, click here and watch the video guide:": "Indien u een bijdrage wilt leveren aan het ontwikkelen van de software of een fout wilt rapporteren kunt u dit doen door een nieuw ticket te openen in ons ticketsysteem:"
 }

@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "এই ইমেলটি অপঠিত বা আপডেট হওয়া প্রতিবেদনগুলির উপস্থিতি আপনাকে স্মরণ করিয়ে দেওয়ার জন্য।",
   "Reminder about unread or updated reports": "অপঠিত বা আপডেট হওয়া প্রতিবেদনগুলির বিষয়ে অনুস্মারক",
   "Role: {Role}": "রোল: {Role}",
-  "Password: {Password}": "পাসওয়ার্ড: {Password}"
+  "Password: {Password}": "পাসওয়ার্ড: {Password}",
+  "For the user documentation, download here:": "ব্যবহারকারীর ডকুমেন্টেশনের জন্য, এখানে যান:",
+  "If you need technical support or have general questions, write to us here:": "আপনার যদি প্রযুক্তিগত সহায়তার প্রয়োজন হয়, সাধারণ প্রশ্ন থাকে বা সফ্টওয়্যারটির জন্য নতুন ধারণা পেয়ে থাকেনঃ",
+  "For a detailed overview, click here and watch the video guide:": "আপনি যদি সফ্টওয়্যার বিকাশে অবদান রাখতে চান বা কোনও বাগ রিপোর্ট করতে চান, দয়া করে আমাদের টিকিটিং সিস্টেমের মাধ্যমে জানানঃ"
 }

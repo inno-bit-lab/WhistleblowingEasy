@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Ин почтаи электронӣ шуморо хотиррасон мекунад, ки гузоришҳои хонданашуда ё навсозишуда мавҷуд мебошанд. ",
   "Reminder about unread or updated reports": "Ёддошт дар бораи гузоришҳои хонданашуда ё навшуда",
   "Role: {Role}": "Нақш: {Role}",
-  "Password: {Password}": "Гузарвожа: {Password}"
+  "Password: {Password}": "Гузарвожа: {Password}",
+  "For the user documentation, download here:": "Барои ҳуҷҷатҳои корбар, аз ин ҷо дидан кунед:",
+  "If you need technical support or have general questions, write to us here:": "Агар ба шумо дастгирии техникӣ лозим бошад, саволи умумӣ дошта бошед ва ё ақидаи нав барои нармафзор доред:",
+  "For a detailed overview, click here and watch the video guide:": "Агар шумо хоҳед, ки дар таҳияи нармафзор саҳм гузоред ва ё оиди камбудие хабар диҳед, лутфан дар системаи мо парванда кушоед:"
 }

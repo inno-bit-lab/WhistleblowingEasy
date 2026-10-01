@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Бул кат сизге окулбаган же жаңыртылган отчеттор бар экендиги жөнүндө бар экенин эскертип турат",
   "Reminder about unread or updated reports": "Окула элек же жаңыланган отчеттор тууралуу эскертүү",
   "Role: {Role}": "Роль: {Роль}",
-  "Password: {Password}": "Сырсөз: {Сырсөз}"
+  "Password: {Password}": "Сырсөз: {Сырсөз}",
+  "For the user documentation, download here:": "Колдонуучунун документтери үчүн төмөнкүгө кириңиз:",
+  "If you need technical support or have general questions, write to us here:": "Эгерде сиз техникалык колдоого муктаж болсоңуз, жалпы сурооңуз болсо же программалык жабдыктар боюнча жаңы идеяңыз болсо:",
+  "For a detailed overview, click here and watch the video guide:": "Эгерде сиз программалык камсыздоону иштеп чыгууга салым кошкуңуз келсе же ката тууралуу кабар бергиңиз келсе, анда биздин билеттер системасында көйгөй ачыңыз:"
 }

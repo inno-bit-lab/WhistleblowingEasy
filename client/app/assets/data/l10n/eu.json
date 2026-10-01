@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Posta elektroniko honen bidez irakurri gabeko edo eguneratu gabeko salaketa bat eguneratu dela jakinarazi nahi dizugu.",
   "Reminder about unread or updated reports": "Irakurri edo eguneratu gabeko salaketak daudela gogorarazi.",
   "Role: {Role}": "Betekizuna:{Role}",
-  "Password: {Password}": "Pasahitza:{Password}"
+  "Password: {Password}": "Pasahitza:{Password}",
+  "For the user documentation, download here:": "Erabiltzailearen dokumentaziorako, hona joan:",
+  "If you need technical support or have general questions, write to us here:": "Laguntza teknikoa behar baduzu, galdera orokorrak badituzu edo softwarearentzat ideia berriak badituzu:",
+  "For a detailed overview, click here and watch the video guide:": "Softwarea garatzen lagundu nahi baduzu edo akats baten berri eman nahi baduzu, arren, ireki gaia gure ticketen sisteman:"
 }

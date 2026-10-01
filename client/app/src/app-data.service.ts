@@ -36,6 +36,11 @@ export class AppDataService {
 
   constructor() {}
 
+  get showGlobalBranding(): boolean {
+    const contexts = this.public.contexts || [];
+    return contexts.filter(context => !context.hidden).length <= 1 || !this.context_id;
+  }
+
   updateShowLoadingPanel(newValue: boolean) {
     this.showLoadingPanelSubject.next(newValue);
   }

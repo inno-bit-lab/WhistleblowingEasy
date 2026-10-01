@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-end">
-  @if (appDataService.public.node.languages_enabled.length > 1) {
+  @if (appDataService.public.node.languages_enabled.length > 1 && appDataService.showGlobalBranding) {
     <div id="LanguagePickerBox" class="order-2" [ngClass]="appDataService.public.node.wizard_done ? 'language-box' : 'language-box-extended'">
       <label id="language-picker-label" for="language-picker-select" class="visually-hidden">{{'Select your language' | translate}}</label>
       <ng-select id="language-picker-select" [clearable]="false" [ngModel]="translationService.language" (ngModelChange)="onChangeLanguage($event)" [ariaLabel]="'Select your language' | translate">
@@ -55,9 +55,3 @@
     </div>
   }
 </div>
-@if (utilsService.showWBLoginBox()) {
-  <div id="WhistleblowerLoginBox" class="ms-1 mb-1">
-    <src-receipt ></src-receipt>
-  </div>
-}
-

@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Prin acest e-mail îți reamintim că ai avertizări necitite sau care au primit informații suplimentare.",
   "Reminder about unread or updated reports": "Memento pentru sesizările necitite sau actualizate",
   "Role: {Role}": "Rol: {Role}",
-  "Password: {Password}": "Parolă: {Password}"
+  "Password: {Password}": "Parolă: {Password}",
+  "For the user documentation, download here:": "Pentru a vedea documentația necesară utilizatorilor, mergi la:",
+  "If you need technical support or have general questions, write to us here:": "Dacă ai nevoie de suport tehnic, ai întrebări generale sau ai idei pentru software:",
+  "For a detailed overview, click here and watch the video guide:": "Dacă vrei să contribui la dezvoltarea software-ului sau dorești să raportezi o problemă, te rugăm să deschizi o sesizare:"
 }

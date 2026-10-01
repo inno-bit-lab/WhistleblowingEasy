@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Бу елхәт сизгә нөвәттики оқулмиған йаки йеңиланған доклатларни хатирилитиш үчүндур.",
   "Reminder about unread or updated reports": "Оқулмиған йаки йеңиланған мәлуматларни хатирилатқучи.",
   "Role: {Role}": "Роли: {Role}",
-  "Password: {Password}": "Парол: {Password}"
+  "Password: {Password}": "Парол: {Password}",
+  "For the user documentation, download here:": "Ишләткүчи һөҗҗити үчүн бу йәргә қараң:",
+  "If you need technical support or have general questions, write to us here:": "Әгәр техникилиқ қоллашқа еһтийаҗлиқ болсиңиз , адәттики соъаллириңиз болса йаки йумшақ деталға мунасивәтлик йеңи пикирлириңиз болса:",
+  "For a detailed overview, click here and watch the video guide:": "Йумшақ детал ечишқа төһпә қошмақчи йаки кәмтүк мәлум қилмақчи болсиңиз , хаталиқ мәлум  қилиш системисимиздин мәлумат ечиң:"
 }

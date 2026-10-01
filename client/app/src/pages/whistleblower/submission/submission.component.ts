@@ -1,3 +1,4 @@
+import {ReceiptComponent} from "@app/shared/partials/receipt/receipt.component";
 import {Component, OnInit, QueryList, ViewChild, ViewChildren, inject} from "@angular/core";
 import {ActivatedRoute} from '@angular/router';
 import {AppDataService} from "@app/app-data.service";
@@ -34,7 +35,7 @@ import {firstValueFrom} from "rxjs";
     templateUrl: "./submission.component.html",
     providers: [SubmissionService],
     standalone: true,
-    imports: [ContextSelectionComponent, FormsModule, NgClass, ReceiverSelectionComponent, NgFormChangeDirective, MarkdownComponent, FormComponent, RFilesUploadStatusComponent, TranslateModule, TranslatorPipe, StripHtmlPipe, OrderByPipe]
+    imports: [ReceiptComponent, ContextSelectionComponent, FormsModule, NgClass, ReceiverSelectionComponent, NgFormChangeDirective, MarkdownComponent, FormComponent, RFilesUploadStatusComponent, TranslateModule, TranslatorPipe, StripHtmlPipe, OrderByPipe]
 })
 export class SubmissionComponent implements OnInit {
   private route = inject(ActivatedRoute);

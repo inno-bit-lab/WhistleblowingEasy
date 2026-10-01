@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "อีเมลฉบับนี้ส่งมาเพื่อเตือนความจำคุณว่ามีรายงานที่ยังไม่ได้อ่านหรือรายงานที่ถูกปรับปรุงแล้ว",
   "Reminder about unread or updated reports": "เตือนความจำถึงรายงานที่ยังไม่ได้อ่านหรือที่ถูกปรับปรุง",
   "Role: {Role}": "บทบาท: {Role}",
-  "Password: {Password}": "รหัสผ่าน: {Password}"
+  "Password: {Password}": "รหัสผ่าน: {Password}",
+  "For the user documentation, download here:": "สำหรับเอกสารผู้ใช้ ไปที่:",
+  "If you need technical support or have general questions, write to us here:": "ถ้าคุณต้องการการสนับสนุนทางเทคนิค มีคำถามทั่วไป หรือมีความคิดใหม่ๆ สำหรับซอฟต์แวร์นี้",
+  "For a detailed overview, click here and watch the video guide:": "ถ้าคุณต้องการช่วยในการพัฒนาซอฟต์แวร์หรือรายงานข้อผิดพลาด กรุณาเปิดประเด็น (issue) ในระบบติดตามตั๋วงานของเรา:"
 }

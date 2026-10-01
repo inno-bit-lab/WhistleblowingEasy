@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Šis el. laiškas skirtas priminti, kad yra neperskaitytų arba atnaujintų pranešimų.",
   "Reminder about unread or updated reports": "Priminimas apie neperskaitytus arba atnaujintus pranešimus",
   "Role: {Role}": "Funkcija: {Role}",
-  "Password: {Password}": "Slaptažodis: {Password}"
+  "Password: {Password}": "Slaptažodis: {Password}",
+  "For the user documentation, download here:": "Naudotojo dokumentų ieškokite:",
+  "If you need technical support or have general questions, write to us here:": "Jei jums reikia techninės pagalbos, turite bendrųjų klausimų ar naujų idėjų dėl programinės įrangos:",
+  "For a detailed overview, click here and watch the video guide:": "Jei norite prisidėti prie programinės įrangos kūrimo ar pranešti apie klaidą, atidarykite problemą mūsų bilietų sistemoje:"
 }

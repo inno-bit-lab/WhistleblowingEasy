@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "This email is to remind you the presence of unread or updated reports.",
   "Reminder about unread or updated reports": "Reminder about unread or updated reports",
   "Role: {Role}": "ሚና፡-{Role}",
-  "Password: {Password}": "የይለፍ ቃል፡-{Password}"
+  "Password: {Password}": "የይለፍ ቃል፡-{Password}",
+  "For the user documentation, download here:": "ለተጠቃሚ ሰነድ የሚከተለውን ጎብኝ",
+  "If you need technical support or have general questions, write to us here:": "ውያዊ ድጋፍ ከፈለጉ፣ ማንኛውም ጥያቄ ካሎት ወይም አዲስ ሃሳብ \n\nለሶፍትዌር ካሎት",
+  "For a detailed overview, click here and watch the video guide:": "ለሶፍትዌር ግንባታ አስተዋጽኦ ማደረግ ከፈለጉ ወይም የሶፍትዌር ሳንካ መጠቆም ከፈለጉ\n\nበትኬት ስርኣታችን ገብተው ሁኔታ ሙሉ"
 }

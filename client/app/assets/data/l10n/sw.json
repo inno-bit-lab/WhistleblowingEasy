@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "This email is to remind you the presence of unread or updated reports.",
   "Reminder about unread or updated reports": "Reminder about unread or updated reports",
   "Role: {Role}": "Jukumu: {Role}",
-  "Password: {Password}": "neno la siri: {Password}"
+  "Password: {Password}": "neno la siri: {Password}",
+  "For the user documentation, download here:": "Kwa nyaraka za mtumiaji, tembelea:",
+  "If you need technical support or have general questions, write to us here:": "Ikiwa unahitaji msaada wa kiufundi, ukiwa na maswali ya jumla, au uwe na maoni mapya juu ya\n\nprogramu:",
+  "For a detailed overview, click here and watch the video guide:": "Ikiwa unataka kuchangia uendelezaji wa programu au kuripoti kuhusu virusi katika programu, tafadhali\n\nfungua suala katika mfumo wetu wa tiketi:"
 }

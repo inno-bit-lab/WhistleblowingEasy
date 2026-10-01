@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Бұл электрондық хат сізге оқылмаған немесе жаңартылған есептерді еске салады.",
   "Reminder about unread or updated reports": "Оқылмаған немесе жаңартылған есептер туралы ескерту",
   "Role: {Role}": "Рөл: {Рөл}",
-  "Password: {Password}": "Құпиясөз: {Құпиясөз}"
+  "Password: {Password}": "Құпиясөз: {Құпиясөз}",
+  "For the user documentation, download here:": "Пайдаланушы құжаттамасы үшін, мына сайтқа кіріңіз:",
+  "If you need technical support or have general questions, write to us here:": "Егер сізге техникалық қолдау қажет болса, жалпы сұрақтарыңыз болса немесе бағдарламалық жасақтамаға байланысты идеяларыңыз болса:",
+  "For a detailed overview, click here and watch the video guide:": "Егер сіз бағдарламалық жасақтаманы дамытуға үлес қосқыңыз келсе немесе қате туралы хабарлағыңыз келсе, тикет жүйесінде мәселе ашыңыз:"
 }

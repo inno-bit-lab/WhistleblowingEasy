@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Surel ini untuk mengingatkan Anda akan adanya laporan yang belum dibaca atau yang diperbarui ",
   "Reminder about unread or updated reports": "Pengingat tentang laporan yang belum dibaca atau yang diperbarui",
   "Role: {Role}": "Peran: {Role}",
-  "Password: {Password}": "Kata sandi: {Password}"
+  "Password: {Password}": "Kata sandi: {Password}",
+  "For the user documentation, download here:": "Untuk dokumentasi pengguna, kunjungi:",
+  "If you need technical support or have general questions, write to us here:": "Jika Anda membutuhkan dukungan teknis, memiliki pertanyaan umum, atau ide baru untuk perangkat lunak:",
+  "For a detailed overview, click here and watch the video guide:": "Jika Anda ingin memberikan kontribusi untuk pengembangan perangkat lunak atau melaporkan sebuah gangguan, bukalah sebuah isu pada sistem tiket kami."
 }

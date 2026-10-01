@@ -8,16 +8,19 @@
     <div>
       @if (appDataService.context_id || selectable_contexts.length > 1) {
         <div>
-          <div class="title">{{submission.context.name}}</div>
+          <div class="title d-none">{{submission.context.name}}</div>
           <div class="row">
             @if (submission.context.picture) {
-              <div class="col-md-12">
+              <div class="col-md-12 d-flex justify-content-center">
                 <img class="context-image" alt="context picture" src="/s/{{submission.context.id}}" />
               </div>
             }
           </div>
         </div>
       }
+      <div class="d-flex justify-content-center my-2">
+        <src-receipt loginLabel="Search"></src-receipt>
+      </div>
       <form #submissionForm="ngForm" id="SubmissionForm" [ngClass]="{'was-validated': displaySubmissionErrors()}" autocomplete="off" novalidate>
         <div class="tabbable tabs-below mb-3">
           @if (submission.context.show_steps_navigation_interface && questionnaire.steps.length > 1) {

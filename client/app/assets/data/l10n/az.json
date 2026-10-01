@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Bu məktub sizə, oxunmamış və ya yenilənmiş hesabatların olduğunu xatıratmaqçün göndərilib.",
   "Reminder about unread or updated reports": "Oxunmamış və ya yenilənmiş hesabatlar haqda xəbərdarlıq",
   "Role: {Role}": "Rol: {Role}",
-  "Password: {Password}": "Parol: {Password}"
+  "Password: {Password}": "Parol: {Password}",
+  "For the user documentation, download here:": "Sənədləşməyə baxmaq üçün:",
+  "If you need technical support or have general questions, write to us here:": "Texniki dəstəyə ehtiyacınız , ümumi suallarınız və ya proqramçün yeni ideyalarınız varsa: ",
+  "For a detailed overview, click here and watch the video guide:": "Proqram təminatına töhvə, yaxud problem haqda məlumat vermək istəyirsinizsə, bilet sistemində məsələ qaldırın: "
 }

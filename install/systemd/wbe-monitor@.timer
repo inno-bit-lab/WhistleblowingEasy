@@ -1,0 +1,11 @@
+[Unit]
+Description=Run WBE Process Monitor for Node %i every 3 minutes
+
+[Timer]
+# Avvia 3 minuti dopo il boot del sistema
+OnBootSec=3min
+# Avvia ogni 3 minuti (corrisponde a */3 * * * *)
+OnCalendar=*:0/3
+
+[Install]
+WantedBy=timers.target

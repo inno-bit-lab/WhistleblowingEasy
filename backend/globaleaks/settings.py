@@ -20,7 +20,7 @@ class SettingsClass(metaclass=Singleton):
         self.migrate_only = False
 
         self.bind_address = '::'
-        self.bind_remote_ports = [8080, 8443]
+        self.bind_remote_ports = [int(os.environ.get('WBE_HTTP_PORT', '8080')), 8443]
         self.bind_local_ports = [8083]
 
         self.db_type = 'sqlite'
@@ -32,14 +32,15 @@ class SettingsClass(metaclass=Singleton):
         self.src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
         self.backend_script = os.path.abspath(os.path.join(self.src_path, 'globaleaks/backend.py'))
 
-        self.pidfile_path = '/run/globaleaks/globaleaks.pid'
+        runtime_directory = os.environ.get('WBE_RUNTIME_DIRECTORY', '/run/globaleaks')
+        self.pidfile_path = os.path.join(runtime_directory, 'globaleaks.pid')
         # RAM-backed spool for password-reset/activation token markers. It must
         # never hit disk: the markers are decryptable with the token mailed to
         # the user, and the mail spool is on persistent storage. /run is a
         # systemd-managed tmpfs (RuntimeDirectory=globaleaks) that is root-owned
         # rather than world-writable like /dev/shm, and the unit preserves it
         # across restarts so in-flight tokens survive a service reload.
-        self.ramdisk_path = '/run/globaleaks/ramdisk'
+        self.ramdisk_path = os.path.join(runtime_directory, 'ramdisk')
         self.working_path = '/var/globaleaks'
         self.client_path = None
 

@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Denne e-posten minner deg om uleste eller oppdaterte rapporter.",
   "Reminder about unread or updated reports": "Påminnelse om uleste eller oppdaterte rapporter",
   "Role: {Role}": "Rolle: {Role}",
-  "Password: {Password}": "Passord: {Password}"
+  "Password: {Password}": "Passord: {Password}",
+  "For the user documentation, download here:": "For brukerdokumentasjon, gå til:",
+  "If you need technical support or have general questions, write to us here:": "Hvis du trenger teknisk støtte, har spørsmål eller nye idéer for programvaren:",
+  "For a detailed overview, click here and watch the video guide:": "Hvis du ønsker å bidra i programvareutvilingen eller innrapportere en feil, åpne en feilrapport på vår problemoversikt:"
 }

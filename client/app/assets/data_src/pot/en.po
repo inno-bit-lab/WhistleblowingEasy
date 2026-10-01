@@ -2116,3 +2116,11 @@ msgstr "Role: {Role}"
 
 msgid "Password: {Password}"
 msgstr "Password: {Password}"
+
+msgid "For the user documentation, download here:"
+msgstr "For the user documentation, download here:"
+
+msgid "For a detailed overview, click here and watch the video guide:"
+msgstr ""
+"If you want to contribute to software development or report a bug, please "
+"open an issue in our ticketing system:"

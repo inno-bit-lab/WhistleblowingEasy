@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "អុីមែលនេះ ដើម្បីរំលឹកអ្នកពីវត្តមាននៃរបាយការណ៍ដែលមិនទាន់អាន​ ឬធ្វើបច្ចុប្បន្នភាព។",
   "Reminder about unread or updated reports": "ការរំលឹកពីរបាយការណ៍មិនទាន់អាន​ ឬបានធ្វើបច្ចុប្បន្នភាព",
   "Role: {Role}": "តួនាទី៖ {Role}",
-  "Password: {Password}": "ពាក្យសម្ងាត់៖ {Password}"
+  "Password: {Password}": "ពាក្យសម្ងាត់៖ {Password}",
+  "For the user documentation, download here:": "សម្រាប់ឯកសារអ្នកប្រើប្រាស់ សូមចូលទៅកាន់៖",
+  "If you need technical support or have general questions, write to us here:": "បើអ្នកត្រូវការជំនួយបច្ចេកទេស មានសំណួរទូទៅ ឬមានគំនិតថ្មីសម្រាប់កម្មវិធី៖",
+  "For a detailed overview, click here and watch the video guide:": "បើអ្នកចង់ចូលរួមចំណែកក្នុងការអភិវឌ្ឍកម្មវិធី ឬរាយការណ៍អំពីកំហុស សូមលើកបញ្ហានៅក្នុងប្រព័ន្ធសំបុត្ររបស់យើង៖ "
 }

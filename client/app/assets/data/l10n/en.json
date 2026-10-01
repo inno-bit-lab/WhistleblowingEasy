@@ -594,5 +594,8 @@
   "This email is to remind you the presence of unread or updated reports.": "This email is to remind you the presence of unread or updated reports.",
   "Reminder about unread or updated reports": "Reminder about unread or updated reports",
   "Role: {Role}": "Role: {Role}",
-  "Password: {Password}": "Password: {Password}"
+  "Password: {Password}": "Password: {Password}",
+  "For the user documentation, download here:": "For the user documentation, download here:",
+  "If you need technical support or have general questions, write to us here:": "If you need technical support or have general questions, write to us here:",
+  "For a detailed overview, click here and watch the video guide:": "For a detailed overview, click here and watch the video guide:"
 }

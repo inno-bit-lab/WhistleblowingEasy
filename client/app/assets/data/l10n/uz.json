@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Bu xat sizga oʻqilmagan yoki yangilangan anonim xabarlar haqida eslatish uchun yuborildi.",
   "Reminder about unread or updated reports": "Oʻqilmagan yoki yangilangan xabarlar haqida eslatma",
   "Role: {Role}": "Vakolati: {Role}",
-  "Password: {Password}": "Paroli: {Password}"
+  "Password: {Password}": "Paroli: {Password}",
+  "For the user documentation, download here:": "Foydalanuvchilar uchun texnik hujjatlar:",
+  "If you need technical support or have general questions, write to us here:": "Texnik koʻmak, dastur yuzasidan savollar va takliflar uchun:",
+  "For a detailed overview, click here and watch the video guide:": "Dasturiy taʼminot rivojiga hissa qoʻshish yoki xatoliklar haqida xabar qilish uchun bizning tiketlar tizimimizga tashrif buyuring:"
 }

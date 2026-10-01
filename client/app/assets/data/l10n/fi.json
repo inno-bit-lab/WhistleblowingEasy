@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Tämä sähköpostiviesti muistuttaa sinua lukemattomista tai päivitetyistä ilmoituksista.",
   "Reminder about unread or updated reports": "Muistutus lukemattomista tai päivitetyistä ilmoituksista",
   "Role: {Role}": "Rooli: {Role}",
-  "Password: {Password}": "Salasana: {Password}"
+  "Password: {Password}": "Salasana: {Password}",
+  "For the user documentation, download here:": "Käyttöohjeet löydät osoitteesta: ",
+  "If you need technical support or have general questions, write to us here:": "Jos tarvitset teknistä tukea, sinulla on yleisiä kysymyksiä tai sinulla on uusia ideoita ohjelmistoon:",
+  "For a detailed overview, click here and watch the video guide:": "Jos haluat osallistua ohjelmistokehitykseen tai ilmoittaa virheestä, avaa ongelma tikettijärjestelmässämme:"
 }

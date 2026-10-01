@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Syftet med detta e-postmeddelande är att påminna dig om olästa eller uppdaterade rapporter.",
   "Reminder about unread or updated reports": "Påminnelse om olästa eller uppdaterade rapporter",
   "Role: {Role}": "Roll: {Role}",
-  "Password: {Password}": "Lösenord: {Password}"
+  "Password: {Password}": "Lösenord: {Password}",
+  "For the user documentation, download here:": "För att hitta användardokumentation, gå in på sidan:",
+  "If you need technical support or have general questions, write to us here:": "Om du behöver tekniskt stöd, har allmänna frågor eller nya idéer om mjukvaran, kontakta:",
+  "For a detailed overview, click here and watch the video guide:": "Om du vill bidra till programvaruutvecklingen eller rapportera om ett fel, får du gärna lämna en anmälan i vårt ärendesystem."
 }

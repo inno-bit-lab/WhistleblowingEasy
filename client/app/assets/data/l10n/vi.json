@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Email này là để nhắc bạn có những báo cáo vừa được cập nhật hoặc chưa được đọc.",
   "Reminder about unread or updated reports": "Nhắc nhở về báo cáo vừa được cập nhật hoặc chưa được đọc",
   "Role: {Role}": "Vai trò: {Role}",
-  "Password: {Password}": "Mật khẩu: {Password}"
+  "Password: {Password}": "Mật khẩu: {Password}",
+  "For the user documentation, download here:": "Vào trang sau đây để xem cẩm nang sử dụng",
+  "If you need technical support or have general questions, write to us here:": "Nếu bạn cần hỗ trợ kỹ thuật, có câu hỏi chung hoặc có ý tưởng mới cho phần mềm:",
+  "For a detailed overview, click here and watch the video guide:": "Nếu bạn muốn đóng góp vào việc phát triển phần mềm hoặc báo cáo lỗi, vui lòng báo cáo trong hệ thống theo dõi vấn đề của chúng tôi:"
 }

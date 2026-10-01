@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Bu élxet sizge nöwettiki oqulmighan yaki yéngilan’ghan melumatlarni xatirilitish üchündur.",
   "Reminder about unread or updated reports": "Oqulmighan yaki yéngilan’ghan melumatlarni xatirilatquchi",
   "Role: {Role}": "Roli: {Role}",
-  "Password: {Password}": "Parol: {Password}"
+  "Password: {Password}": "Parol: {Password}",
+  "For the user documentation, download here:": "Ishletküchi höjjiti üchün bu yerge qarang:",
+  "If you need technical support or have general questions, write to us here:": "Eger téxnikiliq qollashqa éhtiyajliq bolsingiz , adettiki so’alliringiz bolsa yaki yumshaq détalgha munasiwetlik yéngi pikirliringiz bolsa:",
+  "For a detailed overview, click here and watch the video guide:": "Yumshaq détal échishqa töhpe qoshmaqchi yaki kemtük melum qilmaqchi bolsingiz , xataliq melum  qilish sistémisimizdin melumat éching:"
 }

@@ -1,4 +1,4 @@
-import {Component, inject} from "@angular/core";
+import {Component, Input, inject} from "@angular/core";
 import {AuthenticationService} from "@app/services/helper/authentication.service";
 import {AppDataService} from "@app/app-data.service";
 import {UtilsService} from "@app/shared/services/utils.service";
@@ -19,6 +19,7 @@ export class ReceiptComponent{
   protected authenticationService = inject(AuthenticationService);
   protected appDataService = inject(AppDataService);
 
+  @Input() loginLabel = "Log in";
   formattedReceipt = "";
 
   viewReport() {

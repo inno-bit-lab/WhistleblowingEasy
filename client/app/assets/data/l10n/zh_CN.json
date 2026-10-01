@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "该邮件提醒您，有新的未读或已更新报告。",
   "Reminder about unread or updated reports": "未读或已更新报告的提醒",
   "Role: {Role}": "角色：{Role}",
-  "Password: {Password}": "密码：{Password}"
+  "Password: {Password}": "密码：{Password}",
+  "For the user documentation, download here:": "查看用户文档，请访问：",
+  "If you need technical support or have general questions, write to us here:": "对于有关软件的技术支持、常规问题或新想法，可访问：",
+  "For a detailed overview, click here and watch the video guide:": "如果想要参与软件开发或提交程序漏洞，请在我们的票证系统中新建一个问题条目："
 }

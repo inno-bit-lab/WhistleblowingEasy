@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Ovo je email da vas podsjeti da postoje nepročitani ili ažuriran izvještaji.",
   "Reminder about unread or updated reports": "Podsjetnik o nepročitanim ili ažuriranim izvještajima",
   "Role: {Role}": "Uloga: {Role}",
-  "Password: {Password}": "Lozinka: {Password}"
+  "Password: {Password}": "Lozinka: {Password}",
+  "For the user documentation, download here:": "Za pristup korisničkoj dokumentaciji, posjetite:",
+  "If you need technical support or have general questions, write to us here:": "Ukoliko vam je potrebna tehnička podrška, imate pitanja ili prijedloge za softver:",
+  "For a detailed overview, click here and watch the video guide:": "Ukoliko želite doprinijeti razvoju softvera ili prijaviti problem, molimo vas dapokrenete temu na našem ticketing sistemu"
 }

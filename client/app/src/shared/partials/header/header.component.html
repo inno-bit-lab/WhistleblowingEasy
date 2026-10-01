@@ -1,6 +1,6 @@
 <header id="HeaderBox" class="p-3">
   <div class="d-flex flex-wrap justify-content-between">
-    <div id="HeaderBox1">
+    <div id="HeaderBox1" [class.d-none]="!appDataService.showGlobalBranding">
       <div id="LogoBox" class="mb-3" (click)="appConfig.setHomepage()">
         <img class="img-fluid pointer" [alt]="appDataService.projectTitle" src="s/logo" />
       </div>

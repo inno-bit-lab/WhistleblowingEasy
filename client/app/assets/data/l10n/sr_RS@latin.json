@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Ovom porukom vas podsećamo da postoje nepročitane ili izmenjene dojave.",
   "Reminder about unread or updated reports": "Podsetnik o nepročitanim ili izmenjenim dojavama",
   "Role: {Role}": "Uloga: {Role}",
-  "Password: {Password}": "Lozinka: {Password}"
+  "Password: {Password}": "Lozinka: {Password}",
+  "For the user documentation, download here:": "Dokumentacija za korisnike se nalazi na:",
+  "If you need technical support or have general questions, write to us here:": "Ako vam je potrebna tehnička podrška, imate pitanje ili ideju za ovaj softver:",
+  "For a detailed overview, click here and watch the video guide:": "Ako želite da doprinesete razvoju softvera ili prijavite grešku, otvorite predmet u našem prijavnom sistemu:"
 }

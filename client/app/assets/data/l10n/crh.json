@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Бу мектюп сизге окъулмагъан я да янъартылгъан эсабатлар бар олгъаны акъкъында хатырлатмакъ ичюн ёлланылды.",
   "Reminder about unread or updated reports": "Окъулмагъан я да янъартылгъан эсабатлар акъкъында хатырлатма",
   "Role: {Role}": "Роль: {Role} ",
-  "Password: {Password}": "Пароль: {Password}"
+  "Password: {Password}": "Пароль: {Password}",
+  "For the user documentation, download here:": "Къулланыджы весикъаларынен невбеттеки саифеде таныш олмагъа мумкюн:",
+  "If you need technical support or have general questions, write to us here:": "Сизге техникий ярдым керек олса, я да умумий суаллеринъиз пейда олды, программа теминаты ичюн теклифлер олса:",
+  "For a detailed overview, click here and watch the video guide:": "Сиз программа теминаты ишленмесинде иштирак этмеге я да хата акъкъында хабер этмеге истесенъиз, лютфен, бизим дестек системамызгъа соратма ёлланъыз:"
 }

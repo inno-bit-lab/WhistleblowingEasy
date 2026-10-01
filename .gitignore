@@ -3,3 +3,13 @@ backend/workingdir/
 client/build
 client/node_modules/
 documentation/_build
+
+client/dist/
+client/tmp/
+client/app/fonts/*.ttf
+backend/_trial_temp/
+**/__pycache__/
+*.pyc
+client/.angular/
+client/app/viewer/script.min.js
+client/app/viewer/script.min.js.LICENSE.txt

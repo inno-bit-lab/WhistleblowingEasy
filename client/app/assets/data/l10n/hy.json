@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Այս նամակով ձեզ հիշեցնում ենք, որ դուք ունեք չկարդացած կամ թարմացված հաշվետվություններ:",
   "Reminder about unread or updated reports": "Հիշեցում՝ չկարդացած կամ թարմացված հաշվետվությունների մասին",
   "Role: {Role}": "Դեր՝ {Role}",
-  "Password: {Password}": "Գաղտնաբառ՝ {Password}"
+  "Password: {Password}": "Գաղտնաբառ՝ {Password}",
+  "For the user documentation, download here:": "Օգտատերերին առնչվող դոկումենտացիայի համար այցելեք՝",
+  "If you need technical support or have general questions, write to us here:": "Եթե ​​ձեզ անհրաժեշտ է տեխնիկական աջակցություն, ունեք ընդհանուր հարցեր կամ ծրագրային ապահովումը բարելավելու նոր գաղափարներ.",
+  "For a detailed overview, click here and watch the video guide:": "Եթե ​​ցանկանում եք մասնակցել ծրագրաշարի մշակմանը կամ հաղորդել սխալի մասին, խնդրում ենք բացել զեկույց մեր տոմսային համակարգում."
 }

@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "ອີເມວນີ້ແມ່ນເພື່ອເຕືອນທ່ານຊາບວ່າຍັງມີລາຍງານທີ່ຍັງບໍ່ທັນໄດ້ອ່ານ ຫຼື ມີການອັບເດດ.",
   "Reminder about unread or updated reports": "ເຕືອນໃຫ້ຊາບວ່າຍັງມີລາຍງານທີ່ຍັງບໍ່ທັນໄດ້ອ່ານ ຫຼື ມີການອັບເດດ",
   "Role: {Role}": "ບົດບາດ: {Role}",
-  "Password: {Password}": "ລະຫັດຜ່ານ: {Password}"
+  "Password: {Password}": "ລະຫັດຜ່ານ: {Password}",
+  "For the user documentation, download here:": "ສຳລັບເອກະສານຂອງຜູ້ໃຊ້, ໃຫ້ເຂົ້າເບິ່ງ:",
+  "If you need technical support or have general questions, write to us here:": "ຖ້າທ່ານຕ້ອງການການຊ່ວຍເຫຼືອດ້ານເຕັກນິກ, ມີຄຳຖາມທົ່ວໄປ ຫຼື ມີແນວຄວາມຄິດໃໝ່ໆສຳລັບຊອບແວ:",
+  "For a detailed overview, click here and watch the video guide:": "ຖ້າທ່ານຕ້ອງການປະກອບສ່ວນເຂົ້າໃນການພັດທະນາຊອບແວ ຫຼື ລາຍງານຂໍ້ບົກຜ່ອງ, ກະລຸນາຍົກບັນຫາຂຶ້ນມາໃນລະບົບການອອກປີ້ຂອງພວກເຮົາ:"
 }

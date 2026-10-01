@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Käesoleva meiliga tuletame teile meelde lugemata või uuendatud teavituste olemasolust.",
   "Reminder about unread or updated reports": "Meeldetuletus lugemata või uuendatud teavituste kohta",
   "Role: {Role}": "Roll: {Role}",
-  "Password: {Password}": "Parool: {Password}"
+  "Password: {Password}": "Parool: {Password}",
+  "For the user documentation, download here:": "Kasutaja dokumendid leiate aadressilt:",
+  "If you need technical support or have general questions, write to us here:": "Kui vajate tehnilist tuge, teil on üldisi küsimusi või uusi ideid tarkvara arendamiseks:",
+  "For a detailed overview, click here and watch the video guide:": "Kui soovite kaasa aidata tarkvara arendamisele või teatada programmiveast, avage meie piletisüsteemis probleemikirje:"
 }

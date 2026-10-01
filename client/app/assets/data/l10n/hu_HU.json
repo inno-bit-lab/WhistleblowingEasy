@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Ez egy értesítő email olvasatlan vagy frissített bejelentésről.",
   "Reminder about unread or updated reports": "Emlékeztető olvasatlan vagy frissített bejelentésekről",
   "Role: {Role}": "Szerep: {Role}",
-  "Password: {Password}": "Jelszó: {Password}"
+  "Password: {Password}": "Jelszó: {Password}",
+  "For the user documentation, download here:": "A felhasználói útmutatóért látogasson ide:",
+  "If you need technical support or have general questions, write to us here:": "Ha technikai támogatásra van szüksége, általános kérdése, vagy ötletei vannak a szoftverhez:",
+  "For a detailed overview, click here and watch the video guide:": "Ha szeretne hozzájárulni a fejlesztéshez vagy jelenteni egy hibát, kérjük nyisson egy hibajegyet a jegykezelő rendszerünkben:"
 }

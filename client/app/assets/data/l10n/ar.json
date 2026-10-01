@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "هذا البريد الإلكتروني لتذكيرك بوجود تقارير غير مقروءة أو محدّثة.",
   "Reminder about unread or updated reports": "تذكير بشأن التقارير غير المقروءة أو المحدثة",
   "Role: {Role}": "الدور: {Role}",
-  "Password: {Password}": "كلمة السركلمة السر: {Password}"
+  "Password: {Password}": "كلمة السركلمة السر: {Password}",
+  "For the user documentation, download here:": "للاطلاع على وثائق المستخدم، قم بزيارة:",
+  "If you need technical support or have general questions, write to us here:": "إذا كنت بحاجة إلى الدعم التقني أو لديك أسئلة عامة أو أفكار جديدة للبرنامج:",
+  "For a detailed overview, click here and watch the video guide:": "إذا كنت ترغب في المساهمة في تطوير البرمجيّة أو الإبلاغ عن عطب، يرجى التدوين على نظام التذاكر على Github:"
 }

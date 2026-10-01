@@ -62,7 +62,7 @@
               <div>
                 @for (option of field.options | orderBy:'order'; track option; let innerindex = $index) {
                   <div>
-                    <input [name]="fieldEntry" id="{{fieldEntry + '-option-' + innerindex}}" class="form-control-inputform-check-input" type="radio" [(ngModel)]="entry['value']" value="{{option.id}}" [required]="field.required" />
+                    <input [name]="fieldEntry" id="{{fieldEntry + '-option-' + innerindex}}" class="form-control-inputform-check-input" type="checkbox" [ngModel]="entry['value'] === option.id" (ngModelChange)="entry['value'] = $event ? option.id : ''" value="{{option.id}}" [required]="field.required" />
                     <label for="{{fieldEntry + '-option-' + innerindex}}" ngbTooltip="{{option.hint1}}" class="form-control-label" [ngClass]="{'text-underline': option.hint1}">{{option.label}}</label>
                   </div>
                 }

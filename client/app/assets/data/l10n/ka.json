@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "ეს ელწერილი შეგახსენებთ წაუკითხავი ან განახლებული ანგარიშების არსებობის შესახებ.",
   "Reminder about unread or updated reports": "შეხსენება წაუკითხავი ან განახლებული ანგარიშების შესახებ",
   "Role: {Role}": "როლი: {Role}",
-  "Password: {Password}": "პაროლი: {Password}"
+  "Password: {Password}": "პაროლი: {Password}",
+  "For the user documentation, download here:": "მომხმარებლის დოკუმენტაციისთვის, ეწვიეთ:",
+  "If you need technical support or have general questions, write to us here:": "თუ გჭირდებათ ტექნიკური მხარდაჭერა, გაქვთ ზოგადი კითხვები ან ახალი იდეები პროგრამულ უზრუნველყოფასთან დაკავშირებით:",
+  "For a detailed overview, click here and watch the video guide:": "თუ ქსურთ შეიტანოთ წვლილი პროგრამული უზრუნველყოფის განვითარებაში ან შეატყობინოთ შეცდომის შესახებ, გახსენით საკითხი ჩვენს საბილეთო სისტემაში:"
 }

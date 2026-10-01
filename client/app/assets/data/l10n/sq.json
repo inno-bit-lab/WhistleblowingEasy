@@ -628,5 +628,8 @@
   "This email is to remind you the presence of unread or updated reports.": "Ky email është për t’ju kujtuar praninë e raportimesh të palexuar ose të përditësuar.",
   "Reminder about unread or updated reports": "Kujtues për raportime të palexuar ose të përditësuar",
   "Role: {Role}": "Rol: {Role}",
-  "Password: {Password}": "Fjalëkalim: {Password}"
+  "Password: {Password}": "Fjalëkalim: {Password}",
+  "For the user documentation, download here:": "Për dokumentim për përdoruesit, vizitoni:",
+  "If you need technical support or have general questions, write to us here:": "Nëse ju duhet asistencë teknike, keni pyetje të përgjithshme, ose keni ide të reja për software-in:",
+  "For a detailed overview, click here and watch the video guide:": "Nëse doni të jepni ndihmesë në zhvillimin e software-it, ose të njoftoni një të metë, ju lutemi, hapni një çështje te sistemi ynë për të tilla:"
 }
