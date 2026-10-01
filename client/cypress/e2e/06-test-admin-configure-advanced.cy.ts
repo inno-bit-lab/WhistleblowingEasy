@@ -43,7 +43,8 @@ describe("admin enable submissions", () => {
     cy.waitForUrl("/#/login")
 
     cy.visit("/#/");
-    cy.get("#WhistleblowingButton").should("be.visible");
+    cy.open_channel();
+    cy.get("#step-0").should("be.visible");
   });
 });
 
@@ -69,14 +70,16 @@ describe("admin add and remove disclaimer", function () {
     cy.waitForUrl('/#/login');
 
     cy.visit("/#/");
-    cy.get("#WhistleblowingButton").click();
-    cy.get('#modal-action-ok').click();
+    // Direct channel links do not open the upstream homepage disclaimer modal.
+    // Verify the configured disclaimer remains available in the public payload.
+    cy.request("/api/public").its("body.node.disclaimer_text").should("eq", "disclaimer_text");
 
     cy.login_admin();
     cy.visit("/#/admin/settings");
     cy.get('textarea[name="nodeResolver.dataModel.disclaimer_text"]').clear();
     cy.get("#save_settings").click();
     cy.logout();
+    cy.request("/api/public").its("body.node.disclaimer_text").should("eq", "");
   });
 });
 

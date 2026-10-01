@@ -3,7 +3,7 @@ class WhistleblowerPage {
     cy.visit("#/");
     cy.takeScreenshot("whistleblower/home");
 
-    cy.get("#WhistleblowingButton").click();
+    cy.open_channel();
     cy.get("#step-0").should("be.visible");
 
     cy.get("#step-0-field-0-0-input-0").type("summary");

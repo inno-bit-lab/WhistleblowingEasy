@@ -64,6 +64,7 @@ describe("admin enable submissions", () => {
     cy.waitForUrl("/#/login");
 
     cy.visit("/#/");
-    cy.get("#WhistleblowingButton").should("be.visible");
+    cy.open_channel();
+    cy.get("#step-0").should("be.visible");
   });
 });

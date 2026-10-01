@@ -8,6 +8,7 @@ declare global {
       login_custodian: (username?: string, password?: string, url?: string, firstlogin?: boolean) => void;
       login_whistleblower: (receipt: string) => void;
       logout: () => void;
+      open_channel: () => Chainable<any>;
       simple_login_admin: (username?: string, password?: string, url?: string, firstlogin?: boolean) => void;
       simple_login_receiver: (username?: string, password?: string, url?: string, firstlogin?: boolean) => void;
       takeScreenshot: (filename: string, locator?: string) => void;
@@ -140,6 +141,18 @@ Cypress.Commands.add("login_receiver", (username, password, url, firstlogin) => 
       });
     });
   }
+});
+
+// The WBE fork opens reports through channel links, without a global homepage CTA.
+Cypress.Commands.add("open_channel", () => {
+  return cy.request("/api/public").then(({body}) => {
+    expect(body.node.disable_submissions).to.equal(false);
+    const channels = body.contexts
+      .filter((context: {hidden: boolean}) => !context.hidden)
+      .sort((a: {order: number}, b: {order: number}) => a.order - b.order);
+    expect(channels, "available reporting channels").not.to.be.empty;
+    return cy.visit(`/#/submission?context=${encodeURIComponent(channels[0].id)}`);
+  });
 });
 
 Cypress.Commands.add("login_whistleblower", (receipt) => {
