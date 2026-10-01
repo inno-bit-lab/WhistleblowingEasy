@@ -7,8 +7,11 @@ export async function initializeChannelRouting(): Promise<void> {
   const slug = window.location.pathname.split('/')[1];
   if (!slug || !/^\/[a-z0-9-]+\/(report|admin|login)(\/|$)/.test(window.location.pathname)) return;
   const response = await fetch('/api/public/channels/' + encodeURIComponent(slug), {credentials: 'same-origin'});
-  if (!response.ok) throw new Error('Reporting channel not found');
-  const channel = await response.json();
+  const body = await response.text();
+  if (response.status === 404 || !body.trim()) { showMissingChannel(); return new Promise<void>(() => {}); }
+  if (!response.ok) throw new Error('Unable to load reporting channel');
+  const channel = JSON.parse(body);
+  if (!channel.id || !channel.slug) { showMissingChannel(); return new Promise<void>(() => {}); }
   channels[channel.slug] = channel.id;
 }
 
@@ -44,4 +47,25 @@ export class ChannelLocationStrategy extends HashLocationStrategy {
     }
     return super.prepareExternalUrl(internal);
   }
+}
+
+function showMissingChannel(): void {
+  const root = document.querySelector('app-root');
+  if (!root) return;
+  const render = (language: string) => {
+    const italian = language === 'it';
+    document.documentElement.lang = language;
+    document.title = italian ? 'Canale non trovato | Kronos Finance' : 'Channel not found | Kronos Finance';
+    const section = document.createElement('section');
+    section.className = 'kronos-auth-shell';
+    const card = document.createElement('div'); card.className = 'kronos-auth-card';
+    const brand = document.createElement('p'); brand.className = 'kronos-page-eyebrow'; brand.textContent = 'Kronos Finance / Whistleblowing';
+    const title = document.createElement('h1'); title.textContent = italian ? 'Questo canale non esiste.' : 'This channel does not exist.';
+    const description = document.createElement('p'); description.className = 'kronos-page-lead'; description.textContent = italian ? 'Controlla il collegamento ricevuto dalla tua organizzazione oppure torna alla pagina iniziale.' : 'Check the link provided by your organization or return to the homepage.';
+    const home = document.createElement('a'); home.className = 'btn btn-primary'; home.href = '/#/'; home.textContent = italian ? 'Torna alla home' : 'Return to homepage';
+    const languages = document.createElement('div'); languages.className = 'kronos-missing-languages';
+    for (const code of ['it', 'en']) { const button = document.createElement('button'); button.type = 'button'; button.className = 'btn btn-outline-secondary'; button.textContent = code.toUpperCase(); button.setAttribute('aria-pressed', String(code === language)); button.addEventListener('click', () => { sessionStorage.setItem('language', code); render(code); }); languages.append(button); }
+    card.append(brand, title, description, home, languages); section.append(card); root.replaceChildren(section);
+  };
+  render(sessionStorage.getItem('language') === 'en' ? 'en' : 'it');
 }
