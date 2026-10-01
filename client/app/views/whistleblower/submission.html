@@ -1,23 +1,23 @@
 <div data-ng-if="selectable_contexts.length && !submission.context" data-ng-include="'views/whistleblower/context_selection.html'"></div>
 <div data-ng-if="submission.context">
-  <div data-ng-if="selectable_contexts.length > 1 || context_id">
+  <div data-ng-if="selectable_contexts.length > 1 || context_id" class="d-flex justify-content-center">
     <div class="title display-none">{{submission.context.name}}</div>
     <div class="row">
       <div class="col-md-2" data-ng-if="submission.context.picture"><img class="contextImg" alt="context picture" data-ng-src="/s/{{submission.context.id}}" /></div>
     </div>
   </div>
-  <div>
+  <div class="d-flex justify-content-center">
     <label id="WhistleblowerLoginQuestion" for="receipt-input" data-translate>Have you already filed a report? Enter your receipt.</label>
   </div>
-  <div class="form-inline">
-    <div class="form-group d-block ml-auto">
+  <div class="form-inline mb-2 mt-2 d-flex justify-content-center">
+    <div class="form-group d-block ml">
       <div class="input-group">
         <input id="receipt-input" class="form-control" type="text" maxlength="19" size="19" data-ng-model="formatted_receipt" name="receipt-input" receiptvalidator>
         <span class="input-group-append">
           <button id="ReceiptButton"
                   data-ng-click="Authentication.login(0, 'whistleblower', formatted_receipt); formatted_receipt = ''" class="btn btn-primary"
                   data-ng-disabled="formatted_receipt.length !== 19 || Authentication.loginInProgress || WhistleblowerLoginForm.receipt.$error.receiptvalidator" type="submit">
-            <span data-translate>Log in</span>
+            <span data-translate>Search</span>
           </button>
         </span>
       </div>

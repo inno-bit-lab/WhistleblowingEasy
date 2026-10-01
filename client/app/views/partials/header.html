@@ -1,6 +1,6 @@
 <header id="HeaderBox">
   <div class="row">
-    <div id="HeaderBox1" class="col-auto mr-auto">
+    <div id="HeaderBox1" class="col-auto mr-auto" data-ng-if="selectable_contexts.length == 0 || selectable_contexts.length == 1 || !context_id">
       <a id="LogoBox" href="#" data-ng-click="setHomepage()">
         <img class="img-fluid" alt="{{projectTitle}}" data-ng-src="{{public.node.logo ? 's/logo' : 'data/logo.png'}}" />
       </a>

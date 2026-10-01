@@ -1,5 +1,5 @@
 <div data-ng-hide="resources.preferences.password_change_needed || resources.preferences.require_two_factor">
-  <div id="LanguagePickerBox" data-ng-if="public.node.languages_enabled.length > 1" class="float-right ml-1 mb-2">
+  <div id="LanguagePickerBox" data-ng-if="public.node.languages_enabled.length > 1 && (selectable_contexts.length == 0 || selectable_contexts.length == 1 || !context_id)" class="float-right ml-1 mb-2">
     <label for="language-picker-select" class="visually-hidden" data-traslate>Select your language</label>
     <select id="language-picker-select" class="form-control" data-ng-model="GLTranslate.state.language" data-ng-options="item.code as item.native for item in languages_enabled_selector | orderBy:'native'"></select>
   </div>
@@ -22,5 +22,5 @@
       <a id="LogoutLink" href="#" data-ng-click="Authentication.logout()" data-uib-tooltip="{{'Logout' | translate}}"><i class="fa-solid fa-fw fa-sign-out-alt"></i><span data-ng-if="Authentication.session.role === 'whistleblower'"><span> </span><span data-translate>Logout</span></span></a>
     </span>
   </div>
-  <div id="WhistleblowerLoginBox" class="ml-1 mb-1" data-ng-if="Utils.showWBLoginBox()" data-ng-include="'views/partials/receipt.html'"></div>
+<!--  <div id="WhistleblowerLoginBox" class="ml-1 mb-1" data-ng-if="Utils.showWBLoginBox()" data-ng-include="'views/partials/receipt.html'"></div>-->
 </div>
