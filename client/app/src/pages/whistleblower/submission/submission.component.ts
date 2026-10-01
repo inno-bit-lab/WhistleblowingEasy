@@ -33,6 +33,7 @@ import {firstValueFrom} from "rxjs";
 @Component({
     selector: "src-submission",
     templateUrl: "./submission.component.html",
+    styleUrls: ["../homepage/homepage.component.css"],
     providers: [SubmissionService],
     standalone: true,
     imports: [ReceiptComponent, ContextSelectionComponent, FormsModule, NgClass, ReceiverSelectionComponent, NgFormChangeDirective, MarkdownComponent, FormComponent, RFilesUploadStatusComponent, TranslateModule, TranslatorPipe, StripHtmlPipe, OrderByPipe]
@@ -54,6 +55,17 @@ export class SubmissionComponent implements OnInit {
 
   @ViewChild("submissionForm") public submissionForm: NgForm;
   @ViewChildren("stepForm") stepForms: QueryList<NgForm>;
+  reportFormOpened = false;
+
+  openReportForm(): void {
+    this.reportFormOpened = true;
+    requestAnimationFrame(() => {
+      const region = document.getElementById('kronos-report-form');
+      region?.focus({preventScroll: true});
+      region?.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'});
+    });
+  }
+
   _navigation = -1;
   answers: Answers = {};
   context: Context | undefined = undefined;

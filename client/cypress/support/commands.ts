@@ -151,7 +151,9 @@ Cypress.Commands.add("open_channel", () => {
       .filter((context: {hidden: boolean}) => !context.hidden)
       .sort((a: {order: number}, b: {order: number}) => a.order - b.order);
     expect(channels, "available reporting channels").not.to.be.empty;
-    return cy.visit(`/#/submission?context=${encodeURIComponent(channels[0].id)}`);
+    return cy.visit(`/#/submission?context=${encodeURIComponent(channels[0].id)}`).then(() => {
+      return cy.get('[aria-controls="kronos-report-form"]').click();
+    });
   });
 });
 
