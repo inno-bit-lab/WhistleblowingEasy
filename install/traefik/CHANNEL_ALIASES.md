@@ -4,7 +4,7 @@ Il campo `context.slug` è persistito nello schema WBE 69, facoltativo, univoco 
 
 Il client risolve lo slug via `GET /api/public/channels/{slug}` prima dell’avvio Angular. La risposta contiene soltanto ID e slug del canale nel tenant richiesto. Gli slug sono indirizzi pubblici condivisibili, non credenziali. I canali nascosti rimangono esclusi dall’elenco pubblico, ma uno slug noto consente l’accesso diretto come il loro UUID.
 
-Traefik riscrive internamente il documento su `/`, senza redirect. Lo slug resta visibile. La regola è generale: non serve riconfigurare Traefik quando si aggiunge un canale. Gli asset e le API usano percorsi assoluti; la CSP mantiene `base-uri none`.
+Traefik riscrive internamente il documento su `/`, senza redirect. Lo slug resta visibile. La regola è generale: non serve riconfigurare Traefik quando si aggiunge un canale. Gli asset e le API usano percorsi assoluti; la CSP mantiene `base-uri none`. I prefissi tecnici `api`, `s`, `js`, `css`, `fonts`, `workers` e `l10n` sono esclusi dalla riscrittura dei canali: in particolare `/api/admin/...` deve sempre raggiungere il backend. Il controllo `python3 -m unittest discover -s install/traefik/tests -v` verifica questa separazione anche in CI.
 
 Percorsi supportati: `/{slug}/report`, `/{slug}/login`, `/{slug}/admin`, `/{slug}/admin/...`, `/{slug}/login/passwordreset` e sue sottopagine. Login/admin restano della piattaforma e non modificano i permessi per azienda. I vecchi URL `/#/submission?context=UUID` restano compatibili.
 
