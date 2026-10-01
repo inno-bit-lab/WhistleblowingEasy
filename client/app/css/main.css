@@ -1324,3 +1324,14 @@ body .dropdown-visible > div.multiselect-dropdown > div > span.dropdown-btn {
 .kronos-submission-shell .audio-box { padding: 16px; background: #f3f7f9; border: 1px solid #dce5eb; border-radius: 10px; }
 .kronos-submission-shell :is(audio,video) { max-width: 100%; }
 .kronos-submission-shell input[type=file]:focus-visible + label { outline: 3px solid #087f83; outline-offset: 3px; }
+
+/* Compact mobile step navigation: equal-width items with stacked labels. */
+@media (max-width: 640px) {
+  .kronos-submission-shell #SubmissionTabsNavigationBox { display: grid; grid-template-columns: repeat(auto-fit, minmax(64px, 1fr)); gap: 6px; padding-bottom: 14px; margin-bottom: 20px; }
+  .kronos-submission-shell #SubmissionTabsNavigationBox .nav-item { min-width: 0; width: 100%; }
+  .kronos-submission-shell #SubmissionTabsNavigationBox .nav-link { width: 100%; min-height: 78px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 10px 2px; height: 100%; margin: 0; border: 1px solid transparent; font-size: .75rem; line-height: 1.25; text-align: center; }
+  .kronos-submission-shell #SubmissionTabsNavigationBox .step-index { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; margin: 0; flex: 0 0 26px; font-size: .8125rem; }
+  .kronos-submission-shell #SubmissionTabsNavigationBox .step-index-selected { background: #087f83; border-color: #087f83; color: #fff; }
+  .kronos-submission-shell #SubmissionTabsNavigationBox .step-label { margin: 0; font-size: inherit; letter-spacing: -.02em; white-space: normal; overflow-wrap: anywhere; }
+  .kronos-submission-shell #SubmissionTabsNavigationBox .nav-link.active { border-color: #c7dfe0; background: #edf7f7; color: #102c46; }
+}
