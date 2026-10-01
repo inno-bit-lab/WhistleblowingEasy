@@ -7,22 +7,20 @@
   }
   @if (submission.context) {
     <div>
-      @if (appDataService.context_id || selectable_contexts.length > 1) {
-        <div>
-          <div class="title d-none">{{submission.context.name}}</div>
-          <div class="row">
-            @if (submission.context.picture) {
-              <div class="col-md-12 d-flex justify-content-center">
-                <img class="context-image" alt="context picture" src="/s/{{submission.context.id}}" />
-              </div>
-            }
-          </div>
+      <header class="kronos-organization-header" aria-labelledby="kronos-organization-name">
+        @if (submission.context.picture) {
+          <div class="kronos-organization-logo"><img class="context-image" [alt]="submission.context.name" src="/s/{{submission.context.id}}" /></div>
+        }
+        <div class="kronos-organization-identity">
+          <p class="kronos-page-eyebrow">{{'Reports to' | translate}}</p>
+          <h2 id="kronos-organization-name">{{submission.context.name}}</h2>
+          <p>{{'This reporting space is dedicated to this organization.' | translate}}</p>
         </div>
-      }
+      </header>
 <div id="HomePageBox" class="kronos-home">
   <section class="kronos-hero" aria-labelledby="kronos-channel-title">
     <div class="kronos-intro">
-      <p class="kronos-eyebrow">{{'Reporting channel' | translate}} <span aria-hidden="true">/</span> {{submission.context.name}}</p>
+      <p class="kronos-eyebrow">Whistleblowing</p>
       <h1 id="kronos-channel-title">{{'Transparency starts with a report.' | translate}}</h1>
       <p class="kronos-lead">{{'A dedicated channel to raise concerns and keep a dialogue with your organization.' | translate}}</p>
   <section class="kronos-guide" aria-labelledby="kronos-guide-title">

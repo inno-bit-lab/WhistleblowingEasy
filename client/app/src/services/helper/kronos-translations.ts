@@ -1,5 +1,7 @@
 export const kronosTranslations: Record<string, Record<string, string>> = {
   "it": {
+    "Reports to": "Segnalazioni a",
+    "This reporting space is dedicated to this organization.": "Uno spazio dedicato alle segnalazioni che riguardano questa organizzazione.",
     "Open your report": "Apri la tua segnalazione",
     "WhistleblowingEasy is a user-friendly online portal for reporting wrongdoing or unethical conduct within organizations. It is designed to protect the confidentiality and anonymity of reporting persons, providing a secure environment where they can share their concerns without fear of retaliation.": "WhistleblowingEasy è concepito come un portale online user-friendly dedicato alla facilitazione delle segnalazioni di illeciti o comportamenti non etici all’interno delle organizzazioni. Il portale è progettato per garantire la massima riservatezza e anonimato per i segnalanti, offrendo un ambiente sicuro in cui possono condividere le loro preoccupazioni senza timore di ritorsioni.",
     "Transparency starts with a report.": "La trasparenza inizia da una segnalazione.",
@@ -43,6 +45,8 @@ export const kronosTranslations: Record<string, Record<string, string>> = {
     "Go to the homepage": "Vai alla pagina iniziale"
   },
   "en": {
+    "Reports to": "Reports to",
+    "This reporting space is dedicated to this organization.": "This reporting space is dedicated to this organization.",
     "Open your report": "Open your report",
     "WhistleblowingEasy is a user-friendly online portal for reporting wrongdoing or unethical conduct within organizations. It is designed to protect the confidentiality and anonymity of reporting persons, providing a secure environment where they can share their concerns without fear of retaliation.": "WhistleblowingEasy is a user-friendly online portal for reporting wrongdoing or unethical conduct within organizations. It is designed to protect the confidentiality and anonymity of reporting persons, providing a secure environment where they can share their concerns without fear of retaliation.",
     "Transparency starts with a report.": "Transparency starts with a report.",

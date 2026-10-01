@@ -1335,3 +1335,18 @@ body .dropdown-visible > div.multiselect-dropdown > div > span.dropdown-btn {
   .kronos-submission-shell #SubmissionTabsNavigationBox .step-label { margin: 0; font-size: inherit; letter-spacing: -.02em; white-space: normal; overflow-wrap: anywhere; }
   .kronos-submission-shell #SubmissionTabsNavigationBox .nav-link.active { border-color: #c7dfe0; background: #edf7f7; color: #102c46; }
 }
+
+.kronos-organization-header { display: flex; align-items: center; gap: 28px; padding: 24px 0 28px; border-bottom: 1px solid #dce5eb; }
+.kronos-organization-logo { flex: 0 0 160px; width: 160px; height: 104px; display: flex; align-items: center; justify-content: center; padding: 12px; background: #fff; border: 1px solid #dce5eb; border-radius: 12px; }
+.kronos-submission-shell .kronos-organization-logo .context-image { width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; object-position: center; }
+.kronos-organization-identity { min-width: 0; }
+.kronos-organization-identity .kronos-page-eyebrow { margin-bottom: 8px; }
+.kronos-organization-identity h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 650; line-height: 1.25; letter-spacing: -.025em; overflow-wrap: anywhere; margin-bottom: 10px; }
+.kronos-organization-identity > p:last-child { color: #506377; font-size: .9375rem; line-height: 1.6; margin: 0; }
+@media(max-width:640px) {
+  .kronos-organization-header { gap: 16px; align-items: flex-start; padding: 12px 0 24px; }
+  .kronos-organization-logo { flex-basis: 80px; width: 80px; height: 80px; padding: 8px; }
+  .kronos-submission-shell .kronos-organization-logo .context-image { max-height: 100%; }
+  .kronos-organization-identity h2 { font-size: clamp(1.125rem, 4.8vw, 1.375rem); }
+  .kronos-organization-identity > p:last-child { font-size: .8125rem; }
+}
