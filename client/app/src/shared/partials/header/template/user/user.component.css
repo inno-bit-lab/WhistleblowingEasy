@@ -4,3 +4,17 @@
 .kronos-language-switch button:hover { background: #e4edf1; color: #102c46; }
 .kronos-language-switch button.is-active { background: #102c46; color: #fff; }
 .kronos-language-switch button:focus-visible { outline: 3px solid #087f83; outline-offset: 2px; }
+
+.kronos-header-tools { display: flex; align-items: center; justify-content: flex-end; gap: 16px; flex-wrap: wrap; }
+#LoginStatusBox.kronos-user-actions { display: flex; align-items: center; gap: 8px; height: auto; line-height: normal; margin: 0; padding: 4px; border: 1px solid #dce5eb; border-radius: 12px; background: #f3f7f9; }
+.kronos-user-actions a { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 44px; min-height: 44px; padding: 8px; border-radius: 8px; color: #102c46; text-decoration: none; transition: background-color 150ms ease, color 150ms ease; }
+.kronos-action-icon { width: 20px; height: 20px; flex: 0 0 20px; }
+.kronos-user-actions a:hover { background: #e4edf1; color: #087f83; }
+.kronos-user-actions a:active { background: #d7e7ea; }
+.kronos-user-actions a:focus-visible { outline: 3px solid #087f83; outline-offset: 2px; }
+@media (max-width: 640px) {
+  .kronos-header-tools { flex-direction: column; align-items: flex-end; gap: 8px; }
+  .kronos-language-switch { order: 0 !important; }
+  #LoginStatusBox.kronos-user-actions { gap: 4px; }
+}
+@media (prefers-reduced-motion: reduce) { .kronos-user-actions a { transition: none; } }

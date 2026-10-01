@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-end">
+<div class="kronos-header-tools">
   @if (appDataService.public.node.languages_enabled.length > 1 && appDataService.showGlobalBranding) {
     <div id="LanguagePickerBox" class="order-2 kronos-language-switch" role="group" [attr.aria-label]="'Select your language' | translate">
       @for (lang of appDataService.languages_enabled_selector | orderBy: 'code'; track lang.code) {
@@ -7,38 +7,35 @@
     </div>
   }
   @if (utilsService.showUserStatusBox()) {
-    <div id="LoginStatusBox">
+    <nav id="LoginStatusBox" class="kronos-user-actions" [attr.aria-label]="'Account' | translate">
       @if (!preferences.dataModel.password_change_needed && !preferences.dataModel.require_two_factor) {
         <span id="HomeLinkBox">
           @if (authentication.session.role !== 'whistleblower') {
             <span>
               <a id="HomepageLink" [href]="'#'+authentication.session.homepage" ngbTooltip="{{'Home' | translate }}" [attr.aria-label]="'Home' | translate">
-                <i class="fas fa-house"></i>
+                <svg class="kronos-action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 10 9-7 9 7M5 9v11h5v-6h4v6h5V9"/></svg>
               </a>
-              <span class="text-separator">|</span>
             </span>
           }
         </span>
         @if (authentication.session.role !== 'whistleblower' && !authentication.session.properties.management_session) {
           <span id="PreferencesLinkBox">
             <a id="PreferencesLink" [href]="'#'+authentication.session.preferencespage" ngbTooltip="{{'Preferences' | translate}}" [attr.aria-label]="'Preferences' | translate">
-              <i class="fas fa-user"></i>
+              <svg class="kronos-action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg>
             </a>
-            <span class="text-separator">|</span>
           </span>
         }
         @if (authentication.session && authentication.session.role !== 'whistleblower') {
           <span id="SupportLinkBox">
             <a id="SupportLink" href="#" (click)="utilsService.openSupportModal($event)" ngbTooltip="{{'Request support' | translate}}" [attr.aria-label]="'Request support' | translate">
-              <i class="fas fa-life-ring"></i>
+              <svg class="kronos-action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="m5.6 5.6 3.6 3.6m5.6 5.6 3.6 3.6m0-12.8-3.6 3.6m-5.6 5.6-3.6 3.6"/></svg>
             </a>
-            <span class="text-separator">|</span>
           </span>
         }
       }
       <span id="LogoutLinkBox">
         <a id="LogoutLink" href="" (click)="onLogout($event)" ngbTooltip="{{'Logout' | translate}}" [attr.aria-label]="'Logout' | translate">
-          <i class="pointer fas fa-right-from-bracket"></i>
+          <svg class="kronos-action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 4H4v16h6m-1-8h12m-4-4 4 4-4 4"/></svg>
           @if (authentication.session.role === 'whistleblower') {
             <span>
               <span></span>
@@ -47,6 +44,6 @@
           }
         </a>
       </span>
-    </div>
+    </nav>
   }
 </div>
