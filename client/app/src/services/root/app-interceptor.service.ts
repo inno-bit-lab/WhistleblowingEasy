@@ -1,3 +1,4 @@
+import {Router} from '@angular/router';
 import {Injectable, inject} from "@angular/core";
 import {
   HttpInterceptor,
@@ -146,6 +147,7 @@ export class appInterceptor implements HttpInterceptor {
 
 @Injectable()
 export class ErrorCatchingInterceptor implements HttpInterceptor {
+  private router = inject(Router);
   private authenticationService = inject(AuthenticationService);
   private appDataService = inject(AppDataService);
 
@@ -160,7 +162,7 @@ export class ErrorCatchingInterceptor implements HttpInterceptor {
               this.authenticationService.deleteSession();
             } else if (error.error["error_code"] === 6 && this.authenticationService.session) {
               if (this.authenticationService.session.role !== "whistleblower") {
-                location.pathname = this.authenticationService.session.homepage;
+                this.router.navigateByUrl(this.authenticationService.session.homepage).then();
               }
             }
             this.appDataService.errorCodes = new ErrorCodes(error.error["error_message"], error.error["error_code"], error.error["arguments"]);
