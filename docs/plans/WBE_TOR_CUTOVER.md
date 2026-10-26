@@ -1,5 +1,12 @@
 # Tor: proposta di cutover e blocchi verificati
 
+## Stato dopo il cutover del 26 ottobre 2026
+
+Implementato e online sullo stack `wbe-production`, con prima release su singola VM esplicitamente accettata dall'utente. Tor inoltra a FE loopback 8085; FE inoltra sul socket Unix onion dedicato del BE, preservando il riconoscimento Tor. Identità e chiavi sono quelle importate dal database finale. Verificati HTTP 200 di pagina e API attraverso la rete onion dopo il cambio delle rotte web. Notifiche riabilitate. HA tra server resta fuori da questa prima release.
+
+L'analisi sotto è storica e descrive i blocchi antecedenti all'implementazione; non rappresenta lo stato online corrente.
+
+
 Data: 26 ottobre 2026. Analisi statica; nessun servizio, configurazione, chiave, database o permesso modificato. Nessuna lettura dei segreti o accesso sudo. Percorsi sotto `/opt/apps/wbe-refact` salvo indicazione diversa. La proposta NON è una configurazione implementata o collaudata.
 
 ## Esito

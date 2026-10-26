@@ -1,6 +1,6 @@
 # Copia reale per collaudo PostgreSQL
 
-Aggiornato il 26 ottobre 2026. Copia importata e collaudo avviato. Nessun cutover: la produzione rimane la sorgente autorevole. Lo svuotamento della destinazione e la migrazione definitiva sono attività successive.
+Aggiornato dopo il cutover del 26 ottobre 2026: rehearsal dismesso e svuotato dopo backup finale. La produzione autorevole è ora lo stack `wbe-production`, importato da una nuova copia congelata, non dalla copia di collaudo. Conservati privatamente backup e snapshot. I risultati seguenti documentano il collaudo storico.
 
 ## Diagnosi dello snapshot
 

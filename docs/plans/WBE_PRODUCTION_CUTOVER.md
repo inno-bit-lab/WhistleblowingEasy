@@ -1,6 +1,22 @@
 # Cutover WBE SQLite → PostgreSQL: procedura operatore
 
-Data: 26 ottobre 2026. **Runbook preparato, cutover non eseguito.** Questo documento non certifica la destinazione come pronta alla produzione. Lo stato del collaudo è in `WBE_REAL_DATA_REHEARSAL.md`. La produzione autorevole resta `/opt/apps/wbe/node1/appdata`; nessun dato del collaudo deve essere promosso.
+Data: 26 ottobre 2026. **Cutover eseguito sulla VM attuale.** Sorgente autorevole ora: PostgreSQL e appdata dello stack `wbe-production`. Il legacy è fermo, con monitor fermo e maintenance nel node.conf. Non riavviarlo e non ripristinare lo snapshot SQLite: il nuovo sito è aperto alle scritture.
+
+## Esito operativo
+
+- Freeze operatore: 20:42:50 Europe/Rome. Backup legacy completo verificato dallo script operatore e copia finale privata acquisita.
+- Schema completo verificato, marker normalizzato sulla sola copia, dry-run e import PostgreSQL riusciti; controllo schema riuscito. I manifest dei 9 file permanenti coincidono. Nessun reset delle utenze o delle credenziali.
+- Apertura web verificata entro le 20:47:13: downtime circa 5 minuti. Homepage, canale, API JSON e asset HTTP 200. Browser reale a 375 e 1440 px senza overflow orizzontale.
+- SMTP: connessione diretta, TLS e autenticazione verificati dal container, senza invio di messaggi di prova. Notifiche applicative riabilitate; questo controllo non certifica la consegna finale delle email né il percorso SMTP via Tor.
+- Tor riabilitato dopo cambio rotte, con identità importata: richieste end-to-end sulla rete onion alla pagina e alle API HTTP 200. Nessun hostname/chiave onion incluso nel repository.
+- Rehearsal dismesso dopo backup finale verificato: rimossi i soli container/reti/volume del progetto `wbe-rehearsal`, svuotata la sua appdata. Backup e snapshot privati conservati. Il laboratorio sintetico separato `wbe-refact` non è stato eliminato.
+- Tutti e tre i container production healthy; vecchi app e timer inattivi. Il timer legacy risulta ancora enabled: richiesto all’operatore `sudo systemctl disable --now wbe-monitor@node1.timer` per impedirne la riattivazione al boot. Verifica utente di login e decifratura allegato ancora attesa al momento della stesura.
+
+Le sole configurazioni dinamiche WBE sono state aggiornate, senza riavviare Traefik. Durante il caricamento il provider ha rifiutato `routers: {}` nel file degli alias: corretto conservando il solo redirect della base canale; la riscrittura del documento è gestita dal FE. Il caricamento successivo e gli accessi pubblici sono riusciti. Configurazioni originali, dump e manifest sono conservati in `.local/production/` con accesso privato.
+
+**Rollback dopo apertura:** conservare tutte le nuove scritture; eventuali guasti vanno gestiti sul nuovo stack o con una migrazione inversa validata. Non riattivare semplicemente SQLite. Il backup originale rimane conservato per recupero e confronto.
+
+Le sezioni seguenti descrivono preparazione e procedura storica della finestra appena eseguita; lo stato corrente è quello riportato sopra.
 
 ## Aggiornamento implementazione — stack Docker sulla VM attuale
 
