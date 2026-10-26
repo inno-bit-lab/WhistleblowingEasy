@@ -2,6 +2,24 @@
 
 Data: 26 ottobre 2026. **Runbook preparato, cutover non eseguito.** Questo documento non certifica la destinazione come pronta alla produzione. Lo stato del collaudo è in `WBE_REAL_DATA_REHEARSAL.md`. La produzione autorevole resta `/opt/apps/wbe/node1/appdata`; nessun dato del collaudo deve essere promosso.
 
+## Aggiornamento implementazione — stack Docker sulla VM attuale
+
+Decisione esplicita dell'utente: prima messa online sulla VM attuale; HA tra server rinviata. Manifest `deploy/production/compose.yml`, wrapper e strumenti `scripts/production/` ora implementati. Le indicazioni sotto che descrivono questi file come mancanti sono superate da questo aggiornamento; i gate operativi restano obbligatori.
+
+Lo stack `wbe-production` è avviato con **soli dati sintetici**, separato da produzione legacy e rehearsal. PostgreSQL è interno; FE/BE leggono sorgenti tramite bind mount. FE e BE condividono il namespace di rete per il listener onion loopback, ma restano processi/container separati. Non rappresenta ancora una soluzione HA o a repliche indipendenti.
+
+Ingresso web: Traefik HTTPS → `127.0.0.1:18092` → FE → socket Unix privato BE. Il FE accetta solo peer proxy espliciti, protocollo HTTPS e ultimo IP della catena X-Forwarded-For; elimina le asserzioni provenienti dal browser. Ingresso onion separato su loopback 8085 → FE → socket Unix onion. Il backend conserva le chiavi onion importate. Pubblicazione onion disabilitata durante preparazione; notifiche disabilitate nella prova sintetica.
+
+Verificato il 26 ottobre: tre container healthy; login amministratore sintetico verificato in browser su HTTPS; percorso reale tramite istanza Traefik isolata TLS restituisce 200 per pagina e `/api/public`; 4 test frontend, 11 ingressi/Tor e 13 preparazione snapshot superati. Anche lo snapshot reale offline già usato in rehearsal coincide con lo schema canonico completo. Verificato inoltre accesso end-to-end sulla rete Tor con identità esclusivamente sintetica: pagina e API HTTP 200 dopo pubblicazione. Il primo tentativo era scaduto; ripetizione riuscita. Pubblicazione disabilitata al termine. Questi risultati non sostituiscono la prova autenticata, il download/decifratura allegati e SMTP sul candidato finale.
+
+`prepare-snapshot.py` confronta struttura completa (DDL, colonne, vincoli e indici), integrità, FK e upload pendenti prima della normalizzazione 68→69 della sola copia. Produce una nuova directory privata con hash e manifest; non opera sul nodo live. Ripetere sulla copia finale congelata.
+
+Configurazioni Traefik pronte in `deploy/production/traefik/`, **non installate**: endpoint FE 18092, rimozione dai soli router WBE dei middleware che cancellano X-Forwarded-For o sovrascrivono le policy applicative; routing canali delegato al FE. Non modificare i middleware condivisi o altri servizi. La configurazione statica attuale accetta forwarded headers: il FE usa l'ultimo IP aggiunto da Traefik, non il primo fornito dal browser; verificare anche la configurazione effettiva prima del cutover.
+
+Verificato anche backup consistente con FE/BE fermi, checksum, integrità archivi e ripristino del dump in un database sintetico temporaneo separato (poi eliminato). Prima del freeze: completare verifica SMTP, maintenance e prova finestra; ripetere il controllo Tor con identità finale dopo il passaggio. Poi rimuovere esclusivamente i dati sintetici della destinazione (marker privato `SYNTHETIC_ONLY`), preservando backup, e importare lo snapshot finale. Vietato applicare i template al database sintetico. Le configurazioni e i segreti in `.local/` non vanno in Git.
+
+L'arresto del legacy richiede un operatore con sudo; l'agente non dispone di sudo non interattivo. **Non eseguire ancora il comando di freeze** finché i gate sopra non risultano chiusi.
+
 ## Autorizzazione, responsabilità e blocchi
 
 L'utente ha autorizzato eliminazione dei soli dati di rehearsal, nuova migrazione dalla produzione, passaggio Traefik e successivamente Tor. L'agente non dispone di sudo non interattivo: non sono stati arrestati servizi di produzione, cancellati dati, acquisiti nuovi snapshot produttivi o cambiati routing. Il collaudo è stato brevemente fermato e riavviato per salvarne un backup coerente prima di qualsiasi pulizia. Le operazioni privilegiate vanno eseguite dall'operatore in terminale; non inviare password o file segreti in chat.
@@ -10,7 +28,7 @@ Prima della finestra chiudere questi blocchi:
 
 1. Manifest e wrapper **production** revisionati, con destinazione PostgreSQL, file, credenziali, restart, backup, rete/SMTP/Tor e endpoint FE espliciti. Il compose rehearsal esistente usa `WBE_REHEARSAL=1`, notifiche disabilitate e reti BE/DB interne: non basta collegarlo a Traefik. Se HA resta requisito della prima messa online, il singolo PG/backend/frontend attuale non lo soddisfa: serve gate HA oppure decisione esplicita di scope differente.
 2. Collaudo autenticato operatore con password/2FA, ricevuta e decifratura allegati completato. Nessun reset credenziali durante migrazione.
-3. Procedura di confronto strutturale 68/69 ripetibile e revisionata. Il precedente snapshot aveva marker 68 ma struttura 69: non implica che ogni futuro DB possa essere rietichettato. Non è presente uno script generico approvato di normalizzazione.
+3. Procedura di confronto strutturale 68/69 ripetibile e revisionata. Il precedente snapshot aveva marker 68 ma struttura 69: non implica che ogni futuro DB possa essere rietichettato. È disponibile `scripts/production/prepare-snapshot.py`, che rifiuta qualsiasi differenza strutturale.
 4. Rehearsal dell'intera finestra, backup compreso, con massimo 60 minuti e tempo di rollback misurato; prova di ripristino backup su destinazione isolata. Assegnare responsabile GO/NO-GO e operatore rollback.
 5. Maintenance HTTPS predisposta e provata; blocco di nuovi ingressi prima del drain, inclusa la vecchia onion. Il servizio `wbe-maintenance-service` presente punta a 8889, ma la sua esistenza nel YAML non prova che risponda.
 
@@ -20,7 +38,7 @@ Non iniziare il fermo finché questi gate non sono chiusi. Non promuovere il reh
 
 Fissare commit/build backend e frontend; conservare gli artifact testati, evitare build e installazioni durante il fermo. Annotare privatamente timestamp UTC, tempi limite, volumi, percorsi, UID/GID e checksum. `umask 077`; nessun `set -x`, DSN in argv, dump dati o output completo di Docker env/config.
 
-La procedura assume un wrapper production revisionato chiamato `scripts/production/compose.sh` con servizi `postgres`, `backend`, `frontend`, `migrate` e opzioni migrator uguali a rehearsal. **Questo wrapper non esiste allo stato ispezionato: i comandi che lo citano sono un contratto da implementare e verificare, non comandi oggi eseguibili.** Deve usare progetto e segreti production separati da `wbe-refact` e `wbe-rehearsal`, appdata permanente dedicata e destinazione PG vuota. Non usare `migrate init` prima dell'import.
+La procedura assume un wrapper production revisionato chiamato `scripts/production/compose.sh` con servizi `postgres`, `backend`, `frontend`, `migrate` e opzioni migrator uguali a rehearsal. **Il wrapper è ora implementato e verificato nello stack sintetico; non implica che il database candidato contenga già i dati finali.** Deve usare progetto e segreti production separati da `wbe-refact` e `wbe-rehearsal`, appdata permanente dedicata e destinazione PG vuota. Non usare `migrate init` prima dell'import.
 
 Verifiche operatore prima di iniziare:
 
@@ -89,7 +107,7 @@ Su source e work eseguire verifiche offline read-only: `PRAGMA integrity_check`,
 - Schema realmente 68: applicare migrator storico 68→69 esclusivamente alla copia isolata, senza daemon, Tor, rete o job, usando procedura provata in rehearsal. Non chiamare startup generale sul clone. Verificare nuovo schema, dati e marker dopo commit.
 - Qualsiasi altra situazione: NO-GO. Non correggere il live e non ignorare incongruenze.
 
-Non viene fornito un UPDATE del marker senza il confronto: questa preparazione manca ancora di automazione operator-ready approvata. Se la revisione supera deadline abort, rollback.
+Non eseguire UPDATE manuali del marker: utilizzare `scripts/production/prepare-snapshot.py` sulla copia staged per il confronto completo e la normalizzazione controllata. Se la revisione supera deadline abort, rollback.
 
 ## Fase 3 — file e import PostgreSQL
 

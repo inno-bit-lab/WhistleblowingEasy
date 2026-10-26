@@ -400,7 +400,7 @@ class APIResourceWrapper(Resource):
         """
         request.compressed = False
         request.hostname = request.getRequestHostname()
-        request.port = request.getHost().port
+        request.port = getattr(request.getHost(), 'port', 0)
         request.headers = request.getAllHeaders()
         request.client_ip = b''
         request.client_ua = b''
@@ -411,20 +411,14 @@ class APIResourceWrapper(Resource):
         request.finished = False
         request.nonce = base64.b64encode(secrets.token_bytes(16))
 
-        client_address = request.getClientAddress()
-        if isinstance(client_address, (address.IPv4Address, address.IPv6Address)):
-            request.client_ip = client_address.host
-        else:
-            request.client_ip = None
-        if isinstance(request.client_ip, bytes):
-            request.client_ip = request.client_ip.decode()
-
-        # Handle IPv4 mapping on IPv6
-        if request.client_ip.startswith('::ffff:'):
-            request.client_ip = request.client_ip[7:]
-
-        request.client_using_tor = request.client_ip in State.tor_exit_set or \
-                                   request.port == 8083
+        from globaleaks.utils.frontend_ingress import request_identity
+        try:
+            request.client_ip, request.client_using_tor = request_identity(request, State.tor_exit_set)
+        except ValueError:
+            request.setResponseCode(400)
+            request.setHeader(b'content-type', b'text/plain')
+            request.setHeader(b'cache-control', b'no-store')
+            return b'Invalid frontend ingress identity'
 
         request.client_ua = request.headers.get(b'user-agent', b'')
 

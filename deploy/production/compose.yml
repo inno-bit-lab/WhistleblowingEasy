@@ -1,0 +1,138 @@
+name: wbe-production
+x-backend: &backend
+  labels: {traefik.enable: "false"}
+  image: wbe-refact-backend-runtime:phase1
+  pull_policy: never
+  user: "${WBE_UID}:${WBE_GID}"
+  environment: &backend-env
+    WBE_DATABASE_URL_FILE: /run/secrets/database-url
+    WBE_RESOURCES_PATH: /resources
+    WBE_SEPARATE_FRONTEND: '1'
+    WBE_DEV_HTTP: '0'
+    WBE_DISABLE_NOTIFICATIONS: "${WBE_DISABLE_NOTIFICATIONS:-0}"
+    WBE_REHEARSAL: '0'
+    WBE_FRONTEND_SOCKET_DIR: /run/wbe-proxy
+    WBE_ONION_TARGET_PORT: '8085'
+    WBE_ONION_PUBLISH: "${WBE_ONION_PUBLISH:-0}"
+    WBE_RUNTIME_DIRECTORY: /run/globaleaks
+    WBE_HTTP_PORT: '8080'
+  volumes:
+    - ingress-sockets:/run/wbe-proxy
+    - ./backend:/app/backend:ro
+    - ./.local/resources:/resources:ro
+    - ./.local/production/appdata:/var/globaleaks
+    - ./deploy/dev/backend-entrypoint.sh:/backend-entrypoint.sh:ro
+    - ./deploy/production/health-unix.py:/app/health-unix.py:ro
+  tmpfs:
+    - /run/globaleaks:uid=${WBE_UID},gid=${WBE_GID},mode=0700
+    - /var/globaleaks/tmp:uid=${WBE_UID},gid=${WBE_GID},mode=0700
+  security_opt: [no-new-privileges:true]
+  cap_drop: [ALL]
+services:
+  postgres:
+    labels: {traefik.enable: "false"}
+    image: postgres:18-bookworm@sha256:bbf83594798e144bff365a9c191c5d779f181fb3135902064ab8ff11918020fc
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres-password
+    secrets: [postgres-password, owner-password, runtime-password]
+    volumes:
+      - postgres-data:/var/lib/postgresql
+      - ./deploy/production/postgres-init.sh:/docker-entrypoint-initdb.d/10-wbe.sh:ro
+    networks: [database]
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U postgres -d wbe']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+    mem_limit: 1g
+  backend:
+    <<: *backend
+    command: [sh, /backend-entrypoint.sh]
+    secrets:
+      - source: runtime-url
+        target: database-url
+    networks: [edge, database]
+    ports: ['127.0.0.1:18092:8084']
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: [CMD, python, /app/backend/../health-unix.py]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+    mem_limit: 2g
+  frontend:
+    labels: {traefik.enable: "false"}
+    image: wbe-refact-frontend-runtime:phase1
+    pull_policy: never
+    user: "${WBE_UID}:${WBE_GID}"
+    command: [node, /frontend/server.mjs]
+    environment:
+      WBE_FRONTEND_SOCKET_DIR: /run/wbe-proxy
+      WBE_ONION_FRONTEND_PORT: '8085'
+      WBE_TRUSTED_PROXY_IPS: 172.30.92.1,127.0.0.1
+      CLIENT_ROOT: /client/build
+      PORT: '8084'
+    volumes:
+      - ingress-sockets:/run/wbe-proxy:ro
+      - ./client:/client:ro
+      - ./deploy/dev/frontend-server:/frontend:ro
+    network_mode: service:backend
+    depends_on:
+      backend:
+        condition: service_healthy
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt: [no-new-privileges:true]
+    cap_drop: [ALL]
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:8084/healthz').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+    mem_limit: 512m
+  migrate:
+    <<: *backend
+    profiles: [tooling]
+    entrypoint: [python, -m, globaleaks.db.postgresql]
+    command: [check, --working-path, /var/globaleaks]
+    secrets:
+      - source: owner-url
+        target: database-url
+    networks: [database]
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+networks:
+  edge:
+    ipam:
+      config:
+        - subnet: 172.30.92.0/24
+          gateway: 172.30.92.1
+  database:
+    internal: true
+volumes:
+  postgres-data: {}
+  ingress-sockets:
+    driver: local
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+      o: "uid=${WBE_UID},gid=${WBE_GID},mode=0700"
+secrets:
+  postgres-password:
+    file: ./.local/production/secrets/postgres-password
+  owner-password:
+    file: ./.local/production/secrets/owner-password
+  runtime-password:
+    file: ./.local/production/secrets/runtime-password
+  owner-url:
+    file: ./.local/production/secrets/owner-url
+  runtime-url:
+    file: ./.local/production/secrets/runtime-url

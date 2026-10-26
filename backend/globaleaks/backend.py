@@ -20,6 +20,9 @@ from globaleaks.state import State
 from globaleaks.utils.brotli import BrotliEncoderFactory
 from globaleaks.utils.log import log, openLogFile, logFormatter, LogObserver
 from globaleaks.utils.sock import listen_tcp_on_sock, listen_tls_on_sock
+from globaleaks.utils.frontend_ingress import (
+    FrontendWebRequest, FrontendOnionRequest, frontend_socket_paths)
+
 
 
 def fail_startup(excep):
@@ -52,6 +55,7 @@ class Service(service.Service):
         self.arw = resource.EncodingResourceWrapper(APIResourceWrapper(), [BrotliEncoderFactory()])
         self.api_factory = Site(self.arw, logPath=Settings.accesslogfile, logFormatter=logFormatter)
         self.api_factory.displayTracebacks = False
+        self.frontend_listeners = []
 
     def start_jobs(self):
         if self.state.settings.rehearsal:
@@ -102,6 +106,14 @@ class Service(service.Service):
                                    contextFactory=self.state.snimap,
                                    factory=self.api_factory)
 
+            if Settings.frontend_socket_dir:
+                paths = frontend_socket_paths(Settings.frontend_socket_dir)
+                for path, request_class in zip(paths, (FrontendWebRequest, FrontendOnionRequest)):
+                    factory = Site(self.arw, logPath=Settings.accesslogfile, logFormatter=logFormatter)
+                    factory.requestFactory = request_class
+                    factory.displayTracebacks = False
+                    self.frontend_listeners.append(reactor.listenUNIX(path, factory, mode=0o600, wantPID=True))
+
             sync_refresh_tenant_cache()
             sync_initialize_snimap()
             self.state.orm_tp.start()
@@ -116,6 +128,9 @@ class Service(service.Service):
 
     @defer.inlineCallbacks
     def stopService(self):
+        yield defer.DeferredList([defer.maybeDeferred(listener.stopListening)
+                                  for listener in self.frontend_listeners])
+        self.frontend_listeners = []
         yield self.stop_jobs()
         yield self.state.orm_tp.stop()
 

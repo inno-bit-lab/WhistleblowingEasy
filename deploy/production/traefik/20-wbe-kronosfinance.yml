@@ -1,0 +1,44 @@
+# Staged configuration: apply only after final migration and validation.
+http:
+  routers:
+    wbe-kronosfinance-secure:
+      rule: "Host(`wbe.kronosfinance.it`)"
+      entryPoints: [websecure]
+      service: wbe-kronosfinance-https
+      tls:
+        certResolver: letsencrypt
+        options: modern-tls
+      middlewares:
+        - compression
+        - rate-limit-standard
+#        - wbe-error-pages
+      priority: 50
+
+    wbe-kronosfinance-redirect:
+      rule: "Host(`wbe.kronosfinance.it`)"
+      entryPoints: [web]
+      middlewares: [redirect-to-https]
+      service: wbe-kronosfinance-https
+
+  services:
+    wbe-kronosfinance-https:
+      loadBalancer:
+        servers:
+          - url: "http://127.0.0.1:18092"
+#        healthCheck:
+#          path: /
+#          interval: "30s"
+#          timeout: "5s"
+#          scheme: https
+
+    wbe-maintenance-service:
+      loadBalancer:
+        servers:
+          - url: "http://127.0.0.1:8889"
+
+  middlewares:
+    wbe-error-pages:
+      errors:
+        status: ["500", "502", "503", "504"]
+        service: wbe-maintenance-service
+        query: "/maintenance.html"

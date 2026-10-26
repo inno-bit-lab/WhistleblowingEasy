@@ -27,6 +27,24 @@ class SettingsClass(metaclass=Singleton):
         self.separate_frontend = os.environ.get('WBE_SEPARATE_FRONTEND') == '1'
         self.dev_http = os.environ.get('WBE_DEV_HTTP') == '1'
         self.rehearsal = os.environ.get('WBE_REHEARSAL') == '1'
+        self.frontend_socket_dir = os.environ.get('WBE_FRONTEND_SOCKET_DIR')
+        onion_publish = os.environ.get('WBE_ONION_PUBLISH', '1')
+        if onion_publish not in ('0', '1'):
+            raise ValueError('WBE_ONION_PUBLISH must be 0 or 1')
+        self.onion_publish = onion_publish == '1'
+        self.onion_target_port = int(os.environ.get('WBE_ONION_TARGET_PORT', '8083'))
+        if not 1 <= self.onion_target_port <= 65535:
+            raise ValueError('Invalid onion target port')
+        if self.frontend_socket_dir:
+            if not self.separate_frontend or not os.path.isabs(self.frontend_socket_dir):
+                raise ValueError('Frontend sockets require separate frontend and an absolute directory')
+            if self.onion_target_port in self.bind_local_ports + self.bind_remote_ports:
+                raise ValueError('Split frontend requires a distinct onion frontend target port')
+        elif self.separate_frontend and self.onion_publish:
+            # Preserve legacy development defaults; a custom frontend target
+            # is valid only when private frontend transport is configured.
+            if self.onion_target_port != 8083:
+                raise ValueError('Custom onion frontend target requires private frontend sockets')
         self.db_type = 'postgresql' if self.database_url else 'sqlite'
 
         # debug defaults

@@ -1,0 +1,3 @@
+# Channel routing is handled by the frontend; do not rewrite document paths.
+http:
+  routers: {}
