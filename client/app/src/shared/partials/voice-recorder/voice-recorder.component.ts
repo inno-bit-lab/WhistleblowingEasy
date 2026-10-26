@@ -423,7 +423,7 @@ export class VoiceRecorderComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.iframeUrl = this.sanitizer.bypassSecurityTrustResourceUrl("viewer/index.html");
+    this.iframeUrl = this.sanitizer.bypassSecurityTrustResourceUrl("/viewer/index.html");
     this.fileInput = this.field ? this.field.id : "status_page";
     // Honour the URL provided by the host form (the initial submission posts to
     // submission/attachment, an existing tip's additional questionnaire to wbtip/wbfiles).

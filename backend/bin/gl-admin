@@ -435,6 +435,8 @@ if __name__ == '__main__':
     try:
         args = parser.parse_args()
         if hasattr(args, 'func'):
+            if Settings.database_url:
+                parser.error('gl-admin commands support SQLite only; for PostgreSQL use the application admin UI and scripts/dev/backup.sh or scripts/dev/restore.sh')
             args.func(args)
         else:
             parser.print_help()

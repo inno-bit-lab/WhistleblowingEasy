@@ -832,7 +832,7 @@ export class UtilsService {
         next: async token => {
           this.cryptoService.proofOfWork(token).subscribe(
               (ans) => {
-               const url = this.authenticationService.session.role === "whistleblower"?"api/whistleblower/wbtip/wbfiles/":"api/recipient/wbfiles/";
+               const url = this.authenticationService.session.role === "whistleblower"?"/api/whistleblower/wbtip/wbfiles/":"/api/recipient/wbfiles/";
                 window.open(url + file.id + "?token=" + token.id + ":" + ans);
                 this.appDataService.updateShowLoadingPanel(false);
               }
@@ -866,6 +866,11 @@ export class UtilsService {
       // here. The DPoP hooks below are intentionally placed AFTER this spread so
       // that no call site can override them and silently upload without a proof.
       ...overrides,
+      // Flow uses XHR directly and bypasses the Angular HTTP interceptor.
+      // Root the API URL before both sending the chunk and signing its DPoP
+      // proof, so channel documents such as /channel/report cannot prefix it.
+      ...(typeof overrides.target === "string" && overrides.target.startsWith("api/")
+        ? {target: "/" + overrides.target} : {}),
       // flow.js cannot sign asynchronously inside the (synchronous) headers
       // callback, so each chunk is signed in the async preprocess hook and the
       // resulting DPoP proof is stashed on the chunk for headers() to read.

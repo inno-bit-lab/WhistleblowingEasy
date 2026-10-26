@@ -90,9 +90,9 @@ export class WbFilesComponent implements OnInit {
           this.cryptoService.proofOfWork(token).subscribe(
             (ans) => {
               if (this.authenticationService.session?.role === "receiver") {
-                window.open("api/recipient/rfiles/" + wbFile.id + "?token=" + token.id + ":" + ans);
+                window.open("/api/recipient/rfiles/" + wbFile.id + "?token=" + token.id + ":" + ans);
               } else {
-                window.open("api/whistleblower/wbtip/rfiles/" + wbFile.id + "?token=" + token.id + ":" + ans);
+                window.open("/api/whistleblower/wbtip/rfiles/" + wbFile.id + "?token=" + token.id + ":" + ans);
               }
               this.appDataService.updateShowLoadingPanel(false);
             }

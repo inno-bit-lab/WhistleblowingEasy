@@ -7,7 +7,7 @@ from globaleaks import models, DATABASE_VERSION
 from globaleaks.handlers.admin.https import db_load_tls_configs
 from globaleaks.models import Base, Config
 from globaleaks.models.config_desc import ConfigFilters
-from globaleaks.orm import get_engine, get_session, make_db_uri, transact, transact_sync
+from globaleaks.orm import get_engine, get_session, make_db_uri, transact, transact_sync, is_postgresql
 from globaleaks.settings import Settings
 from globaleaks.state import State, TenantState
 from globaleaks.utils import fs
@@ -45,6 +45,9 @@ def create_db():
     """
     engine = get_engine(orm_lockdown=False)
 
+    if is_postgresql():
+        raise RuntimeError('Use python -m globaleaks.db.postgresql init before starting WBE')
+
     conn = engine.connect()
     try:
         conn.execute(sqlalchemy.text('PRAGMA foreign_keys = ON'))
@@ -59,8 +62,10 @@ def create_db():
 
 def compact_db():
     """
-    Execute VACUUM command to deallocate database space
+    Execute SQLite VACUUM; PostgreSQL maintenance belongs to autovacuum.
     """
+    if is_postgresql():
+        return
     engine = get_engine(orm_lockdown=False)
     conn = engine.connect()
     try:
@@ -84,6 +89,11 @@ def update_db():
     This function handles the update of an existing database
     :return: The database version
     """
+    if is_postgresql():
+        from globaleaks.db.postgresql import check_schema
+        check_schema(get_engine())
+        return DATABASE_VERSION
+
     db_version, db_file_path = get_db_file(Settings.working_path)
     if db_version == 0:
         return 0

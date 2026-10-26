@@ -1,5 +1,6 @@
 @if (wbTipService.tip) {
-  <div class="reveal" [ngClass]="['report-status-' + wbTipService.tip.status, 'report-substatus-' + wbTipService.tip.substatus]">
+  <div class="reveal kronos-tip-shell" [ngClass]="['report-status-' + wbTipService.tip.status, 'report-substatus-' + wbTipService.tip.substatus]">
+    <header class="kronos-tip-heading"><h1>{{'Your report' | translate}}</h1></header>
     <div id="Toolbar" class="row">
       <div class="col-md-12">
         <div class="d-flex justify-content-end">
@@ -30,11 +31,11 @@
     </div>
     @if (wbTipService.tip.data) {
       <div class="row">
-        <div [ngClass]="{'col-md-12': !wbTipService.tip.whistleblower_identity_field,'col-md-6': wbTipService.tip.whistleblower_identity_field}">
+        <div class="col-12">
           <src-tip-questionnaire-answers [tipService]="wbTipService"></src-tip-questionnaire-answers>
         </div>
         @if (wbTipService.tip.whistleblower_identity_field && wbTipService.tip.whistleblower_identity_field.enabled) {
-          <div class="col-md-6">
+          <div class="col-12">
             <src-whistleblower-identity [uploadEstimateTime]="calculateEstimatedTime()" [uploadProgress]="calculateProgress()" [isUploading]="uploading()" (onFormUpdate)="onFormChange()" (provideIdentityInformation)=provideIdentityInformation($event) [answers]="answers" [step]="wbTipService.tip.whistleblower_identity_field" [field]="wbTipService.tip.whistleblower_identity_field" [submission]="submission" [uploads]="uploads"></src-whistleblower-identity>
           </div>
         }
@@ -49,7 +50,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 col-sm-12">
+      <div class="col-12">
         @if (wbTipService) {
           <src-tip-comments [tipService]="wbTipService" [key]="'public'"></src-tip-comments>
         }

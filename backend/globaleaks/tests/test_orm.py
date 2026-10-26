@@ -4,7 +4,7 @@ from sqlalchemy import text
 from twisted.internet.defer import inlineCallbacks
 
 from globaleaks.models import Tenant
-from globaleaks.orm import get_engine, get_session, transact
+from globaleaks.orm import get_engine, get_session, transact, is_postgresql
 from globaleaks.settings import Settings
 from globaleaks.tests import helpers
 
@@ -30,11 +30,13 @@ class TestORM(helpers.TestGL):
 
         # now check data actually written
         session = get_session()
+        self.addCleanup(session.close)
         self.assertEqual(session.query(Tenant).count(), 2)
 
     @inlineCallbacks
     def test_transaction_with_exception(self):
         session = get_session()
+        self.addCleanup(session.close)
         count1 = session.query(Tenant).count()
 
         yield self.assertFailure(self._transact_with_exception(), Exception)
@@ -52,7 +54,10 @@ class TestORM(helpers.TestGL):
 
     @inlineCallbacks
     def test_authorizer_callback_denied(self):
+        if is_postgresql():
+            self.skipTest('SQLite authorizer; PostgreSQL runtime privileges are tested separately')
         session = get_session()
+        self.addCleanup(session.close)
 
         # Denied operation, such as DROP TABLE (we expect an exception)
         yield self.assertRaises(sqlalchemy.exc.DatabaseError, session.execute, sqlalchemy.text("DROP TABLE Tenant"))

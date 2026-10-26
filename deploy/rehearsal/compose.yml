@@ -1,0 +1,122 @@
+name: wbe-rehearsal
+x-backend: &backend
+  labels: {traefik.enable: "false"}
+  image: wbe-refact-backend-runtime:phase1
+  pull_policy: never
+  user: "${WBE_UID}:${WBE_GID}"
+  environment: &backend-env
+    WBE_DATABASE_URL_FILE: /run/secrets/database-url
+    WBE_RESOURCES_PATH: /resources
+    WBE_SEPARATE_FRONTEND: '1'
+    WBE_DEV_HTTP: '1'
+    WBE_DISABLE_NOTIFICATIONS: '1'
+    WBE_REHEARSAL: '1'
+    WBE_RUNTIME_DIRECTORY: /run/globaleaks
+    WBE_HTTP_PORT: '8080'
+  volumes:
+    - ./backend:/app/backend:ro
+    - ./.local/resources:/resources:ro
+    - ./.local/rehearsal/appdata:/var/globaleaks
+    - ./deploy/dev/backend-entrypoint.sh:/backend-entrypoint.sh:ro
+  tmpfs:
+    - /run/globaleaks:uid=${WBE_UID},gid=${WBE_GID},mode=0700
+    - /var/globaleaks/tmp:uid=${WBE_UID},gid=${WBE_GID},mode=0700
+  security_opt: [no-new-privileges:true]
+  cap_drop: [ALL]
+services:
+  postgres:
+    labels: {traefik.enable: "false"}
+    image: postgres:18-bookworm@sha256:bbf83594798e144bff365a9c191c5d779f181fb3135902064ab8ff11918020fc
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres-password
+    secrets: [postgres-password, owner-password, runtime-password]
+    volumes:
+      - postgres-data:/var/lib/postgresql
+      - ./deploy/dev/postgres-init.sh:/docker-entrypoint-initdb.d/10-wbe.sh:ro
+    networks: [database]
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U postgres -d wbe']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+    mem_limit: 1g
+  backend:
+    <<: *backend
+    command: [sh, /backend-entrypoint.sh]
+    secrets:
+      - source: runtime-url
+        target: database-url
+    networks: [web, database]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/api/health', timeout=4)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+    mem_limit: 2g
+  frontend:
+    labels: {traefik.enable: "false"}
+    image: wbe-refact-frontend-runtime:phase1
+    pull_policy: never
+    user: "${WBE_UID}:${WBE_GID}"
+    command: [node, /frontend/server.mjs]
+    environment:
+      BACKEND_URL: http://backend:8080
+      CLIENT_ROOT: /client/build
+      PORT: '8080'
+    volumes:
+      - ./client:/client:ro
+      - ./deploy/dev/frontend-server:/frontend:ro
+    ports: ['127.0.0.1:18091:8080']
+    networks: [web, ingress]
+    depends_on: [backend]
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt: [no-new-privileges:true]
+    cap_drop: [ALL]
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:8080/healthz').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+    mem_limit: 512m
+  migrate:
+    <<: *backend
+    profiles: [tooling]
+    entrypoint: [python, -m, globaleaks.db.postgresql]
+    command: [check, --working-path, /var/globaleaks]
+    secrets:
+      - source: owner-url
+        target: database-url
+    networks: [database]
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+networks:
+  # Docker needs a non-internal ingress bridge to publish the loopback port.
+  # Only FE joins it; BE and PG remain exclusively on internal networks.
+  ingress: {}
+  web:
+    internal: true
+  database:
+    internal: true
+volumes:
+  postgres-data: {}
+secrets:
+  postgres-password:
+    file: ./.local/rehearsal/secrets/postgres-password
+  owner-password:
+    file: ./.local/rehearsal/secrets/owner-password
+  runtime-password:
+    file: ./.local/rehearsal/secrets/runtime-password
+  owner-url:
+    file: ./.local/rehearsal/secrets/owner-url
+  runtime-url:
+    file: ./.local/rehearsal/secrets/runtime-url

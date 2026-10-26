@@ -31,7 +31,7 @@ export class FileViewComponent implements OnInit {
   iframeUrl: SafeResourceUrl;
 
   ngOnInit() {
-    this.iframeUrl = this.sanitizer.bypassSecurityTrustResourceUrl("viewer/index.html");
+    this.iframeUrl = this.sanitizer.bypassSecurityTrustResourceUrl("/viewer/index.html");
     this.args.iframeHeight = window.innerHeight * 0.75;
     this.viewFile();
   }

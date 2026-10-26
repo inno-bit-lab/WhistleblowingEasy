@@ -123,12 +123,12 @@ export class AppComponent implements AfterViewInit, OnInit, OnDestroy{
       let elem;
       elem = document.createElement("link");
       elem.rel = "stylesheet";
-      elem.href = "css/fonts.css";
+      elem.href = "/css/fonts.css";
       document.head.appendChild(elem);
 
       elem = document.createElement("link");
       elem.rel = "stylesheet";
-      elem.href = "s/css";
+      elem.href = "/s/css";
       document.head.appendChild(elem);
 
       elem = document.createElement("script");

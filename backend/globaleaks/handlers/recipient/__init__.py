@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 
 from nacl.encoding import Base64Encoder
-from sqlalchemy.sql.expression import distinct, func, and_, or_
+from sqlalchemy.sql.expression import distinct, func, and_, or_, select
 
 from globaleaks import models
 from globaleaks.handlers.base import BaseHandler
@@ -68,6 +68,14 @@ def get_receivertips(session, tid, receiver_id, user_key, language, args=None):
                                                       ).all()
     ]
 
+    # The list previews the initial questionnaire; later answers must not make
+    # the result depend on SQLite's arbitrary non-aggregated GROUP BY row.
+    first_answers_hash = select(models.InternalTipAnswers.questionnaire_hash) \
+        .where(models.InternalTipAnswers.internaltip_id == models.InternalTip.id) \
+        .order_by(models.InternalTipAnswers.creation_date.asc(),
+                  models.InternalTipAnswers.questionnaire_hash.asc()) \
+        .correlate(models.InternalTip).limit(1).scalar_subquery()
+
     dict_ret = dict()
     # Fetch rtip, internaltip and associated questionnaire schema
     for rtip, itip, answers, data in session.query(models.ReceiverTip,
@@ -84,8 +92,8 @@ def get_receivertips(session, tid, receiver_id, user_key, language, args=None):
                                                     models.InternalTip.update_date >= updated_after,
                                                     models.InternalTip.update_date <= updated_before,
                                                     models.InternalTip.id == models.ReceiverTip.internaltip_id,
-                                                    models.InternalTipAnswers.internaltip_id == models.ReceiverTip.internaltip_id) \
-                                            .group_by(models.ReceiverTip.id):
+                                                    models.InternalTipAnswers.internaltip_id == models.ReceiverTip.internaltip_id,
+                                                    models.InternalTipAnswers.questionnaire_hash == first_answers_hash):
         answers = answers.answers  # noqa: PLW2901
         label = itip.label
         accessible = rtip.receiver_id == receiver_id

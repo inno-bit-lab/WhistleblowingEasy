@@ -1038,7 +1038,10 @@ class _ReceiverFile(Model):
     internaltip_id = Column(UnicodeText(36), nullable=False, index=True)
     author_id = Column(UnicodeText(36))
     name = Column(UnicodeText, nullable=False)
-    size = Column(Integer, nullable=False)
+    # SQLite INTEGER affinity historically stores either a clear byte count or
+    # an encrypted base64 string. PostgreSQL uses JSON-as-TEXT to retain both
+    # Python types without guessing whether a numeric-looking ciphertext is int.
+    size = Column(Integer().with_variant(JSON(), 'postgresql'), nullable=False)
     content_type = Column(UnicodeText, nullable=False)
     creation_date = Column(DateTime, default=datetime_now, nullable=False)
     access_date = Column(DateTime, default=datetime_null, nullable=False)

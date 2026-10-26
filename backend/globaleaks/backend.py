@@ -9,7 +9,7 @@ from twisted.python.log import ILogObserver
 from twisted.python.log import addObserver
 from twisted.web import resource, server
 
-from globaleaks.jobs import job, jobs_list
+from globaleaks.jobs import job, jobs_list, delivery
 from globaleaks.services import tor
 
 from globaleaks.db import create_db, initialize_db, update_db, \
@@ -54,6 +54,12 @@ class Service(service.Service):
         self.api_factory.displayTracebacks = False
 
     def start_jobs(self):
+        if self.state.settings.rehearsal:
+            # Retain local report/file processing for functional rehearsal, but
+            # never launch Tor, notifications, retention or external checks.
+            self.state.jobs.append(delivery.Delivery())
+            self.state.jobs_monitor = job.JobsMonitor(self.state.jobs)
+            return
         for j in jobs_list:
             self.state.jobs.append(j())
 

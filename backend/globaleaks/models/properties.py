@@ -3,6 +3,7 @@ import json
 
 from sqlalchemy import Column, CheckConstraint, ForeignKeyConstraint, UniqueConstraint, types
 from sqlalchemy.schema import ForeignKey
+from sqlalchemy.ext.compiler import compiles
 from sqlalchemy.types import Boolean, DateTime, Integer, LargeBinary, UnicodeText
 
 try:
@@ -49,3 +50,10 @@ class Enum(types.TypeDecorator):
 
     def process_result_value(self, value, dialect):
         return self._enumtype(value).name
+
+
+# SQLite accepted legacy UnicodeText(length) hints without enforcing a limit.
+# PostgreSQL rejects TEXT(n); retain the same unbounded text semantics.
+@compiles(UnicodeText, 'postgresql')
+def compile_postgresql_unicode_text(type_, compiler, **kw):
+    return 'TEXT'

@@ -13,3 +13,10 @@ backend/_trial_temp/
 client/.angular/
 client/app/viewer/script.min.js
 client/app/viewer/script.min.js.LICENSE.txt
+
+.local/
+
+working_path/
+_trial_temp/
+
+_trial_temp.lock

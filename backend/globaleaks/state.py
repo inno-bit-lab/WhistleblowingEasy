@@ -178,10 +178,10 @@ class StateClass(ObjectDict, metaclass=Singleton):
         from globaleaks.models.config import ConfigFactory
 
         db_file = os.path.join(self.settings.working_path, 'globaleaks.db')
-        if not os.path.exists(db_file):
+        if not self.settings.database_url and not os.path.exists(db_file):
             return True
 
-        session = orm.get_session(orm.make_db_uri(db_file))
+        session = orm.get_session(self.settings.database_url or orm.make_db_uri(db_file))
         try:
             return ConfigFactory(session, 1).get_val('reachable_via_web')
         except Exception as excep:

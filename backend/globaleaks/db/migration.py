@@ -148,10 +148,12 @@ def perform_data_update(db_file):
             session.query(models.Config).filter_by(var_name='latest_version') \
                    .update({'value': __version__, 'update_date': now})
 
-            session.query(models.Config).filter_by(var_name='version_db') \
-                   .update({'value': DATABASE_VERSION, 'update_date': now})
-
             db_log(session, tid=1, type='version_update', user_id='system', data={'from': original_version, 'to': __version__})
+
+        # Schema migrations can ship without an application version change.
+        # This runs after the structural migration has completed successfully.
+        session.query(models.Config).filter_by(var_name='version_db') \
+               .update({'value': DATABASE_VERSION, 'update_date': now})
 
         session.commit()
     except Exception:

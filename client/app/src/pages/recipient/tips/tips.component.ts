@@ -109,7 +109,7 @@ export class TipsComponent implements OnInit {
         concatMap((tipId: string) =>
           from(this.tokenResourceService.getWithProofOfWork()).pipe(
             tap((token: any) => {
-              const url = `api/recipient/rtips/${tipId}/export?token=${token.id}:${token.answer}`;
+              const url = `/api/recipient/rtips/${tipId}/export?token=${token.id}:${token.answer}`;
               window.open(url);
             }),
 	    delay(500)

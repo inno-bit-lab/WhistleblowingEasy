@@ -146,7 +146,16 @@ class FakeThreadPool:
 
 def init_state():
     Settings.set_devel_mode()
+    test_url_file = os.environ.get('WBE_TEST_DATABASE_URL_FILE')
+    test_url = (open(test_url_file).read().strip() if test_url_file
+                else os.environ.get('WBE_TEST_DATABASE_URL'))
+    if test_url:
+        from sqlalchemy.engine import make_url
+        if make_url(test_url).database != 'wbe_phase1_test':
+            raise RuntimeError('PostgreSQL tests require the dedicated wbe_phase1_test database')
+        Settings.database_url = test_url
     Settings.disable_notifications = True
+    Settings.separate_frontend = False
     Settings.working_path = os.path.abspath('./working_path')
 
     Settings.eval_paths()
@@ -647,7 +656,22 @@ class TestGL(unittest.TestCase):
 
         self.setUp_dummy()
 
-        if self.initialize_test_database_using_archived_db:
+        if orm.is_postgresql():
+            from sqlalchemy import text
+            from globaleaks.db.postgresql import import_sqlite, initialize
+            engine = orm.get_engine()
+            # Explicit test DSN guard above; never reset an application database.
+            from sqlalchemy.engine import make_url
+            if make_url(orm.get_db_uri()).database != 'wbe_phase1_test':
+                raise RuntimeError('Refusing schema reset outside dedicated test database')
+            with engine.begin() as conn:
+                conn.execute(text('DROP SCHEMA public CASCADE'))
+                conn.execute(text('CREATE SCHEMA public'))
+            if self.initialize_test_database_using_archived_db:
+                import_sqlite(os.path.join(TEST_DIR, 'db', 'empty', 'globaleaks-%d.db' % DATABASE_VERSION), engine)
+            else:
+                initialize(engine)
+        elif self.initialize_test_database_using_archived_db:
             shutil.copy(
                 os.path.join(TEST_DIR, 'db', 'empty', 'globaleaks-%d.db' % DATABASE_VERSION),
                 os.path.join(Settings.db_file_path)

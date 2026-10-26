@@ -1,0 +1,8 @@
+**
+!backend/
+!backend/requirements/
+!backend/requirements/requirements.txt.noble
+!deploy/
+!deploy/dev/
+!deploy/dev/Dockerfile.*
+!deploy/dev/requirements-postgresql.txt

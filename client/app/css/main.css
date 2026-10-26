@@ -1350,3 +1350,77 @@ body .dropdown-visible > div.multiselect-dropdown > div > span.dropdown-btn {
   .kronos-organization-identity h2 { font-size: clamp(1.125rem, 4.8vw, 1.375rem); }
   .kronos-organization-identity > p:last-child { font-size: .8125rem; }
 }
+
+/* Authenticated whistleblower view, scoped away from recipient/admin screens. */
+.kronos-tip-shell {
+  --report-reading-width: 1160px;
+  --report-padding: clamp(20px, 3vw, 36px);
+  --report-ink: #102c46;
+  --report-muted: #506377;
+  --report-line: #dce5eb;
+  --report-accent: #087f83;
+  width: 100%;
+  max-width: var(--report-reading-width);
+  margin: 24px auto 56px;
+  color: var(--report-ink);
+  text-align: start;
+}
+.kronos-tip-heading { padding-inline: var(--report-padding); }
+.kronos-tip-heading h1 {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 650;
+  letter-spacing: -.025em;
+  margin: 0 0 20px;
+}
+.kronos-tip-shell > .row { margin-inline: 0; }
+.kronos-tip-shell > .row > div { min-width: 0; padding-inline: 0; }
+.kronos-tip-shell #Toolbar { margin-bottom: 16px; }
+.kronos-tip-shell .card {
+  border: 1px solid var(--report-line);
+  border-radius: 12px;
+  margin-bottom: 24px;
+  background: #fff;
+}
+.kronos-tip-shell #TipInfoBox { border-top: 3px solid var(--report-accent); }
+.kronos-tip-shell .card-header {
+  padding: 16px var(--report-padding);
+  background: #f3f7f9;
+  border-bottom: 1px solid var(--report-line);
+  border-radius: 11px 11px 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.kronos-tip-shell .card-body { padding: var(--report-padding); min-width: 0; }
+.kronos-tip-shell #TipInfoBox .card-body { overflow-x: auto; }
+.kronos-tip-shell #TipInfoBox .text-center { text-align: start !important; overflow-wrap: anywhere; }
+.kronos-tip-shell .table { font-size: .9375rem; }
+.kronos-tip-shell .table th { font-weight: 600; color: var(--report-ink); }
+.kronos-tip-shell .table td { overflow-wrap: anywhere; }
+.kronos-tip-shell .btn { min-height: 44px; min-width: 44px; border-radius: 6px; }
+.kronos-tip-shell .btn-primary { background: var(--report-ink); border-color: var(--report-ink); }
+.kronos-tip-shell .form-control {
+  max-width: 100%; min-height: 48px;
+  border-color: var(--report-line); border-radius: 6px;
+  font-size: 1rem; background: #f8fafb;
+}
+.kronos-tip-shell textarea.form-control { min-height: 140px; resize: vertical; }
+.kronos-tip-shell .drag-drop {
+  padding: 20px; border: 1px dashed #9fb5c4;
+  border-radius: 10px; background: #f8fafb;
+}
+.kronos-tip-shell :is(button,a,input,textarea,[role="button"]):focus-visible {
+  outline: 3px solid var(--report-accent); outline-offset: 3px;
+}
+.kronos-tip-shell :is(p,dd,.description) { overflow-wrap: anywhere; line-height: 1.65; }
+@media (max-width: 640px) {
+  .kronos-tip-shell { margin-block: 16px 40px; }
+  .kronos-tip-shell .card { margin-bottom: 16px; }
+}
+.kronos-tip-shell .field-answer { margin-bottom: 24px; }
+.kronos-tip-shell .field-answer > div:first-child {
+  font-weight: 600; color: var(--report-ink); line-height: 1.5; margin-bottom: 8px;
+}
+.kronos-tip-shell .field-answer > div + div { color: var(--report-muted); line-height: 1.65; }
+.kronos-tip-shell #TipInfoBox .table { min-width: 540px; }
+.kronos-tip-shell #TipInfoBox .table :is(th,td) { white-space: nowrap; overflow-wrap: normal; }

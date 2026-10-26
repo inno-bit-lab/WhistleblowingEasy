@@ -1,6 +1,6 @@
 import os
 
-from globaleaks.orm import make_db_uri, set_db_uri, enable_orm_debug
+from globaleaks.orm import make_db_uri, set_db_uri, enable_orm_debug, configured_db_uri
 from globaleaks.utils.singleton import Singleton
 
 this_directory = os.path.dirname(__file__)
@@ -23,7 +23,11 @@ class SettingsClass(metaclass=Singleton):
         self.bind_remote_ports = [int(os.environ.get('WBE_HTTP_PORT', '8080')), 8443]
         self.bind_local_ports = [8083]
 
-        self.db_type = 'sqlite'
+        self.database_url = configured_db_uri()
+        self.separate_frontend = os.environ.get('WBE_SEPARATE_FRONTEND') == '1'
+        self.dev_http = os.environ.get('WBE_DEV_HTTP') == '1'
+        self.rehearsal = os.environ.get('WBE_REHEARSAL') == '1'
+        self.db_type = 'postgresql' if self.database_url else 'sqlite'
 
         # debug defaults
         self.orm_debug = False
@@ -53,7 +57,9 @@ class SettingsClass(metaclass=Singleton):
         self.rsa_key_bits = 4096
         self.csr_sign_bits = 512
 
-        self.disable_notifications = False
+        self.disable_notifications = os.environ.get('WBE_DISABLE_NOTIFICATIONS') == '1'
+        if self.rehearsal and not (self.separate_frontend and self.disable_notifications):
+            raise ValueError('Rehearsal requires separate frontend and disabled notifications')
         self.notification_limit = 30
         self.jobs_operation_limit = 20
 
@@ -108,15 +114,18 @@ class SettingsClass(metaclass=Singleton):
                 client_found=True
                 break
 
-        if not client_found:
+        if not client_found and not os.environ.get('WBE_RESOURCES_PATH'):
             print("Unable to find a directory to load the client from")
+
+        if os.environ.get('WBE_RESOURCES_PATH'):
+            self.client_path = os.environ['WBE_RESOURCES_PATH']
 
         self.appdata_file = os.path.join(self.client_path, 'data/appdata.json')
         self.questionnaires_path = os.path.join(self.client_path, 'data/questionnaires')
         self.questions_path = os.path.join(self.client_path, 'data/questions')
         self.field_attrs_file = os.path.join(self.client_path, 'data/field_attrs.json')
 
-        set_db_uri(make_db_uri(self.db_file_path))
+        set_db_uri(self.database_url or make_db_uri(self.db_file_path))
 
     def set_devel_mode(self):
         self.devel_mode = True

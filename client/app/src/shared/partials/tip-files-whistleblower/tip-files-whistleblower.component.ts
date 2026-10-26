@@ -41,7 +41,7 @@ export class TipFilesWhistleblowerComponent {
         next: async token => {
           this.cryptoService.proofOfWork(token).subscribe(
               (ans) => {
-                window.open("api/whistleblower/wbtip/wbfiles/" + wbFile.id + "?token=" + token.id + ":" + ans);
+                window.open("/api/whistleblower/wbtip/wbfiles/" + wbFile.id + "?token=" + token.id + ":" + ans);
                 this.appDataService.updateShowLoadingPanel(false);
               }
           );

@@ -136,13 +136,19 @@ def db_set_internaltip_data(session, itip_id, key, value, date=None):
 
 
 def db_assign_submission_progressive(session, tid):
-    counter = session.query(models.Config).filter(models.Config.tid == tid, models.Config.var_name == 'counter_submissions').one()
+    counter = session.query(models.Config).filter(models.Config.tid == tid, models.Config.var_name == 'counter_submissions').with_for_update().populate_existing().one()
     counter.value += 1
+    session.flush()
     return counter.value
 
 
 def db_archive_questionnaire_schema(session, questionnaire):
     hash = sha256(json.dumps(questionnaire, sort_keys=True)).decode("utf-8")
+    if session.bind.dialect.name == 'postgresql':
+        from sqlalchemy.dialects.postgresql import insert
+        session.execute(insert(models.ArchivedSchema).values(hash=hash, schema=questionnaire)
+                        .on_conflict_do_nothing(index_elements=['hash']))
+        return hash
     if session.query(models.ArchivedSchema).filter(models.ArchivedSchema.hash == hash).count():
         return hash
 

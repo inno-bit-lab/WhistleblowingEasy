@@ -18,6 +18,8 @@ from globaleaks.tests import helpers
 
 class TestMigrationRoutines(unittest.TestCase):
     def _test(self, path, version):
+        if os.environ.get('WBE_TEST_DATABASE_URL') or os.environ.get('WBE_TEST_DATABASE_URL_FILE'):
+            self.skipTest('Historical file migrations run in the SQLite test matrix')
         helpers.init_state()
         srcpath = os.path.join(path, 'globaleaks-%d.db' % version)
         dstpath = os.path.join(Settings.working_path, 'globaleaks.db')

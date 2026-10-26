@@ -78,7 +78,7 @@ export class TipFieldAnswerEntryComponent implements OnInit {
         break;
       }
 
-      this.iframeUrl = this.sanitizer.bypassSecurityTrustResourceUrl("viewer/index.html");
+      this.iframeUrl = this.sanitizer.bypassSecurityTrustResourceUrl("/viewer/index.html");
 
       const id = wbfile.id;
       const url = this.getApiUrl(id);

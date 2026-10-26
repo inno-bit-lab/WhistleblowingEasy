@@ -317,6 +317,11 @@ class APIResourceWrapper(Resource):
         return self.registry.search(path)
 
     def should_redirect_https(self, request):
+        # Only the explicitly opted-in, loopback-facing split development stack.
+        # Never trust X-Forwarded-Proto or disable TLS for arbitrary hostnames.
+        if State.settings.separate_frontend and State.settings.dev_http and \
+                request.hostname in (b'localhost', b'127.0.0.1', b'::1'):
+            return False
         if request.isSecure() or \
                 request.hostname.endswith(b'.onion') or \
                 b'acme-challenge' in request.path:
@@ -473,7 +478,7 @@ class APIResourceWrapper(Resource):
 
         self.set_headers(request)
 
-        if isIPAddress(request.hostname) and 1 in State.tenants:
+        if not State.settings.rehearsal and isIPAddress(request.hostname) and 1 in State.tenants:
             hostname = State.tenants[1].cache['hostname']
             https_enabled = State.tenants[1].cache['https_enabled']
             if hostname and https_enabled:
@@ -612,7 +617,7 @@ class APIResourceWrapper(Resource):
             request.setHeader(b'Strict-Transport-Security',
                               b'max-age=31536000; includeSubDomains; preload')
 
-            if request.tid in State.tenants and State.tenants[request.tid].cache.onionservice:
+            if not State.settings.rehearsal and request.tid in State.tenants and State.tenants[request.tid].cache.onionservice:
                 request.setHeader(b'Onion-Location', b'http://' + State.tenants[request.tid].cache.onionservice.encode() + request.path)
 
         request.setHeader(b"Cross-Origin-Embedder-Policy", "require-corp")

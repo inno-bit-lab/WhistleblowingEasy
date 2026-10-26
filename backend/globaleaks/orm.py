@@ -1,6 +1,10 @@
 import random
 import time
 import sqlite3
+import os
+import threading
+from pathlib import Path
+from sqlalchemy.engine import make_url
 
 from sqlalchemy import create_engine, event
 from sqlalchemy.exc import OperationalError
@@ -10,6 +14,35 @@ from twisted.internet import reactor
 from twisted.internet.threads import deferToThreadPool
 
 from globaleaks.models import AuditLog
+
+
+_PG_ENGINES = {}
+_PG_ENGINE_LOCK = threading.Lock()
+
+
+def configured_db_uri():
+    path = os.environ.get("WBE_DATABASE_URL_FILE")
+    value = Path(path).read_text().strip() if path else os.environ.get("WBE_DATABASE_URL")
+    if path and not value:
+        raise ValueError('WBE database URL file must not be empty')
+    if value:
+        try:
+            if make_url(value).get_backend_name() != 'postgresql':
+                raise ValueError()
+        except Exception:
+            raise ValueError('WBE external database URL must select PostgreSQL') from None
+    return value
+
+
+def is_postgresql(db_uri=None):
+    return make_url(db_uri or get_db_uri()).get_backend_name() == "postgresql"
+
+
+def dispose_engines():
+    with _PG_ENGINE_LOCK:
+        for engine in _PG_ENGINES.values():
+            engine.dispose()
+        _PG_ENGINES.clear()
 
 
 _ORM_DEBUG = False
@@ -44,6 +77,20 @@ def get_engine(db_uri=None, foreign_keys=True, orm_lockdown=True):
     if db_uri is None:
         db_uri = get_db_uri()
 
+    dialect = make_url(db_uri).get_backend_name()
+    if dialect == 'postgresql':
+        # One bounded pool per process, shared by the Twisted transaction threads.
+        # Never echo SQL/bind parameters on the remote database path.
+        with _PG_ENGINE_LOCK:
+            if db_uri not in _PG_ENGINES:
+                _PG_ENGINES[db_uri] = create_engine(
+                    db_uri, pool_size=8, max_overflow=8, pool_timeout=15,
+                    pool_pre_ping=True, hide_parameters=True,
+                    connect_args={'connect_timeout': 10,
+                                  'options': '-c timezone=UTC -c search_path=public -c statement_timeout=30000 -c lock_timeout=10000'})
+            return _PG_ENGINES[db_uri]
+    if dialect != 'sqlite':
+        raise ValueError('Unsupported WBE database dialect')
     engine = create_engine(db_uri, connect_args={'timeout': 30}, echo=_ORM_DEBUG)
 
     def authorizer_callback(action, table, column, sql_location, ignore):
