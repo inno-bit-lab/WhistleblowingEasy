@@ -144,7 +144,7 @@ jobs:
           # Read the AppArmor-specific attribute: attr/current is shared by LSMs.
           APPARMOR_LABEL=$(docker exec gl-systemd cat "/proc/$MAINPID/attr/apparmor/current")
           echo "Daemon AppArmor label: $APPARMOR_LABEL"
-          test "$APPARMOR_LABEL" = "usr.bin.globaleaks (enforce)"
+          sh .github/workflows/scripts/check_apparmor_label.sh "$APPARMOR_LABEL"
           echo "Native unit verified: daemon unprivileged + firewall applied + AppArmor confined"
 
           # Verify the admin opt-out: APPARMOR_SANDBOXING=0 lets the daemon start
